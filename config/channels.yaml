@@ -6,7 +6,7 @@ ViuTV:
   refresh: today
   recap: 1
   preview: 1
-Now新聞台:
+NowNews:
   name:
     - Now新聞台
   scraper:
