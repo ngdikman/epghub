@@ -1,4 +1,4 @@
-import __xmltv
+from epg.scraper import xmlxmltv
 from epg.model import Channel, Program
 from datetime import datetime, date, timezone
 
@@ -12,7 +12,7 @@ def update(
         scraper_id = scraper_params.split("@http", 1)[0]
         scraper_url = "http" + scraper_params.split("@http", 1)[1]
     channel_id = channel.id if scraper_id == None else scraper_id
-    scraper_channels = __xmltv.get_channels(scraper_url)
+    scraper_channels = xmlxmltv.get_channels(scraper_url)
     for scraper_channel in scraper_channels:
         if scraper_channel.id == channel_id:
             for program in scraper_channel.programs:
