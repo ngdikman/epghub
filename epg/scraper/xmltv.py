@@ -42,7 +42,7 @@ def update(
                     program.start_time,
                     program.end_time,
                     channel.id,
-                    program.description,
+                    program.desc,
                     sub_title=program.sub_title
                 )
             )
