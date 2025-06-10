@@ -2,7 +2,7 @@ from jinja2 import Environment, FileSystemLoader
 from epg import utils
 from epg.generator import xmltv
 from epg.generator import diyp
-from epg.scraper import __xmltv
+from epg.scraper import xmlxmltv
 from lxml import etree
 from datetime import datetime, timezone
 from croniter import croniter
@@ -47,7 +47,7 @@ if XMLTV_URL == "":
     print("!!!Please set XMLTV_URL environment variables to reuse XML!!!")
 else:
     print("reuse XML:", XMLTV_URL, flush=True)
-    xml_channels = __xmltv.get_channels(XMLTV_URL, dtd)
+    xml_channels = xmlxmltv.get_channels(XMLTV_URL, dtd)
     # Reuse channels
     if xml_channels != []:
         xml_result = utils.copy_channels(channels, xml_channels)
