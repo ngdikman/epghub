@@ -216,13 +216,6 @@
             background-color: #e6f2ff;
         }
 
-        .date-prev.disabled,
-        .date-next.disabled {
-            color: #ccc;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
         .date-now {
             margin: 0 15px;
             font-weight: bold;
@@ -328,12 +321,6 @@
     </div>
 
     <script>
-        // Global variable to store the earliest and latest available dates
-        let dateBoundaries = {
-            minDate: null,
-            maxDate: null
-        };
-
         // Function to refresh the program list for the selected channel and date
         function refreshProgramList(channelName, formattedDate) {
             const programList = document.querySelector('.program-list tbody');
@@ -348,18 +335,6 @@
                     currentTime = new Date(currentTime.toISOString());
 
                     if (data.epg_data) {
-                        // Update date boundaries if this is the first load
-                        if (!dateBoundaries.minDate || !dateBoundaries.maxDate) {
-                            const programDates = data.epg_data.map(program => {
-                                const programDate = new Date(`${currentDate}T${program.start}{{timezone_offset}}`);
-                                return programDate;
-                            });
-                            
-                            const sortedDates = programDates.sort((a, b) => a - b);
-                            dateBoundaries.minDate = sortedDates[0];
-                            dateBoundaries.maxDate = sortedDates[sortedDates.length - 1];
-                        }
-
                         data.epg_data.forEach((program, index) => {
                             const programItem = document.createElement('tr');
                             programItem.classList.add('program-item');
@@ -388,9 +363,6 @@
                             programItem.innerHTML = `<td>${program.start}</td><td>${programTitle}</td>`;
                             programList.appendChild(programItem);
                         });
-
-                        // Update navigation buttons state
-                        updateDateNavButtons(formattedDate);
                     } else {
                         const noDataItem = document.createElement('tr');
                         noDataItem.classList.add('program-item');
@@ -405,40 +377,6 @@
                     errorItem.innerHTML = '<td colspan="2" style="text-align: center; padding: 20px; color: #dc3545;">Failed to retrieve program data.</td>';
                     programList.appendChild(errorItem);
                 });
-        }
-
-        // Function to update the state of date navigation buttons
-        function updateDateNavButtons(currentFormattedDate) {
-            const currentDate = new Date(currentFormattedDate);
-            const prevButton = document.getElementById('prevDate');
-            const nextButton = document.getElementById('nextDate');
-
-            // Reset buttons
-            prevButton.classList.remove('disabled');
-            nextButton.classList.remove('disabled');
-
-            // Check if we have date boundaries
-            if (dateBoundaries.minDate && dateBoundaries.maxDate) {
-                // Convert current date to same format for comparison
-                const checkDate = new Date(currentDate);
-                checkDate.setHours(0, 0, 0, 0);
-
-                const minBoundary = new Date(dateBoundaries.minDate);
-                minBoundary.setHours(0, 0, 0, 0);
-
-                const maxBoundary = new Date(dateBoundaries.maxDate);
-                maxBoundary.setHours(0, 0, 0, 0);
-
-                // Disable prev button if we're at the earliest date
-                if (checkDate <= minBoundary) {
-                    prevButton.classList.add('disabled');
-                }
-
-                // Disable next button if we're at the latest date
-                if (checkDate >= maxBoundary) {
-                    nextButton.classList.add('disabled');
-                }
-            }
         }
 
         const channelItems = document.querySelectorAll('.channel-item');
@@ -499,21 +437,6 @@
             const currentDateElement = document.getElementById('currentDate');
             const currentDate = currentDateElement.textContent;
             const curDate = convertLocalTimeToTimezoneOffset(new Date(`${currentDate}`), "{{timezone_offset}}");
-            
-            // Check if we can go to previous date
-            if (dateBoundaries.minDate) {
-                const minBoundary = new Date(dateBoundaries.minDate);
-                minBoundary.setHours(0, 0, 0, 0);
-                
-                const checkDate = new Date(curDate);
-                checkDate.setDate(checkDate.getDate() - 1);
-                checkDate.setHours(0, 0, 0, 0);
-                
-                if (checkDate < minBoundary) {
-                    return; // Don't go beyond the minimum date
-                }
-            }
-            
             curDate.setDate(curDate.getDate() - 1);
             const formattedDate = curDate.getFullYear() + '-' + String(curDate.getMonth() + 1).padStart(2, '0') + '-' + String(curDate.getDate()).padStart(2, '0');
             updateDateDisplay(formattedDate);
@@ -526,21 +449,6 @@
             const currentDateElement = document.getElementById('currentDate');
             const currentDate = currentDateElement.textContent;
             const curDate = convertLocalTimeToTimezoneOffset(new Date(`${currentDate}`), "{{timezone_offset}}");
-            
-            // Check if we can go to next date
-            if (dateBoundaries.maxDate) {
-                const maxBoundary = new Date(dateBoundaries.maxDate);
-                maxBoundary.setHours(0, 0, 0, 0);
-                
-                const checkDate = new Date(curDate);
-                checkDate.setDate(checkDate.getDate() + 1);
-                checkDate.setHours(0, 0, 0, 0);
-                
-                if (checkDate > maxBoundary) {
-                    return; // Don't go beyond the maximum date
-                }
-            }
-            
             curDate.setDate(curDate.getDate() + 1);
             const formattedDate = curDate.getFullYear() + '-' + String(curDate.getMonth() + 1).padStart(2, '0') + '-' + String(curDate.getDate()).padStart(2, '0');
             updateDateDisplay(formattedDate);
