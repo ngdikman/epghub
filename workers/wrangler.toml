@@ -1,7 +1,4 @@
-name = "epghub"
+name = "epg-updater-trigger"
 main = "trigger.js"
 compatibility_date = "2025-02-15"
 workers_dev = false
-
-[assets]
-directory = "./dist"
