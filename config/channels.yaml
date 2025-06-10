@@ -1,16 +1,16 @@
-099:
+ViuTV:
   name:
     - ViuTV
   scraper:
-    nowtv: 
+    xmltv: 410274@http://epg.pw/xmltv/epg_HK.xml 
   refresh: today
   recap: 1
   preview: 1
-332:
+Now新聞台:
   name:
-    - NOW新聞台
+    - Now新聞台
   scraper:
-    nowtv: 
+    xmltv: 410344@http://epg.pw/xmltv/epg_HK.xml 
   refresh: today
   recap: 1
   preview: 1
