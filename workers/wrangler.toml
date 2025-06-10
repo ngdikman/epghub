@@ -1,6 +1,4 @@
-# Top-level configuration
 name = "epg-updater-trigger"
 main = "trigger.js"
-compatibility_date = "2023-08-15"
-
+compatibility_date = "2025-02-15"
 workers_dev = false

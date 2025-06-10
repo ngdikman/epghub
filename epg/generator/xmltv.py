@@ -1,9 +1,13 @@
-# https://github.com/XMLTV/xmltv/blob/master/xmltv.dtd
-
+import re
 from lxml import etree
 from epg.model import Channel
 from datetime import datetime
 
+def clean_text(text: str) -> str:
+    """Remove all control characters except for newline and tab. Returns an empty string if input is None."""
+    if text is None:
+        return ""  # Return an empty string if text is None
+    return re.sub(r'[\x00-\x1F\x7F-\x9F]', '', text)
 
 def write(filepath: str, channels: list[Channel], info: str = "") -> bool:
     root = etree.Element("tv")
@@ -46,6 +50,6 @@ def write(filepath: str, channels: list[Channel], info: str = "") -> bool:
                 sub_title.text = program.sub_title
             if program.desc != "":
                 desc = etree.SubElement(program_element, "desc")
-                desc.text = program.desc
+                desc.text = clean_text(program.desc)  # Clean description text here
     tree.write(filepath, pretty_print=True, xml_declaration=True, encoding="utf-8")
     return True
