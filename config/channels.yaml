@@ -19,7 +19,7 @@ NowNews:
 #http://epg.112114.xyz/pp.xml
 广东卫视:
   name:
-  - 广东卫视
+    - 广东卫视
   scraper:
     xmltv: 广东卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -27,7 +27,7 @@ NowNews:
   preview: 1
 大湾区卫视:
   name:
-  - 大湾区卫视
+    - 大湾区卫视
   scraper:
     xmltv: 大湾区卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -35,7 +35,7 @@ NowNews:
   preview: 1
 大湾区卫视海外版:
   name:
-  - 大湾区卫视海外版
+    - 大湾区卫视海外版
   scraper:
     xmltv: 大湾区卫视海外版@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -43,7 +43,7 @@ NowNews:
   preview: 1
 深圳卫视:
   name:
-  - 深圳卫视
+    - 深圳卫视
   scraper:
     xmltv: 深圳卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -51,7 +51,7 @@ NowNews:
   preview: 1
 湖南卫视:
   name:
-  - 湖南卫视
+    - 湖南卫视
   scraper:
     xmltv: 湖南卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -59,7 +59,7 @@ NowNews:
   preview: 1
 浙江卫视:
   name:
-  - 浙江卫视
+    - 浙江卫视
   scraper:
     xmltv: 浙江卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -67,7 +67,7 @@ NowNews:
   preview: 1
 江苏卫视:
   name:
-  - 江苏卫视
+    - 江苏卫视
   scraper:
     xmltv: 江苏卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -75,7 +75,7 @@ NowNews:
   preview: 1
 东方卫视:
   name:
-  - 东方卫视
+    - 东方卫视
   scraper:
     xmltv: 东方卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -83,7 +83,7 @@ NowNews:
   preview: 1
 安徽卫视:
   name:
-  - 安徽卫视
+    - 安徽卫视
   scraper:
     xmltv: 安徽卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -91,7 +91,7 @@ NowNews:
   preview: 1
 北京卫视:
   name:
-  - 北京卫视
+    - 北京卫视
   scraper:
     xmltv: 北京卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -99,7 +99,7 @@ NowNews:
   preview: 1
 天津卫视:
   name:
-  - 天津卫视
+    - 天津卫视
   scraper:
     xmltv: 天津卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -107,7 +107,7 @@ NowNews:
   preview: 1
 山东卫视:
   name:
-  - 山东卫视
+    - 山东卫视
   scraper:
     xmltv: 山东卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -115,7 +115,7 @@ NowNews:
   preview: 1
 江西卫视:
   name:
-  - 江西卫视
+    - 江西卫视
   scraper:
     xmltv: 江西卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -123,7 +123,7 @@ NowNews:
   preview: 1
 湖北卫视:
   name:
-  - 湖北卫视
+    - 湖北卫视
   scraper:
     xmltv: 湖北卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -131,7 +131,7 @@ NowNews:
   preview: 1
 辽宁卫视:
   name:
-  - 辽宁卫视
+    - 辽宁卫视
   scraper:
     xmltv: 辽宁卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -139,7 +139,7 @@ NowNews:
   preview: 1
 黑龙江卫视:
   name:
-  - 黑龙江卫视
+    - 黑龙江卫视
   scraper:
     xmltv: 黑龙江卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -147,7 +147,7 @@ NowNews:
   preview: 1
 贵州卫视:
   name:
-  - 贵州卫视
+    - 贵州卫视
   scraper:
     xmltv: 贵州卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -155,7 +155,7 @@ NowNews:
   preview: 1
 四川卫视:
   name:
-  - 四川卫视
+    - 四川卫视
   scraper:
     xmltv: 四川卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -163,7 +163,7 @@ NowNews:
   preview: 1
 河南卫视:
   name:
-  - 河南卫视
+    - 河南卫视
   scraper:
     xmltv: 河南卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -171,7 +171,7 @@ NowNews:
   preview: 1
 云南卫视:
   name:
-  - 云南卫视
+    - 云南卫视
   scraper:
     xmltv: 云南卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -179,7 +179,7 @@ NowNews:
   preview: 1
 重庆卫视:
   name:
-  - 重庆卫视
+    - 重庆卫视
   scraper:
     xmltv: 重庆卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -187,7 +187,7 @@ NowNews:
   preview: 1
 河北卫视:
   name:
-  - 河北卫视
+    - 河北卫视
   scraper:
     xmltv: 河北卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -195,7 +195,7 @@ NowNews:
   preview: 1
 东南卫视:
   name:
-  - 东南卫视
+    - 东南卫视
   scraper:
     xmltv: 东南卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -203,7 +203,7 @@ NowNews:
   preview: 1
 广西卫视:
   name:
-  - 广西卫视
+    - 广西卫视
   scraper:
     xmltv: 广西卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -211,7 +211,7 @@ NowNews:
   preview: 1
 吉林卫视:
   name:
-  - 吉林卫视
+    - 吉林卫视
   scraper:
     xmltv: 吉林卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -219,7 +219,7 @@ NowNews:
   preview: 1
 青海卫视:
   name:
-  - 青海卫视
+    - 青海卫视
   scraper:
     xmltv: 青海卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -227,7 +227,7 @@ NowNews:
   preview: 1
 海南卫视:
   name:
-  - 海南卫视
+    - 海南卫视
   scraper:
     xmltv: 海南卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -235,7 +235,7 @@ NowNews:
   preview: 1
 甘肃卫视:
   name:
-  - 甘肃卫视
+    - 甘肃卫视
   scraper:
     xmltv: 甘肃卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -243,7 +243,7 @@ NowNews:
   preview: 1
 三沙卫视:
   name:
-  - 三沙卫视
+    - 三沙卫视
   scraper:
     xmltv: 三沙卫视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -251,7 +251,7 @@ NowNews:
   preview: 1
 广东综艺:
   name:
-  - 广东综艺
+    - 广东综艺
   scraper:
     xmltv: 广东综艺@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -259,7 +259,7 @@ NowNews:
   preview: 1
 广东珠江:
   name:
-  - 广东珠江
+    - 广东珠江
   scraper:
     xmltv: 广东珠江@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -267,7 +267,7 @@ NowNews:
   preview: 1
 广东新闻:
   name:
-  - 广东新闻
+    - 广东新闻
   scraper:
     xmltv: 广东新闻@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -275,7 +275,7 @@ NowNews:
   preview: 1
 广东民生:
   name:
-  - 广东民生
+    - 广东民生
   scraper:
     xmltv: 广东民生@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -283,7 +283,7 @@ NowNews:
   preview: 1
 广东体育:
   name:
-  - 广东体育
+    - 广东体育
   scraper:
     xmltv: 广东体育@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -291,7 +291,7 @@ NowNews:
   preview: 1
 经济科教:
   name:
-  - 经济科教
+    - 经济科教
   scraper:
     xmltv: 经济科教@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -299,7 +299,7 @@ NowNews:
   preview: 1
 广东影视:
   name:
-  - 广东影视
+    - 广东影视
   scraper:
     xmltv: 广东影视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -307,7 +307,7 @@ NowNews:
   preview: 1
 广东少儿:
   name:
-  - 广东少儿
+    - 广东少儿
   scraper:
     xmltv: 广东少儿@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -315,7 +315,7 @@ NowNews:
   preview: 1
 嘉佳卡通:
   name:
-  - 嘉佳卡通
+    - 嘉佳卡通
   scraper:
     xmltv: 嘉佳卡通@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -323,7 +323,7 @@ NowNews:
   preview: 1
 岭南戏曲:
   name:
-  - 岭南戏曲
+    - 岭南戏曲
   scraper:
     xmltv: 岭南戏曲@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -331,7 +331,7 @@ NowNews:
   preview: 1
 现代教育:
   name:
-  - 现代教育
+    - 现代教育
   scraper:
     xmltv: 现代教育@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -339,7 +339,7 @@ NowNews:
   preview: 1
 广州综合:
   name:
-  - 广州综合
+    - 广州综合
   scraper:
     xmltv: 广州综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -347,7 +347,7 @@ NowNews:
   preview: 1
 广州新闻:
   name:
-  - 广州新闻
+    - 广州新闻
   scraper:
     xmltv: 广州新闻@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -355,7 +355,7 @@ NowNews:
   preview: 1
 广州影视:
   name:
-  - 广州影视
+    - 广州影视
   scraper:
     xmltv: 广州影视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -363,7 +363,7 @@ NowNews:
   preview: 1
 广州法治:
   name:
-  - 广州法治
+    - 广州法治
   scraper:
     xmltv: 广州法治@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -371,7 +371,7 @@ NowNews:
   preview: 1
 深圳都市:
   name:
-  - 深圳都市
+    - 深圳都市
   scraper:
     xmltv: 深圳都市@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -379,7 +379,7 @@ NowNews:
   preview: 1
 深圳电视剧:
   name:
-  - 深圳电视剧
+    - 深圳电视剧
   scraper:
     xmltv: 深圳电视剧@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -387,7 +387,7 @@ NowNews:
   preview: 1
 深圳财经生活:
   name:
-  - 深圳财经生活
+    - 深圳财经生活
   scraper:
     xmltv: 深圳财经生活@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -395,7 +395,7 @@ NowNews:
   preview: 1
 深圳体育健康:
   name:
-  - 深圳体育健康
+    - 深圳体育健康
   scraper:
     xmltv: 深圳体育健康@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -403,7 +403,7 @@ NowNews:
   preview: 1
 深圳少儿:
   name:
-  - 深圳少儿
+    - 深圳少儿
   scraper:
     xmltv: 深圳少儿@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -411,7 +411,7 @@ NowNews:
   preview: 1
 湛江综合:
   name:
-  - 湛江综合
+    - 湛江综合
   scraper:
     xmltv: 湛江综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -419,7 +419,7 @@ NowNews:
   preview: 1
 湛江公共:
   name:
-  - 湛江公共
+    - 湛江公共
   scraper:
     xmltv: 湛江公共@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -427,7 +427,7 @@ NowNews:
   preview: 1
 揭阳综合:
   name:
-  - 揭阳综合
+    - 揭阳综合
   scraper:
     xmltv: 揭阳综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -435,7 +435,7 @@ NowNews:
   preview: 1
 揭阳生活:
   name:
-  - 揭阳生活
+    - 揭阳生活
   scraper:
     xmltv: 揭阳生活@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -443,7 +443,7 @@ NowNews:
   preview: 1
 汕尾新闻综合:
   name:
-  - 汕尾新闻综合
+    - 汕尾新闻综合
   scraper:
     xmltv: 汕尾新闻综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -451,7 +451,7 @@ NowNews:
   preview: 1
 汕尾文化生活:
   name:
-  - 汕尾文化生活
+    - 汕尾文化生活
   scraper:
     xmltv: 汕尾文化生活@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -459,7 +459,7 @@ NowNews:
   preview: 1
 江门综合:
   name:
-  - 江门综合
+    - 江门综合
   scraper:
     xmltv: 江门综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -467,23 +467,23 @@ NowNews:
   preview: 1
 江门侨乡生活:
   name:
-  - 江门侨乡生活
+    - 江门侨乡生活
   scraper:
     xmltv: 江门侨乡生活@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-珠海1:
+珠海-1:
   name:
-  - 珠海-1
+    - 珠海-1
   scraper:
     xmltv: 珠海-1@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-珠海2:
+珠海-2:
   name:
-  - 珠海-2
+    - 珠海-2
   scraper:
     xmltv: 珠海-2@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -491,7 +491,7 @@ NowNews:
   preview: 1
 肇庆新闻:
   name:
-  - 肇庆新闻
+    - 肇庆新闻
   scraper:
     xmltv: 肇庆新闻@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -499,7 +499,7 @@ NowNews:
   preview: 1
 肇庆生活服务:
   name:
-  - 肇庆生活服务
+    - 肇庆生活服务
   scraper:
     xmltv: 肇庆生活服务@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -507,7 +507,7 @@ NowNews:
   preview: 1
 河源综合:
   name:
-  - 河源综合
+    - 河源综合
   scraper:
     xmltv: 河源综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -515,7 +515,7 @@ NowNews:
   preview: 1
 河源公共:
   name:
-  - 河源公共
+    - 河源公共
   scraper:
     xmltv: 河源公共@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -523,7 +523,7 @@ NowNews:
   preview: 1
 清远新闻综合:
   name:
-  - 清远新闻综合
+    - 清远新闻综合
   scraper:
     xmltv: 清远新闻综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -531,7 +531,7 @@ NowNews:
   preview: 1
 清远公共:
   name:
-  - 清远公共
+    - 清远公共
   scraper:
     xmltv: 清远公共@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -539,7 +539,7 @@ NowNews:
   preview: 1
 云浮综合:
   name:
-  - 云浮综合
+    - 云浮综合
   scraper:
     xmltv: 云浮综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -547,7 +547,7 @@ NowNews:
   preview: 1
 云浮文旅:
   name:
-  - 云浮文旅
+    - 云浮文旅
   scraper:
     xmltv: 云浮文旅@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -555,7 +555,7 @@ NowNews:
   preview: 1
 茂名综合:
   name:
-  - 茂名综合
+    - 茂名综合
   scraper:
     xmltv: 茂名综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -563,7 +563,7 @@ NowNews:
   preview: 1
 茂名公共:
   name:
-  - 茂名公共
+    - 茂名公共
   scraper:
     xmltv: 茂名公共@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -571,7 +571,7 @@ NowNews:
   preview: 1
 汕头综合:
   name:
-  - 汕头综合
+    - 汕头综合
   scraper:
     xmltv: 汕头综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -579,7 +579,7 @@ NowNews:
   preview: 1
 汕头经济生活:
   name:
-  - 汕头经济生活
+    - 汕头经济生活
   scraper:
     xmltv: 汕头经济生活@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -587,7 +587,7 @@ NowNews:
   preview: 1
 汕头文旅体育:
   name:
-  - 汕头文旅体育
+    - 汕头文旅体育
   scraper:
     xmltv: 汕头文旅体育@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -595,7 +595,7 @@ NowNews:
   preview: 1
 佛山公共:
   name:
-  - 佛山公共
+    - 佛山公共
   scraper:
     xmltv: 佛山公共@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -603,7 +603,7 @@ NowNews:
   preview: 1
 佛山南海:
   name:
-  - 佛山南海
+    - 佛山南海
   scraper:
     xmltv: 佛山南海@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -611,7 +611,7 @@ NowNews:
   preview: 1
 佛山顺德:
   name:
-  - 佛山顺德
+    - 佛山顺德
   scraper:
     xmltv: 佛山顺德@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -619,7 +619,7 @@ NowNews:
   preview: 1
 佛山影视:
   name:
-  - 佛山影视
+    - 佛山影视
   scraper:
     xmltv: 佛山影视@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -627,7 +627,7 @@ NowNews:
   preview: 1
 佛山综合:
   name:
-  - 佛山综合
+    - 佛山综合
   scraper:
     xmltv: 佛山综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -635,7 +635,7 @@ NowNews:
   preview: 1
 东莞新闻:
   name:
-  - 东莞新闻
+    - 东莞新闻
   scraper:
     xmltv: 东莞新闻@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -643,7 +643,7 @@ NowNews:
   preview: 1
 东莞生活资讯:
   name:
-  - 东莞生活资讯
+    - 东莞生活资讯
   scraper:
     xmltv: 东莞生活资讯@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -651,7 +651,7 @@ NowNews:
   preview: 1
 中山综合:
   name:
-  - 中山综合
+    - 中山综合
   scraper:
     xmltv: 中山综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -659,7 +659,7 @@ NowNews:
   preview: 1
 中山公共:
   name:
-  - 中山公共
+    - 中山公共
   scraper:
     xmltv: 中山公共@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -667,7 +667,7 @@ NowNews:
   preview: 1
 潮州综合:
   name:
-  - 潮州综合
+    - 潮州综合
   scraper:
     xmltv: 潮州综合@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -675,7 +675,7 @@ NowNews:
   preview: 1
 潮州民生:
   name:
-  - 潮州民生
+    - 潮州民生
   scraper:
     xmltv: 潮州民生@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -683,15 +683,15 @@ NowNews:
   preview: 1
 徐闻综合:
   name:
-  - 徐闻综合
+    - 徐闻综合
   scraper:
     xmltv: 徐闻综合@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-梅州1:
+梅州-1:
   name:
-  - 梅州-1
+    - 梅州-1
   scraper:
     xmltv: 梅州-1@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -699,23 +699,23 @@ NowNews:
   preview: 1
 客家生活:
   name:
-  - 客家生活
+    - 客家生活
   scraper:
     xmltv: 客家生活@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-hztv1:
+HZTV1:
   name:
-  - HZTV1
+    - HZTV1
   scraper:
     xmltv: HZTV1@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-hztv2:
+HZTV2:
   name:
-  - HZTV2
+    - HZTV2
   scraper:
     xmltv: HZTV2@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -723,23 +723,23 @@ hztv2:
   preview: 1
 金鹰卡通:
   name:
-  - 金鹰卡通
+    - 金鹰卡通
   scraper:
     xmltv: 金鹰卡通@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cetv1:
+CETV-1:
   name:
-  - CETV-1
+    - CETV-1
   scraper:
     xmltv: CETV-1@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cetv4:
+CETV-4:
   name:
-  - CETV-4
+    - CETV-4
   scraper:
     xmltv: CETV-4@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -747,7 +747,7 @@ cetv4:
   preview: 1
 早期教育:
   name:
-  - 早期教育
+    - 早期教育
   scraper:
     xmltv: 早期教育@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -755,7 +755,7 @@ cetv4:
   preview: 1
 中国交通:
   name:
-  - 中国交通
+    - 中国交通
   scraper:
     xmltv: 中国交通@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -763,7 +763,7 @@ cetv4:
   preview: 1
 茶:
   name:
-  - 茶
+    - 茶
   scraper:
     xmltv: 茶@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -771,7 +771,7 @@ cetv4:
   preview: 1
 快乐垂钓:
   name:
-  - 快乐垂钓
+    - 快乐垂钓
   scraper:
     xmltv: 快乐垂钓@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -779,7 +779,7 @@ cetv4:
   preview: 1
 金鹰纪实:
   name:
-  - 金鹰纪实
+    - 金鹰纪实
   scraper:
     xmltv: 金鹰纪实@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -787,7 +787,7 @@ cetv4:
   preview: 1
 求索纪录:
   name:
-  - 求索纪录
+    - 求索纪录
   scraper:
     xmltv: 求索纪录@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -795,7 +795,7 @@ cetv4:
   preview: 1
 求索生活:
   name:
-  - 求索生活
+    - 求索生活
   scraper:
     xmltv: 求索生活@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -803,7 +803,7 @@ cetv4:
   preview: 1
 武术世界:
   name:
-  - 武术世界
+    - 武术世界
   scraper:
     xmltv: 武术世界@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -811,7 +811,7 @@ cetv4:
   preview: 1
 文物宝库:
   name:
-  - 文物宝库
+    - 文物宝库
   scraper:
     xmltv: 文物宝库@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -819,7 +819,7 @@ cetv4:
   preview: 1
 先锋乒羽:
   name:
-  - 先锋乒羽
+    - 先锋乒羽
   scraper:
     xmltv: 先锋乒羽@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -827,7 +827,7 @@ cetv4:
   preview: 1
 天元围棋:
   name:
-  - 天元围棋
+    - 天元围棋
   scraper:
     xmltv: 天元围棋@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -835,7 +835,7 @@ cetv4:
   preview: 1
 爱体育:
   name:
-  - 爱体育
+    - 爱体育
   scraper:
     xmltv: 爱体育@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -843,183 +843,191 @@ cetv4:
   preview: 1
 百事通:
   name:
-  - 百事通
+    - 百事通
   scraper:
     xmltv: 百事通@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv1:
+CCTV-1:
   name:
-  - CCTV-1
+    - CCTV-1
   scraper:
     xmltv: CCTV-1@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv2:
+CCTV-2:
   name:
-  - CCTV-2
+    - CCTV-2
   scraper:
     xmltv: CCTV-2@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv3:
+CCTV-3:
   name:
-  - CCTV-3
+    - CCTV-3
   scraper:
     xmltv: CCTV-3@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv4:
+CCTV-4:
   name:
-  - CCTV-4
+    - CCTV-4
   scraper:
     xmltv: CCTV-4@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv4美洲:
+CCTV-4美洲:
   name:
-  - CCTV-4美洲
+    - CCTV-4美洲
   scraper:
     xmltv: CCTV-4美洲@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv4欧洲:
+CCTV-4欧洲:
   name:
-  - CCTV-4欧洲
+    - CCTV-4欧洲
   scraper:
     xmltv: CCTV-4欧洲@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv5:
+CCTV-5:
   name:
-  - CCTV-5+
+    - CCTV-5
+  scraper:
+    xmltv: CCTV-5@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+CCTV-5+:
+  name:
+    - CCTV-5+
   scraper:
     xmltv: CCTV-5+@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv6:
+CCTV-6:
   name:
-  - CCTV-6
+    - CCTV-6
   scraper:
     xmltv: CCTV-6@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv7:
+CCTV-7:
   name:
-  - CCTV-7
+    - CCTV-7
   scraper:
     xmltv: CCTV-7@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv8:
+CCTV-8:
   name:
-  - CCTV-8
+    - CCTV-8
   scraper:
     xmltv: CCTV-8@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv9:
+CCTV-9:
   name:
-  - CCTV-9
+    - CCTV-9
   scraper:
     xmltv: CCTV-9@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv10:
+CCTV-10:
   name:
-  - CCTV-10
+    - CCTV-10
   scraper:
     xmltv: CCTV-10@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv11:
+CCTV-11:
   name:
-  - CCTV-11
+    - CCTV-11
   scraper:
     xmltv: CCTV-11@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv12:
+CCTV-12:
   name:
-  - CCTV-12
+    - CCTV-12
   scraper:
     xmltv: CCTV-12@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv13:
+CCTV-13:
   name:
-  - CCTV-13
+    - CCTV-13
   scraper:
     xmltv: CCTV-13@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv14:
+CCTV-14:
   name:
-  - CCTV-14
+    - CCTV-14
   scraper:
     xmltv: CCTV-14@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv15:
+CCTV-15:
   name:
-  - CCTV-15
+    - CCTV-15
   scraper:
     xmltv: CCTV-15@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv16:
+CCTV-16:
   name:
-  - CCTV-16
+    - CCTV-16
   scraper:
     xmltv: CCTV-16@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv17:
+CCTV-17:
   name:
-  - CCTV-17
+    - CCTV-17
   scraper:
     xmltv: CCTV-17@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cctv17农业:
+CCTV-17农业:
   name:
-  - CCTV-17农业
+    - CCTV-17农业
   scraper:
     xmltv: CCTV-17农业@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cgtn英语:
+CGTN英语:
   name:
-  - CGTN英语
+    - CGTN英语
   scraper:
     xmltv: CGTN英语@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-cgtn纪录:
+CGTN纪录:
   name:
-  - CGTN纪录
+    - CGTN纪录
   scraper:
     xmltv: CGTN纪录@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1027,7 +1035,7 @@ cgtn纪录:
   preview: 1
 兵器科技:
   name:
-  - 兵器科技
+    - 兵器科技
   scraper:
     xmltv: 兵器科技@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1035,7 +1043,7 @@ cgtn纪录:
   preview: 1
 电视指南:
   name:
-  - 电视指南
+    - 电视指南
   scraper:
     xmltv: 电视指南@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1043,7 +1051,7 @@ cgtn纪录:
   preview: 1
 风云足球:
   name:
-  - 风云足球
+    - 风云足球
   scraper:
     xmltv: 风云足球@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1051,7 +1059,7 @@ cgtn纪录:
   preview: 1
 央视台球:
   name:
-  - 央视台球
+    - 央视台球
   scraper:
     xmltv: 央视台球@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1059,7 +1067,7 @@ cgtn纪录:
   preview: 1
 高尔夫网球:
   name:
-  - 高尔夫网球
+    - 高尔夫网球
   scraper:
     xmltv: 高尔夫网球@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1067,7 +1075,7 @@ cgtn纪录:
   preview: 1
 女性时尚:
   name:
-  - 女性时尚
+    - 女性时尚
   scraper:
     xmltv: 女性时尚@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1075,7 +1083,7 @@ cgtn纪录:
   preview: 1
 世界地理:
   name:
-  - 世界地理
+    - 世界地理
   scraper:
     xmltv: 世界地理@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1083,7 +1091,7 @@ cgtn纪录:
   preview: 1
 怀旧剧场:
   name:
-  - 怀旧剧场
+    - 怀旧剧场
   scraper:
     xmltv: 怀旧剧场@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1091,7 +1099,7 @@ cgtn纪录:
   preview: 1
 风云剧场:
   name:
-  - 风云剧场
+    - 风云剧场
   scraper:
     xmltv: 风云剧场@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1099,7 +1107,7 @@ cgtn纪录:
   preview: 1
 央视文化精品:
   name:
-  - 央视文化精品
+    - 央视文化精品
   scraper:
     xmltv: 央视文化精品@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1107,7 +1115,7 @@ cgtn纪录:
   preview: 1
 第一剧场:
   name:
-  - 第一剧场
+    - 第一剧场
   scraper:
     xmltv: 第一剧场@http://epg.112114.xyz/pp.xml
   refresh: today
@@ -1115,7 +1123,7 @@ cgtn纪录:
   preview: 1
 风云音乐:
   name:
-  - 风云音乐
+    - 风云音乐
   scraper:
     xmltv: 风云音乐@http://epg.112114.xyz/pp.xml
   refresh: today
