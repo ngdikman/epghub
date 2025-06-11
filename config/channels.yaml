@@ -22,3 +22,11 @@ dwqws:
   refresh: today
   recap: 1
   preview: 1
+fszh:
+  name:
+    - 佛山综合
+  scraper:
+    xmltv: 佛山综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
