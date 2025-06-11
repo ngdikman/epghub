@@ -1,3 +1,4 @@
+# http://epg.pw/xmltv/epg_HK.xml
 ViuTV:
   name:
     - ViuTV
@@ -14,19 +15,1874 @@ NowNews:
   refresh: today
   recap: 1
   preview: 1
-dwqws:
+
+#http://epg.112114.xyz/pp.xml
+广东卫视:
   name:
-    - 大湾区卫视
+  - 广东卫视
+  scraper:
+    xmltv: 广东卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+大湾区卫视:
+  name:
+  - 大湾区卫视
   scraper:
     xmltv: 大湾区卫视@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
-fszh:
+大湾区卫视海外版:
   name:
-    - 佛山综合
+  - 大湾区卫视海外版
+  scraper:
+    xmltv: 大湾区卫视海外版@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+深圳卫视:
+  name:
+  - 深圳卫视
+  scraper:
+    xmltv: 深圳卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+湖南卫视:
+  name:
+  - 湖南卫视
+  scraper:
+    xmltv: 湖南卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+浙江卫视:
+  name:
+  - 浙江卫视
+  scraper:
+    xmltv: 浙江卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+江苏卫视:
+  name:
+  - 江苏卫视
+  scraper:
+    xmltv: 江苏卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+东方卫视:
+  name:
+  - 东方卫视
+  scraper:
+    xmltv: 东方卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+安徽卫视:
+  name:
+  - 安徽卫视
+  scraper:
+    xmltv: 安徽卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+北京卫视:
+  name:
+  - 北京卫视
+  scraper:
+    xmltv: 北京卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+天津卫视:
+  name:
+  - 天津卫视
+  scraper:
+    xmltv: 天津卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+山东卫视:
+  name:
+  - 山东卫视
+  scraper:
+    xmltv: 山东卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+江西卫视:
+  name:
+  - 江西卫视
+  scraper:
+    xmltv: 江西卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+湖北卫视:
+  name:
+  - 湖北卫视
+  scraper:
+    xmltv: 湖北卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+辽宁卫视:
+  name:
+  - 辽宁卫视
+  scraper:
+    xmltv: 辽宁卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+黑龙江卫视:
+  name:
+  - 黑龙江卫视
+  scraper:
+    xmltv: 黑龙江卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+贵州卫视:
+  name:
+  - 贵州卫视
+  scraper:
+    xmltv: 贵州卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+四川卫视:
+  name:
+  - 四川卫视
+  scraper:
+    xmltv: 四川卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+河南卫视:
+  name:
+  - 河南卫视
+  scraper:
+    xmltv: 河南卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+云南卫视:
+  name:
+  - 云南卫视
+  scraper:
+    xmltv: 云南卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+重庆卫视:
+  name:
+  - 重庆卫视
+  scraper:
+    xmltv: 重庆卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+河北卫视:
+  name:
+  - 河北卫视
+  scraper:
+    xmltv: 河北卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+东南卫视:
+  name:
+  - 东南卫视
+  scraper:
+    xmltv: 东南卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广西卫视:
+  name:
+  - 广西卫视
+  scraper:
+    xmltv: 广西卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+吉林卫视:
+  name:
+  - 吉林卫视
+  scraper:
+    xmltv: 吉林卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+青海卫视:
+  name:
+  - 青海卫视
+  scraper:
+    xmltv: 青海卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+海南卫视:
+  name:
+  - 海南卫视
+  scraper:
+    xmltv: 海南卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+甘肃卫视:
+  name:
+  - 甘肃卫视
+  scraper:
+    xmltv: 甘肃卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+三沙卫视:
+  name:
+  - 三沙卫视
+  scraper:
+    xmltv: 三沙卫视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东综艺:
+  name:
+  - 广东综艺
+  scraper:
+    xmltv: 广东综艺@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东珠江:
+  name:
+  - 广东珠江
+  scraper:
+    xmltv: 广东珠江@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东新闻:
+  name:
+  - 广东新闻
+  scraper:
+    xmltv: 广东新闻@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东民生:
+  name:
+  - 广东民生
+  scraper:
+    xmltv: 广东民生@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东体育:
+  name:
+  - 广东体育
+  scraper:
+    xmltv: 广东体育@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+经济科教:
+  name:
+  - 经济科教
+  scraper:
+    xmltv: 经济科教@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东影视:
+  name:
+  - 广东影视
+  scraper:
+    xmltv: 广东影视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广东少儿:
+  name:
+  - 广东少儿
+  scraper:
+    xmltv: 广东少儿@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+嘉佳卡通:
+  name:
+  - 嘉佳卡通
+  scraper:
+    xmltv: 嘉佳卡通@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+岭南戏曲:
+  name:
+  - 岭南戏曲
+  scraper:
+    xmltv: 岭南戏曲@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+现代教育:
+  name:
+  - 现代教育
+  scraper:
+    xmltv: 现代教育@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广州综合:
+  name:
+  - 广州综合
+  scraper:
+    xmltv: 广州综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广州新闻:
+  name:
+  - 广州新闻
+  scraper:
+    xmltv: 广州新闻@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广州影视:
+  name:
+  - 广州影视
+  scraper:
+    xmltv: 广州影视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+广州法治:
+  name:
+  - 广州法治
+  scraper:
+    xmltv: 广州法治@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+深圳都市:
+  name:
+  - 深圳都市
+  scraper:
+    xmltv: 深圳都市@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+深圳电视剧:
+  name:
+  - 深圳电视剧
+  scraper:
+    xmltv: 深圳电视剧@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+深圳财经生活:
+  name:
+  - 深圳财经生活
+  scraper:
+    xmltv: 深圳财经生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+深圳体育健康:
+  name:
+  - 深圳体育健康
+  scraper:
+    xmltv: 深圳体育健康@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+深圳少儿:
+  name:
+  - 深圳少儿
+  scraper:
+    xmltv: 深圳少儿@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+湛江综合:
+  name:
+  - 湛江综合
+  scraper:
+    xmltv: 湛江综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+湛江公共:
+  name:
+  - 湛江公共
+  scraper:
+    xmltv: 湛江公共@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+揭阳综合:
+  name:
+  - 揭阳综合
+  scraper:
+    xmltv: 揭阳综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+揭阳生活:
+  name:
+  - 揭阳生活
+  scraper:
+    xmltv: 揭阳生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+汕尾新闻综合:
+  name:
+  - 汕尾新闻综合
+  scraper:
+    xmltv: 汕尾新闻综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+汕尾文化生活:
+  name:
+  - 汕尾文化生活
+  scraper:
+    xmltv: 汕尾文化生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+江门综合:
+  name:
+  - 江门综合
+  scraper:
+    xmltv: 江门综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+江门侨乡生活:
+  name:
+  - 江门侨乡生活
+  scraper:
+    xmltv: 江门侨乡生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+珠海1:
+  name:
+  - 珠海-1
+  scraper:
+    xmltv: 珠海-1@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+珠海2:
+  name:
+  - 珠海-2
+  scraper:
+    xmltv: 珠海-2@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+肇庆新闻:
+  name:
+  - 肇庆新闻
+  scraper:
+    xmltv: 肇庆新闻@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+肇庆生活服务:
+  name:
+  - 肇庆生活服务
+  scraper:
+    xmltv: 肇庆生活服务@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+河源综合:
+  name:
+  - 河源综合
+  scraper:
+    xmltv: 河源综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+河源公共:
+  name:
+  - 河源公共
+  scraper:
+    xmltv: 河源公共@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+清远新闻综合:
+  name:
+  - 清远新闻综合
+  scraper:
+    xmltv: 清远新闻综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+清远公共:
+  name:
+  - 清远公共
+  scraper:
+    xmltv: 清远公共@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+云浮综合:
+  name:
+  - 云浮综合
+  scraper:
+    xmltv: 云浮综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+云浮文旅:
+  name:
+  - 云浮文旅
+  scraper:
+    xmltv: 云浮文旅@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+茂名综合:
+  name:
+  - 茂名综合
+  scraper:
+    xmltv: 茂名综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+茂名公共:
+  name:
+  - 茂名公共
+  scraper:
+    xmltv: 茂名公共@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+汕头综合:
+  name:
+  - 汕头综合
+  scraper:
+    xmltv: 汕头综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+汕头经济生活:
+  name:
+  - 汕头经济生活
+  scraper:
+    xmltv: 汕头经济生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+汕头文旅体育:
+  name:
+  - 汕头文旅体育
+  scraper:
+    xmltv: 汕头文旅体育@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+佛山公共:
+  name:
+  - 佛山公共
+  scraper:
+    xmltv: 佛山公共@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+佛山南海:
+  name:
+  - 佛山南海
+  scraper:
+    xmltv: 佛山南海@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+佛山顺德:
+  name:
+  - 佛山顺德
+  scraper:
+    xmltv: 佛山顺德@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+佛山影视:
+  name:
+  - 佛山影视
+  scraper:
+    xmltv: 佛山影视@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+佛山综合:
+  name:
+  - 佛山综合
   scraper:
     xmltv: 佛山综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+东莞新闻:
+  name:
+  - 东莞新闻
+  scraper:
+    xmltv: 东莞新闻@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+东莞生活资讯:
+  name:
+  - 东莞生活资讯
+  scraper:
+    xmltv: 东莞生活资讯@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+中山综合:
+  name:
+  - 中山综合
+  scraper:
+    xmltv: 中山综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+中山公共:
+  name:
+  - 中山公共
+  scraper:
+    xmltv: 中山公共@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+潮州综合:
+  name:
+  - 潮州综合
+  scraper:
+    xmltv: 潮州综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+潮州民生:
+  name:
+  - 潮州民生
+  scraper:
+    xmltv: 潮州民生@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+徐闻综合:
+  name:
+  - 徐闻综合
+  scraper:
+    xmltv: 徐闻综合@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+梅州1:
+  name:
+  - 梅州-1
+  scraper:
+    xmltv: 梅州-1@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+客家生活:
+  name:
+  - 客家生活
+  scraper:
+    xmltv: 客家生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+hztv1:
+  name:
+  - HZTV1
+  scraper:
+    xmltv: HZTV1@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+hztv2:
+  name:
+  - HZTV2
+  scraper:
+    xmltv: HZTV2@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+金鹰卡通:
+  name:
+  - 金鹰卡通
+  scraper:
+    xmltv: 金鹰卡通@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cetv1:
+  name:
+  - CETV-1
+  scraper:
+    xmltv: CETV-1@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cetv4:
+  name:
+  - CETV-4
+  scraper:
+    xmltv: CETV-4@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+早期教育:
+  name:
+  - 早期教育
+  scraper:
+    xmltv: 早期教育@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+中国交通:
+  name:
+  - 中国交通
+  scraper:
+    xmltv: 中国交通@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+茶:
+  name:
+  - 茶
+  scraper:
+    xmltv: 茶@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+快乐垂钓:
+  name:
+  - 快乐垂钓
+  scraper:
+    xmltv: 快乐垂钓@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+金鹰纪实:
+  name:
+  - 金鹰纪实
+  scraper:
+    xmltv: 金鹰纪实@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+求索纪录:
+  name:
+  - 求索纪录
+  scraper:
+    xmltv: 求索纪录@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+求索生活:
+  name:
+  - 求索生活
+  scraper:
+    xmltv: 求索生活@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+武术世界:
+  name:
+  - 武术世界
+  scraper:
+    xmltv: 武术世界@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+文物宝库:
+  name:
+  - 文物宝库
+  scraper:
+    xmltv: 文物宝库@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+先锋乒羽:
+  name:
+  - 先锋乒羽
+  scraper:
+    xmltv: 先锋乒羽@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+天元围棋:
+  name:
+  - 天元围棋
+  scraper:
+    xmltv: 天元围棋@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+爱体育:
+  name:
+  - 爱体育
+  scraper:
+    xmltv: 爱体育@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+百事通:
+  name:
+  - 百事通
+  scraper:
+    xmltv: 百事通@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv1:
+  name:
+  - CCTV-1
+  scraper:
+    xmltv: CCTV-1@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv2:
+  name:
+  - CCTV-2
+  scraper:
+    xmltv: CCTV-2@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv3:
+  name:
+  - CCTV-3
+  scraper:
+    xmltv: CCTV-3@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv4:
+  name:
+  - CCTV-4
+  scraper:
+    xmltv: CCTV-4@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv4美洲:
+  name:
+  - CCTV-4美洲
+  scraper:
+    xmltv: CCTV-4美洲@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv4欧洲:
+  name:
+  - CCTV-4欧洲
+  scraper:
+    xmltv: CCTV-4欧洲@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv5:
+  name:
+  - CCTV-5+
+  scraper:
+    xmltv: CCTV-5+@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv6:
+  name:
+  - CCTV-6
+  scraper:
+    xmltv: CCTV-6@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv7:
+  name:
+  - CCTV-7
+  scraper:
+    xmltv: CCTV-7@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv8:
+  name:
+  - CCTV-8
+  scraper:
+    xmltv: CCTV-8@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv9:
+  name:
+  - CCTV-9
+  scraper:
+    xmltv: CCTV-9@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv10:
+  name:
+  - CCTV-10
+  scraper:
+    xmltv: CCTV-10@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv11:
+  name:
+  - CCTV-11
+  scraper:
+    xmltv: CCTV-11@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv12:
+  name:
+  - CCTV-12
+  scraper:
+    xmltv: CCTV-12@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv13:
+  name:
+  - CCTV-13
+  scraper:
+    xmltv: CCTV-13@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv14:
+  name:
+  - CCTV-14
+  scraper:
+    xmltv: CCTV-14@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv15:
+  name:
+  - CCTV-15
+  scraper:
+    xmltv: CCTV-15@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv16:
+  name:
+  - CCTV-16
+  scraper:
+    xmltv: CCTV-16@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv17:
+  name:
+  - CCTV-17
+  scraper:
+    xmltv: CCTV-17@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cctv17农业:
+  name:
+  - CCTV-17农业
+  scraper:
+    xmltv: CCTV-17农业@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cgtn英语:
+  name:
+  - CGTN英语
+  scraper:
+    xmltv: CGTN英语@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+cgtn纪录:
+  name:
+  - CGTN纪录
+  scraper:
+    xmltv: CGTN纪录@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+兵器科技:
+  name:
+  - 兵器科技
+  scraper:
+    xmltv: 兵器科技@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+电视指南:
+  name:
+  - 电视指南
+  scraper:
+    xmltv: 电视指南@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+风云足球:
+  name:
+  - 风云足球
+  scraper:
+    xmltv: 风云足球@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+央视台球:
+  name:
+  - 央视台球
+  scraper:
+    xmltv: 央视台球@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+高尔夫网球:
+  name:
+  - 高尔夫网球
+  scraper:
+    xmltv: 高尔夫网球@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+女性时尚:
+  name:
+  - 女性时尚
+  scraper:
+    xmltv: 女性时尚@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+世界地理:
+  name:
+  - 世界地理
+  scraper:
+    xmltv: 世界地理@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+怀旧剧场:
+  name:
+  - 怀旧剧场
+  scraper:
+    xmltv: 怀旧剧场@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+风云剧场:
+  name:
+  - 风云剧场
+  scraper:
+    xmltv: 风云剧场@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+央视文化精品:
+  name:
+  - 央视文化精品
+  scraper:
+    xmltv: 央视文化精品@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+第一剧场:
+  name:
+  - 第一剧场
+  scraper:
+    xmltv: 第一剧场@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+风云音乐:
+  name:
+  - 风云音乐
+  scraper:
+    xmltv: 风云音乐@http://epg.112114.xyz/pp.xml
+  refresh: today
+  recap: 1
+  preview: 1
+
+# mytvsuper
+CWIN:
+  name:
+    - SUPER FREE
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SVAR:
+  name:
+    - SUPER獎門人
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SEYT:
+  name:
+    - SUPER EYT
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SFOO:
+  name:
+    - SUPER識食
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+STRA:
+  name:
+    - SUPER識嘆
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SMUS:
+  name:
+    - SUPER Music
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SGOL:
+  name:
+    - SUPER金曲
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SSIT:
+  name:
+    - SUPER煲劇
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+STVM:
+  name:
+    - SUPER劇場
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SDOC:
+  name:
+    - SUPER話當年
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SSPT:
+  name:
+    - SUPER Sports
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+C18:
+  name:
+    - myTV SUPER 18台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+C28:
+  name:
+    - 28AI智慧賽馬
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+TVG:
+  name:
+    - 黃金翡翠台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+J:
+  name:
+    - 翡翠台
+    - 翡翠台(超高清)
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+B:
+  name:
+    - TVB Plus
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+C:
+  name:
+    - 無綫新聞台
+    - 互動窗 1
+    - 互動窗 2
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+P:
+  name:
+    - 明珠台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CTVC:
+  name:
+    - 千禧經典台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CTVS:
+  name:
+    - 亞洲劇台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CDR3:
+  name:
+    - 華語劇台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+TVO:
+  name:
+    - 黃金華劇台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CTVE:
+  name:
+    - 娛樂新聞台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CCOC:
+  name:
+    - 戲曲台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+KID:
+  name:
+    - SUPER Kids Channel
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+ZOO:
+  name:
+    - ZooMoo
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CNIKO:
+  name:
+    - Nickelodeon
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CNIJR:
+  name:
+    - Nick Jr
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CCLM:
+  name:
+    - 粵語片台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CMAM:
+  name:
+    - 美亞電影台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CTHR:
+  name:
+    - Thrill
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CCCM:
+  name:
+    - 天映經典頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CMC:
+  name:
+    - 中國電影頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CRTX:
+  name:
+    - ROCK Action
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+POPC:
+  name:
+    - PopC
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+ACTM:
+  name:
+    - Action Hollywood Movies
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+RCM:
+  name:
+    - Rialto Classic Movies (RCM)
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CKIX:
+  name:
+    - KIX
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+TRSP:
+  name:
+    - TRACE Sport Stars
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+LNH:
+  name:
+    - Love Nature HD
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+LN4:
+  name:
+    - Love Nature 4K
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SMS:
+  name:
+    - Global Trekker
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+PETC:
+  name:
+    - Pet Club TV
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+GLBT:
+  name:
+    - Globetrotter
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+DOCV:
+  name:
+    - Docsville
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+PULS:
+  name:
+    - Pulse Documentaries
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CRTE:
+  name:
+    - ROCK綜藝娛樂
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CAXN:
+  name:
+    - AXN
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CANI:
+  name:
+    - Animax
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CJTV:
+  name:
+    - tvN
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CTS1:
+  name:
+    - 無線衛星亞洲台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CRE:
+  name:
+    - 創世電視
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+FBX:
+  name:
+    - FashionBox
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CMEZ:
+  name:
+    - Mezzo Live HD
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CC1:
+  name:
+    - 中央電視台綜合頻道 (港澳版)
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CGD:
+  name:
+    - CGTN (中國環球電視網)記錄頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CGE:
+  name:
+    - CGTN (中國環球電視網)英語頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+DTV:
+  name:
+    - 東方衛視國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+PCC:
+  name:
+    - 鳳凰衛視中文台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+PIN:
+  name:
+    - 鳳凰衛視資訊台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+PHK:
+  name:
+    - 鳳凰衛視香港台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CC4:
+  name:
+    - 中國中央電視台中文國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CCE:
+  name:
+    - 中國中央電視台娛樂頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CCO:
+  name:
+    - 中國中央電視台戲曲頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+YNTV:
+  name:
+    - 雲南瀾湄國際衛視
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+AHTV:
+  name:
+    - 安徽廣播電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+BJTV:
+  name:
+    - 北京電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+GXTV:
+  name:
+    - 廣西電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+FJTV:
+  name:
+    - 福建海峽衛視國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+HNTV:
+  name:
+    - 湖南電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+JSTV:
+  name:
+    - 江蘇電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+GBTV:
+  name:
+    - 廣東廣播電視台大灣區衛視頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+ZJTV:
+  name:
+    - 浙江電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+SZTV:
+  name:
+    - 深圳衛視國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+NOW7:
+  name:
+    - NOW 70s
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+NOW8:
+  name:
+    - NOW 80s
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+NOWR:
+  name:
+    - NOW ROCK
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+NOW9:
+  name:
+    - NOW 90s00s
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CONC:
+  name:
+    - Concerto
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+TRUR:
+  name:
+    - TRACE Urban
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CTSN:
+  name:
+    - 無線衛星新聞台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CCNA:
+  name:
+    - 亞洲新聞台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CJAZ:
+  name:
+    - 半島電視台英語頻道
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CF24:
+  name:
+    - France 24
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CDW1:
+  name:
+    - DW
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CNHK:
+  name:
+    - NHK World-Japan
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+CARI:
+  name:
+    - Arirang TV
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+NSWD:
+  name:
+    - NewsWorld
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+EVT2:
+  name:
+    - myTV SUPER直播足球2台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+EVT3:
+  name:
+    - myTV SUPER直播足球3台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+EVT4:
+  name:
+    - myTV SUPER直播足球4台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+EVT5:
+  name:
+    - myTV SUPER直播足球5台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+EVT6:
+  name:
+    - myTV SUPER直播足球6台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+EVT7:
+  name:
+    - myTV SUPER直播足球7台
+  scraper:
+    mytvsuper: 
+  refresh: today
+  recap: 1
+  preview: 1
+TEST:
+  name:
+    - 測試頻道
+  scraper:
+    mytvsuper: 
   refresh: today
   recap: 1
   preview: 1
