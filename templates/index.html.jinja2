@@ -301,6 +301,36 @@
             80% { opacity: 1; top: 20px; }
             100% { opacity: 0; top: 10px; }
         }
+
+        /* 新增搜索框样式 */
+        .channel-search-container {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 10px 0;
+            z-index: 10;
+        }
+        
+        .channel-search-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .channel-search-input:focus {
+            border-color: #007BFF;
+        }
+        
+        /* 新增隐藏频道的样式 */
+        .channel-item.hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -322,22 +352,25 @@
     </div>
     <div class="break-line"></div>
     <div class="container">
-        <div class="channel-list-container">
-            <div class="channel-list">
-                <div class="channel-item selected" data-channel="{{ first_channel }}">{{ first_channel }}</div>
-                {% for channel in channel_list %}
-                <div class="channel-item" data-channel="{{ channel }}">{{ channel }}</div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="program-list-container">
-            <div class="date-nav">
-                <p>
-                    <span class="date-prev" id="prevDate">&lt;&lt; 前一天</span>
-                    <span class="date-now" id="currentDate">2023-10-10</span>
-                    <span class="date-next" id="nextDate">后一天 &gt;&gt;</span>
-                </p>
-            </div>
+<div class="channel-list-container">
+    <div class="channel-search-container">
+        <input type="text" id="channelSearch" placeholder="搜索频道..." class="channel-search-input">
+    </div>
+    <div class="channel-list">
+        <div class="channel-item selected" data-channel="{{ first_channel }}">{{ first_channel }}</div>
+        {% for channel in channel_list %}
+        <div class="channel-item" data-channel="{{ channel }}">{{ channel }}</div>
+        {% endfor %}
+    </div>
+    </div>
+            <div class="program-list-container">
+                <div class="date-nav">
+                    <p>
+                        <span class="date-prev" id="prevDate">&lt;&lt; 前一天</span>
+                        <span class="date-now" id="currentDate">2023-10-10</span>
+                        <span class="date-next" id="nextDate">后一天 &gt;&gt;</span>
+                    </p>
+                </div>
             <table class="program-list">
                 <tbody></tbody>
             </table>
@@ -359,7 +392,14 @@
                     currentTime = new Date(currentTime.toISOString());
 
                     if (data.epg_data) {
-                        data.epg_data.forEach((program, index) => {
+                        // 新增排序逻辑 - 按开始时间排序
+                        const sortedPrograms = data.epg_data.sort((a, b) => {
+                            const timeA = new Date(`${currentDate}T${a.start}{{timezone_offset}}`).getTime();
+                            const timeB = new Date(`${currentDate}T${b.start}{{timezone_offset}}`).getTime();
+                            return timeA - timeB;
+                        });
+
+                        sortedPrograms.forEach((program, index) => {
                             const programItem = document.createElement('tr');
                             programItem.classList.add('program-item');
 
@@ -518,6 +558,33 @@
 
         // Refresh the program list for the initially selected channel
         goBackToday();
+
+         // 新增实时搜索功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('channelSearch');
+            const channelItems = document.querySelectorAll('.channel-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                channelItems.forEach(item => {
+                    const channelName = item.textContent.toLowerCase();
+                    if (channelName.includes(searchTerm)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // 保持搜索框在滚动时可见
+            const channelListContainer = document.querySelector('.channel-list-container');
+            channelListContainer.addEventListener('scroll', function() {
+                const scrollTop = channelListContainer.scrollTop;
+                const searchContainer = document.querySelector('.channel-search-container');
+                searchContainer.style.boxShadow = scrollTop > 0 ? '0 2px 5px rgba(0,0,0,0.1)' : 'none';
+            });
+        });
     </script>
 </body>
 
