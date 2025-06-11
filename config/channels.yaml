@@ -18,7 +18,7 @@ dwqws:
   name:
     - 大湾区卫视
   scraper:
-    xmltv: 大湾区卫视@http://live.fanmingming.cn/e.xml 
+    xmltv: 大湾区卫视@http://epg.112114.xyz/pp.xml
   refresh: today
   recap: 1
   preview: 1
