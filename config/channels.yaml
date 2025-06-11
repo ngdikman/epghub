@@ -9,7 +9,7 @@ ViuTV:
   preview: 1
 Now新闻台:
   name:
-    - Now新聞台
+    - Now新闻台
   scraper:
     xmltv: 410344@http://epg.pw/xmltv/epg_HK.xml 
   refresh: today
