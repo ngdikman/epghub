@@ -6,7 +6,7 @@ ViuTV:
     xmltv: 410274@http://epg.pw/xmltv/epg_HK.xml 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 Now新闻台:
   name:
     - Now新闻台
@@ -14,7 +14,7 @@ Now新闻台:
     xmltv: 410344@http://epg.pw/xmltv/epg_HK.xml 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 
 HOY76:
   name:
@@ -23,7 +23,7 @@ HOY76:
     xmltv: HOY76@http://epg.112114.xyz/pp.xml 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 HOY77:
   name:
     - HOY77
@@ -31,7 +31,7 @@ HOY77:
     xmltv: HOY77@http://epg.112114.xyz/pp.xml 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 HOY78:
   name:
     - HOY78
@@ -39,7 +39,7 @@ HOY78:
     xmltv: HOY78@http://epg.112114.xyz/pp.xml 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 
 # mytvsuper
 CWIN:
@@ -49,7 +49,7 @@ CWIN:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SVAR:
   name:
     - SUPER獎門人
@@ -57,7 +57,7 @@ SVAR:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SEYT:
   name:
     - SUPER EYT
@@ -65,7 +65,7 @@ SEYT:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SFOO:
   name:
     - SUPER識食
@@ -73,7 +73,7 @@ SFOO:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 STRA:
   name:
     - SUPER識嘆
@@ -81,7 +81,7 @@ STRA:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SMUS:
   name:
     - SUPER Music
@@ -89,7 +89,7 @@ SMUS:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SGOL:
   name:
     - SUPER金曲
@@ -97,7 +97,7 @@ SGOL:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SSIT:
   name:
     - SUPER煲劇
@@ -105,7 +105,7 @@ SSIT:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 STVM:
   name:
     - SUPER劇場
@@ -113,7 +113,7 @@ STVM:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SDOC:
   name:
     - SUPER話當年
@@ -121,7 +121,7 @@ SDOC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SSPT:
   name:
     - SUPER Sports
@@ -129,7 +129,7 @@ SSPT:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 C18:
   name:
     - myTV SUPER 18台
@@ -137,7 +137,7 @@ C18:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 C28:
   name:
     - 28AI智慧賽馬
@@ -145,7 +145,7 @@ C28:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 TVG:
   name:
     - 黃金翡翠台
@@ -153,7 +153,7 @@ TVG:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 J:
   name:
     - 翡翠台
@@ -162,7 +162,7 @@ J:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 B:
   name:
     - TVB Plus
@@ -170,7 +170,7 @@ B:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 C:
   name:
     - 無綫新聞台
@@ -180,7 +180,7 @@ C:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 P:
   name:
     - 明珠台
@@ -188,7 +188,7 @@ P:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CTVC:
   name:
     - 千禧經典台
@@ -196,7 +196,7 @@ CTVC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CTVS:
   name:
     - 亞洲劇台
@@ -204,7 +204,7 @@ CTVS:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CDR3:
   name:
     - 華語劇台
@@ -212,7 +212,7 @@ CDR3:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 TVO:
   name:
     - 黃金華劇台
@@ -220,7 +220,7 @@ TVO:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CTVE:
   name:
     - 娛樂新聞台
@@ -228,7 +228,7 @@ CTVE:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCOC:
   name:
     - 戲曲台
@@ -236,7 +236,7 @@ CCOC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 KID:
   name:
     - SUPER Kids Channel
@@ -244,7 +244,7 @@ KID:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 ZOO:
   name:
     - ZooMoo
@@ -252,7 +252,7 @@ ZOO:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CNIKO:
   name:
     - Nickelodeon
@@ -260,7 +260,7 @@ CNIKO:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CNIJR:
   name:
     - Nick Jr
@@ -268,7 +268,7 @@ CNIJR:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCLM:
   name:
     - 粵語片台
@@ -276,7 +276,7 @@ CCLM:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CMAM:
   name:
     - 美亞電影台
@@ -284,7 +284,7 @@ CMAM:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CTHR:
   name:
     - Thrill
@@ -292,7 +292,7 @@ CTHR:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCCM:
   name:
     - 天映經典頻道
@@ -300,7 +300,7 @@ CCCM:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CMC:
   name:
     - 中國電影頻道
@@ -308,7 +308,7 @@ CMC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CRTX:
   name:
     - ROCK Action
@@ -316,7 +316,7 @@ CRTX:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 POPC:
   name:
     - PopC
@@ -324,7 +324,7 @@ POPC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 ACTM:
   name:
     - Action Hollywood Movies
@@ -332,7 +332,7 @@ ACTM:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 RCM:
   name:
     - Rialto Classic Movies (RCM)
@@ -340,7 +340,7 @@ RCM:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CKIX:
   name:
     - KIX
@@ -348,7 +348,7 @@ CKIX:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 TRSP:
   name:
     - TRACE Sport Stars
@@ -356,7 +356,7 @@ TRSP:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 LNH:
   name:
     - Love Nature HD
@@ -364,7 +364,7 @@ LNH:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 LN4:
   name:
     - Love Nature 4K
@@ -372,7 +372,7 @@ LN4:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SMS:
   name:
     - Global Trekker
@@ -380,7 +380,7 @@ SMS:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 PETC:
   name:
     - Pet Club TV
@@ -388,7 +388,7 @@ PETC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 GLBT:
   name:
     - Globetrotter
@@ -396,7 +396,7 @@ GLBT:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 DOCV:
   name:
     - Docsville
@@ -404,7 +404,7 @@ DOCV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 PULS:
   name:
     - Pulse Documentaries
@@ -412,7 +412,7 @@ PULS:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CRTE:
   name:
     - ROCK綜藝娛樂
@@ -420,7 +420,7 @@ CRTE:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CAXN:
   name:
     - AXN
@@ -428,7 +428,7 @@ CAXN:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CANI:
   name:
     - Animax
@@ -436,7 +436,7 @@ CANI:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CJTV:
   name:
     - tvN
@@ -444,7 +444,7 @@ CJTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CTS1:
   name:
     - 無線衛星亞洲台
@@ -452,7 +452,7 @@ CTS1:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CRE:
   name:
     - 創世電視
@@ -460,7 +460,7 @@ CRE:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 FBX:
   name:
     - FashionBox
@@ -468,7 +468,7 @@ FBX:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CMEZ:
   name:
     - Mezzo Live HD
@@ -476,7 +476,7 @@ CMEZ:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CC1:
   name:
     - 中央電視台綜合頻道 (港澳版)
@@ -484,7 +484,7 @@ CC1:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CGD:
   name:
     - CGTN (中國環球電視網)記錄頻道
@@ -492,7 +492,7 @@ CGD:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CGE:
   name:
     - CGTN (中國環球電視網)英語頻道
@@ -500,7 +500,7 @@ CGE:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 DTV:
   name:
     - 東方衛視國際頻道
@@ -508,7 +508,7 @@ DTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 PCC:
   name:
     - 鳳凰衛視中文台
@@ -516,7 +516,7 @@ PCC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 PIN:
   name:
     - 鳳凰衛視資訊台
@@ -524,7 +524,7 @@ PIN:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 PHK:
   name:
     - 鳳凰衛視香港台
@@ -532,7 +532,7 @@ PHK:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CC4:
   name:
     - 中國中央電視台中文國際頻道
@@ -540,7 +540,7 @@ CC4:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCE:
   name:
     - 中國中央電視台娛樂頻道
@@ -548,7 +548,7 @@ CCE:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCO:
   name:
     - 中國中央電視台戲曲頻道
@@ -556,7 +556,7 @@ CCO:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 YNTV:
   name:
     - 雲南瀾湄國際衛視
@@ -564,7 +564,7 @@ YNTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 AHTV:
   name:
     - 安徽廣播電視台國際頻道
@@ -572,7 +572,7 @@ AHTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 BJTV:
   name:
     - 北京電視台國際頻道
@@ -580,7 +580,7 @@ BJTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 GXTV:
   name:
     - 廣西電視台國際頻道
@@ -588,7 +588,7 @@ GXTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 FJTV:
   name:
     - 福建海峽衛視國際頻道
@@ -596,7 +596,7 @@ FJTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 HNTV:
   name:
     - 湖南電視台國際頻道
@@ -604,7 +604,7 @@ HNTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 JSTV:
   name:
     - 江蘇電視台國際頻道
@@ -612,7 +612,7 @@ JSTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 GBTV:
   name:
     - 廣東廣播電視台大灣區衛視頻道
@@ -620,7 +620,7 @@ GBTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 ZJTV:
   name:
     - 浙江電視台國際頻道
@@ -628,7 +628,7 @@ ZJTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 SZTV:
   name:
     - 深圳衛視國際頻道
@@ -636,7 +636,7 @@ SZTV:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 NOW7:
   name:
     - NOW 70s
@@ -644,7 +644,7 @@ NOW7:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 NOW8:
   name:
     - NOW 80s
@@ -652,7 +652,7 @@ NOW8:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 NOWR:
   name:
     - NOW ROCK
@@ -660,7 +660,7 @@ NOWR:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 NOW9:
   name:
     - NOW 90s00s
@@ -668,7 +668,7 @@ NOW9:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CONC:
   name:
     - Concerto
@@ -676,7 +676,7 @@ CONC:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 TRUR:
   name:
     - TRACE Urban
@@ -684,7 +684,7 @@ TRUR:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CTSN:
   name:
     - 無線衛星新聞台
@@ -692,7 +692,7 @@ CTSN:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCNA:
   name:
     - 亞洲新聞台
@@ -700,7 +700,7 @@ CCNA:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CJAZ:
   name:
     - 半島電視台英語頻道
@@ -708,7 +708,7 @@ CJAZ:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CF24:
   name:
     - France 24
@@ -716,7 +716,7 @@ CF24:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CDW1:
   name:
     - DW
@@ -724,7 +724,7 @@ CDW1:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CNHK:
   name:
     - NHK World-Japan
@@ -732,7 +732,7 @@ CNHK:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CARI:
   name:
     - Arirang TV
@@ -740,7 +740,7 @@ CARI:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 NSWD:
   name:
     - NewsWorld
@@ -748,7 +748,7 @@ NSWD:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 EVT2:
   name:
     - myTV SUPER直播足球2台
@@ -756,7 +756,7 @@ EVT2:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 EVT3:
   name:
     - myTV SUPER直播足球3台
@@ -764,7 +764,7 @@ EVT3:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 EVT4:
   name:
     - myTV SUPER直播足球4台
@@ -772,7 +772,7 @@ EVT4:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 EVT5:
   name:
     - myTV SUPER直播足球5台
@@ -780,7 +780,7 @@ EVT5:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 EVT6:
   name:
     - myTV SUPER直播足球6台
@@ -788,7 +788,7 @@ EVT6:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 EVT7:
   name:
     - myTV SUPER直播足球7台
@@ -796,7 +796,7 @@ EVT7:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 TEST:
   name:
     - 測試頻道
@@ -804,7 +804,7 @@ TEST:
     mytvsuper: 
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 
 # cctv
 CCTV1:
@@ -814,7 +814,7 @@ CCTV1:
     tvmao: CCTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV2:
   name:
     - CCTV2
@@ -822,7 +822,7 @@ CCTV2:
     tvmao: CCTV2
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV3:
   name:
     - CCTV3
@@ -830,7 +830,7 @@ CCTV3:
     tvmao: CCTV3
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV4:
   name:
     - CCTV4
@@ -838,7 +838,7 @@ CCTV4:
     tvmao: CCTV4
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV5:
   name:
     - CCTV5
@@ -846,7 +846,7 @@ CCTV5:
     tvmao: CCTV5
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV5+:
   name:
     - CCTV5+
@@ -854,7 +854,7 @@ CCTV5+:
     tvmao: CCTV5+
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV6:
   name:
     - CCTV6
@@ -862,7 +862,7 @@ CCTV6:
     tvmao: CCTV6
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV7:
   name:
     - CCTV7
@@ -870,7 +870,7 @@ CCTV7:
     tvmao: CCTV7
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV8:
   name:
     - CCTV8
@@ -878,7 +878,7 @@ CCTV8:
     tvmao: CCTV8
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV9:
   name:
     - CCTV9
@@ -886,7 +886,7 @@ CCTV9:
     tvmao: CCTV9
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV10:
   name:
     - CCTV10
@@ -894,7 +894,7 @@ CCTV10:
     tvmao: CCTV10
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV11:
   name:
     - CCTV11
@@ -902,7 +902,7 @@ CCTV11:
     tvmao: CCTV11
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV12:
   name:
     - CCTV12
@@ -910,7 +910,7 @@ CCTV12:
     tvmao: CCTV12
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV13:
   name:
     - CCTV13
@@ -918,7 +918,7 @@ CCTV13:
     tvmao: CCTV13
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV14:
   name:
     - CCTV14
@@ -926,7 +926,7 @@ CCTV14:
     tvmao: CCTV14
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV15:
   name:
     - CCTV-15
@@ -934,7 +934,7 @@ CCTV15:
     tvmao: CCTV15
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV16:
   name:
     - CCTV16
@@ -942,7 +942,7 @@ CCTV16:
     tvmao: CCTV16
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 CCTV17:
   name:
     - CCTV17
@@ -950,7 +950,7 @@ CCTV17:
     tvmao: CCTV17
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 
 风云足球:
   name:
@@ -959,7 +959,7 @@ CCTV17:
     tvmao: CCTVPAYFEE1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 风云音乐:
   name:
     - 风云音乐
@@ -967,7 +967,7 @@ CCTV17:
     tvmao: CCTVPAYFEE2
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 第一剧场:
   name:
     - 第一剧场
@@ -975,7 +975,7 @@ CCTV17:
     tvmao: CCTVPAYFEE3
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 风云剧场:
   name:
     - 风云剧场
@@ -983,7 +983,7 @@ CCTV17:
     tvmao: CCTVPAYFEE4
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 世界地理:
   name:
     - 世界地理
@@ -991,7 +991,7 @@ CCTV17:
     tvmao: CCTVPAYFEE5
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 电视指南:
   name:
     - 电视指南
@@ -999,7 +999,7 @@ CCTV17:
     tvmao: CCTVPAYFEE6
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 怀旧剧场:
   name:
     - 怀旧剧场
@@ -1007,7 +1007,7 @@ CCTV17:
     tvmao: CCTVPAYFEE7
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 兵器科技:
   name:
     - 兵器科技
@@ -1015,7 +1015,7 @@ CCTV17:
     tvmao: CCTVPAYFEE8
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 女性时尚:
   name:
     - 女性时尚
@@ -1023,7 +1023,7 @@ CCTV17:
     tvmao: CCTVPAYFEE9
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 高尔夫网球:
   name:
     - 高尔夫网球
@@ -1031,7 +1031,7 @@ CCTV17:
     tvmao: CCTVPAYFEE13
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 央视文化精品:
   name:
     - 央视文化精品
@@ -1039,7 +1039,7 @@ CCTV17:
     tvmao: CCTVPAYFEE14
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 央视台球:
   name:
     - 央视台球
@@ -1047,7 +1047,7 @@ CCTV17:
     tvmao: CCTVPAYFEE36
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 
 # 卫视
 广东卫视:
@@ -1057,7 +1057,7 @@ CCTV17:
     tvmao: GDTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 大湾区卫视:
   name:
     - 大湾区卫视
@@ -1065,7 +1065,7 @@ CCTV17:
     tvmao: NANFANG6
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 深圳卫视:
   name:
     - 深圳卫视
@@ -1073,7 +1073,7 @@ CCTV17:
     tvmao: SZTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 湖南卫视:
   name:
     - 湖南卫视
@@ -1081,7 +1081,7 @@ CCTV17:
     tvmao: HUNANTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 浙江卫视:
   name:
     - 浙江卫视
@@ -1089,7 +1089,7 @@ CCTV17:
     tvmao: ZJTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 江苏卫视:
   name:
     - 江苏卫视
@@ -1097,7 +1097,7 @@ CCTV17:
     tvmao: JSTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 东方卫视:
   name:
     - 东方卫视
@@ -1105,7 +1105,7 @@ CCTV17:
     tvmao: DONGFANG1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 安徽卫视:
   name:
     - 安徽卫视
@@ -1113,7 +1113,7 @@ CCTV17:
     tvmao: AHTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 北京卫视:
   name:
     - 北京卫视
@@ -1121,7 +1121,7 @@ CCTV17:
     tvmao: BTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 天津卫视:
   name:
     - 天津卫视
@@ -1129,7 +1129,7 @@ CCTV17:
     tvmao: TJTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 山东卫视:
   name:
     - 山东卫视
@@ -1137,7 +1137,7 @@ CCTV17:
     tvmao: SDTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 江西卫视:
   name:
     - 江西卫视
@@ -1145,7 +1145,7 @@ CCTV17:
     tvmao: JXTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 湖北卫视:
   name:
     - 湖北卫视
@@ -1153,7 +1153,7 @@ CCTV17:
     tvmao: HUBEI1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 辽宁卫视:
   name:
     - 辽宁卫视
@@ -1161,7 +1161,7 @@ CCTV17:
     tvmao: LNTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 黑龙江卫视:
   name:
     - 黑龙江卫视
@@ -1169,7 +1169,7 @@ CCTV17:
     tvmao: HLJTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 贵州卫视:
   name:
     - 贵州卫视
@@ -1177,7 +1177,7 @@ CCTV17:
     tvmao: GUIZOUTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 四川卫视:
   name:
     - 四川卫视
@@ -1185,7 +1185,7 @@ CCTV17:
     tvmao: SCTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 河南卫视:
   name:
     - 河南卫视
@@ -1193,23 +1193,7 @@ CCTV17:
     tvmao: HNTV1
   refresh: today
   recap: 1
-  preview: 1
-云南卫视:
-  name:
-    - 云南卫视
-  scraper:
-    tvmao: YNTV1
-  refresh: today
-  recap: 1
-  preview: 1
-重庆卫视:
-  name:
-    - 重庆卫视
-  scraper:
-    tvmao: CCQTV1
-  refresh: today
-  recap: 1
-  preview: 1
+  preview: 2
 河北卫视:
   name:
     - 河北卫视
@@ -1217,7 +1201,7 @@ CCTV17:
     tvmao: HEBEI1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 东南卫视:
   name:
     - 东南卫视
@@ -1225,7 +1209,7 @@ CCTV17:
     tvmao: FJTV2
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 广西卫视:
   name:
     - 广西卫视
@@ -1233,7 +1217,7 @@ CCTV17:
     tvmao: GUANXI1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 吉林卫视:
   name:
     - 吉林卫视
@@ -1241,7 +1225,7 @@ CCTV17:
     tvmao: JILIN1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 青海卫视:
   name:
     - 青海卫视
@@ -1249,7 +1233,7 @@ CCTV17:
     tvmao: QHTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 海南卫视:
   name:
     - 海南卫视
@@ -1257,7 +1241,7 @@ CCTV17:
     tvmao: TCTC1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 甘肃卫视:
   name:
     - 甘肃卫视
@@ -1265,7 +1249,7 @@ CCTV17:
     tvmao: GSTV1
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
 三沙卫视:
   name:
     - 三沙卫视
@@ -1273,5 +1257,22 @@ CCTV17:
     tvmao: SANSHATV
   refresh: today
   recap: 1
-  preview: 1
+  preview: 2
+云南卫视:
+  name:
+    - 云南卫视
+  scraper:
+    tvmao: YNTV1
+  refresh: today
+  recap: 1
+  preview: 2
+重庆卫视:
+  name:
+    - 重庆卫视
+  scraper:
+    tvmao: CCQTV1
+  refresh: today
+  recap: 1
+  preview: 2
+
   
