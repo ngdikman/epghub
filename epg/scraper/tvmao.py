@@ -40,7 +40,7 @@ def update(
     else:
         id = scraper_id
     url = f"https://lighttv.tvmao.com/qa/qachannelschedule?epgCode={id}&op=getProgramByChnid&epgName=&isNew=on&day={need_weekday}"
-    time.sleep(1)  # 防止 被BAN
+    # time.sleep(1)  # 防止 被BAN
     try:
         res = requests.get(url, headers=headers, timeout=5)
     except:
