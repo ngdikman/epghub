@@ -1817,7 +1817,7 @@ CCTV17:
     - 江西卫视
   scraper:
     tvmao: JXTV1
-    tvsou: 61914025
+    cctv: jiangxi
   refresh: today
   recap: 1
   preview: 2
