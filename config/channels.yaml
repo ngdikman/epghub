@@ -806,11 +806,598 @@ TEST:
   recap: 1
   preview: 2
 
+# gdtv
+广东综艺:
+  name:
+    - 广东综艺
+  scraper:
+    tvmao: NANFANG3
+  refresh: today
+  recap: 1
+  preview: 1
+广东珠江:
+  name:
+    - 广东珠江
+  scraper:
+    tvmao: GDTV2
+  refresh: today
+  recap: 1
+  preview: 1
+广东新闻:
+  name:
+    - 广东新闻
+  scraper:
+    tvmao: GDTV6
+  refresh: today
+  recap: 1
+  preview: 1
+广东民生:
+  name:
+    - 广东民生
+  scraper:
+    tvmao: GDTV4
+  refresh: today
+  recap: 1
+  preview: 1
+广东体育:
+  name:
+    - 广东体育
+  scraper:
+    tvmao: GDTV3
+  refresh: today
+  recap: 1
+  preview: 1
+经济科教:
+  name:
+    - 经济科教
+  scraper:
+    tvmao: NANFANG1
+  refresh: today
+  recap: 1
+  preview: 1
+广东影视:
+  name:
+    - 广东影视
+  scraper:
+    tvmao: NANFANG4
+  refresh: today
+  recap: 1
+  preview: 1
+广东少儿:
+  name:
+    - 广东少儿
+  scraper:
+    tvmao: NANFANG5
+  refresh: today
+  recap: 1
+  preview: 1
+嘉佳卡通:
+  name:
+    - 嘉佳卡通
+  scraper:
+    tvmao: GDTV7
+  refresh: today
+  recap: 1
+  preview: 1
+岭南戏曲:
+  name:
+    - 岭南戏曲
+  scraper:
+    tvmao: LNXQ
+  refresh: today
+  recap: 1
+  preview: 1
+现代教育:
+  name:
+    - 现代教育
+  scraper:
+    tvmao: FUN-TV
+  refresh: today
+  recap: 1
+  preview: 1
+广州综合:
+  name:
+    - 广州综合
+  scraper:
+    tvmao: GZTV1
+  refresh: today
+  recap: 1
+  preview: 1
+广州新闻:
+  name:
+    - 广州新闻
+  scraper:
+    tvmao: GZTV2
+  refresh: today
+  recap: 1
+  preview: 1
+广州影视:
+  name:
+    - 广州影视
+  scraper:
+    tvmao: GZTV4
+  refresh: today
+  recap: 1
+  preview: 1
+广州法治:
+  name:
+    - 广州法治
+  scraper:
+    tvmao: GZTV6
+  refresh: today
+  recap: 1
+  preview: 1
+深圳都市:
+  name:
+    - 深圳都市
+  scraper:
+    tvmao: SZTV2
+  refresh: today
+  recap: 1
+  preview: 1
+深圳电视剧:
+  name:
+    - 深圳电视剧
+  scraper:
+    tvmao: SZTV3
+  refresh: today
+  recap: 1
+  preview: 1
+深圳财经生活:
+  name:
+    - 深圳财经生活
+  scraper:
+    tvmao: SZTV4
+  refresh: today
+  recap: 1
+  preview: 1
+深圳体育健康:
+  name:
+    - 深圳体育健康
+  scraper:
+    tvmao: SZTV6
+  refresh: today
+  recap: 1
+  preview: 1
+深圳少儿:
+  name:
+    - 深圳少儿
+  scraper:
+    tvmao: SZTV7
+  refresh: today
+  recap: 1
+  preview: 1
+湛江综合:
+  name:
+    - 湛江综合
+  scraper:
+    tvmao: GDZJ1
+  refresh: today
+  recap: 1
+  preview: 1
+湛江公共:
+  name:
+    - 湛江公共
+  scraper:
+    tvmao: GDZJ2
+  refresh: today
+  recap: 1
+  preview: 1
+揭阳综合:
+  name:
+    - 揭阳综合
+  scraper:
+    tvmao: GDJYTV1
+  refresh: today
+  recap: 1
+  preview: 1
+揭阳生活:
+  name:
+    - 揭阳生活
+  scraper:
+    tvmao: GDJYTV2
+  refresh: today
+  recap: 1
+  preview: 1
+汕尾新闻综合:
+  name:
+    - 汕尾新闻综合
+  scraper:
+    tvmao: SWTV1
+  refresh: today
+  recap: 1
+  preview: 1
+汕尾文化生活:
+  name:
+    - 汕尾文化生活
+  scraper:
+    tvmao: SWTV2
+  refresh: today
+  recap: 1
+  preview: 1
+江门综合:
+  name:
+    - 江门综合
+  scraper:
+    tvmao: JMTV2
+  refresh: today
+  recap: 1
+  preview: 1
+江门侨乡生活:
+  name:
+    - 江门侨乡生活
+  scraper:
+    tvmao: JMTV1
+  refresh: today
+  recap: 1
+  preview: 1
+珠海-1:
+  name:
+    - 珠海-1
+  scraper:
+    tvmao: ZHTV1
+  refresh: today
+  recap: 1
+  preview: 1
+珠海-2:
+  name:
+    - 珠海-2
+  scraper:
+    tvmao: ZHTV2
+  refresh: today
+  recap: 1
+  preview: 1
+肇庆新闻:
+  name:
+    - 肇庆新闻
+  scraper:
+    tvmao: GDZQ1
+  refresh: today
+  recap: 1
+  preview: 1
+肇庆生活服务:
+  name:
+    - 肇庆生活服务
+  scraper:
+    tvmao: GDZQ2
+  refresh: today
+  recap: 1
+  preview: 1
+河源综合:
+  name:
+    - 河源综合
+  scraper:
+    tvmao: HYRTV-1
+  refresh: today
+  recap: 1
+  preview: 1
+河源公共:
+  name:
+    - 河源公共
+  scraper:
+    tvmao: HYRTV-2
+  refresh: today
+  recap: 1
+  preview: 1
+清远新闻综合:
+  name:
+    - 清远新闻综合
+  scraper:
+    tvmao: GDQYTV1
+  refresh: today
+  recap: 1
+  preview: 1
+清远公共:
+  name:
+    - 清远公共
+  scraper:
+    tvmao: GDQYTV2
+  refresh: today
+  recap: 1
+  preview: 1
+云浮综合:
+  name:
+    - 云浮综合
+  scraper:
+    tvmao: YFZH
+  refresh: today
+  recap: 1
+  preview: 1
+云浮文旅:
+  name:
+    - 云浮文旅
+  scraper:
+    tvmao: YFGG
+  refresh: today
+  recap: 1
+  preview: 1
+茂名综合:
+  name:
+    - 茂名综合
+  scraper:
+    tvmao: MMTV2
+  refresh: today
+  recap: 1
+  preview: 1
+茂名公共:
+  name:
+    - 茂名公共
+  scraper:
+    tvmao: MMTV1
+  refresh: today
+  recap: 1
+  preview: 1
+汕头综合:
+  name:
+    - 汕头综合
+  scraper:
+    tvmao: SRTTV1
+  refresh: today
+  recap: 1
+  preview: 1
+汕头经济生活:
+  name:
+    - 汕头经济生活
+  scraper:
+    tvmao: SRTTV2
+  refresh: today
+  recap: 1
+  preview: 1
+汕头文旅体育:
+  name:
+    - 汕头文旅体育
+  scraper:
+    tvmao: SRTTV3
+  refresh: today
+  recap: 1
+  preview: 1
+佛山公共:
+  name:
+    - 佛山公共
+  scraper:
+    tvmao: GDFS3
+  refresh: today
+  recap: 1
+  preview: 1
+佛山南海:
+  name:
+    - 佛山南海
+  scraper:
+    tvmao: GDFS4
+  refresh: today
+  recap: 1
+  preview: 1
+佛山顺德:
+  name:
+    - 佛山顺德
+  scraper:
+    tvmao: GDFS5
+  refresh: today
+  recap: 1
+  preview: 1
+佛山影视:
+  name:
+    - 佛山影视
+  scraper:
+    tvmao: GDFS2
+  refresh: today
+  recap: 1
+  preview: 1
+佛山综合:
+  name:
+    - 佛山综合
+  scraper:
+    tvmao: GDFS1
+  refresh: today
+  recap: 1
+  preview: 1
+东莞新闻:
+  name:
+    - 东莞新闻
+  scraper:
+    tvmao: GDDG1
+  refresh: today
+  recap: 1
+  preview: 1
+东莞生活资讯:
+  name:
+    - 东莞生活资讯
+  scraper:
+    tvmao: GDDG2
+  refresh: today
+  recap: 1
+  preview: 1
+中山综合:
+  name:
+    - 中山综合
+  scraper:
+    tvmao: GDZS1
+  refresh: today
+  recap: 1
+  preview: 1
+中山公共:
+  name:
+    - 中山公共
+  scraper:
+    tvmao: GDZS2
+  refresh: today
+  recap: 1
+  preview: 1
+潮州综合:
+  name:
+    - 潮州综合
+  scraper:
+    tvmao: CZBTV1
+  refresh: today
+  recap: 1
+  preview: 1
+潮州民生:
+  name:
+    - 潮州民生
+  scraper:
+    tvmao: CZBTV2
+  refresh: today
+  recap: 1
+  preview: 1
+梅州-1:
+  name:
+    - 梅州-1
+  scraper:
+    tvmao: GDMZTV1
+  refresh: today
+  recap: 1
+  preview: 1
+客家生活:
+  name:
+    - 客家生活
+  scraper:
+    tvmao: GDMZTV2
+  refresh: today
+  recap: 1
+  preview: 1
+HZTV1:
+  name:
+    - HZTV1
+  scraper:
+    xmltv: HZTV1@https://epg.v1.mk/fy.xml
+  refresh: today
+  recap: 1
+  preview: 1
+HZTV2:
+  name:
+    - HZTV2
+  scraper:
+    xmltv: HZTV2@https://epg.v1.mk/fy.xml
+  refresh: today
+  recap: 1
+  preview: 1
+金鹰卡通:
+  name:
+    - 金鹰卡通
+  scraper:
+    tvmao: HUNANTV2
+  refresh: today
+  recap: 1
+  preview: 1
+CETV-1:
+  name:
+    - CETV-1
+  scraper:
+    cctv: cetv1
+  refresh: today
+  recap: 1
+  preview: 1
+CETV-4:
+  name:
+    - CETV-4
+  scraper:
+    tvmao: CETV4
+  refresh: today
+  recap: 1
+  preview: 1
+早期教育:
+  name:
+    - 早期教育
+  scraper:
+    cctv: zaoqijiaoyu
+  refresh: today
+  recap: 1
+  preview: 1
+中国交通:
+  name:
+    - 中国交通
+  scraper:
+    tvmao: ZGJTPD
+  refresh: today
+  recap: 1
+  preview: 1
+茶:
+  name:
+    - 茶
+  scraper:
+    tvmao: DOCUMENTARY-CHANNEL
+  refresh: today
+  recap: 1
+  preview: 1
+快乐垂钓:
+  name:
+    - 快乐垂钓
+  scraper:
+    tvmao: KUAILECHUIDIAO
+  refresh: today
+  recap: 1
+  preview: 1
+金鹰纪实:
+  name:
+    - 金鹰纪实
+  scraper:
+    tvmao: HNETV3
+  refresh: today
+  recap: 1
+  preview: 1
+求索纪录:
+  name:
+    - 求索纪录
+  scraper:
+    tvmao: QSJL
+  refresh: today
+  recap: 1
+  preview: 1
+求索生活:
+  name:
+    - 求索生活
+  scraper:
+    tvmao: QSSH
+  refresh: today
+  recap: 1
+  preview: 1
+武术世界:
+  name:
+    - 武术世界
+  scraper:
+    tvmao: WUSHUSHIJIE
+  refresh: today
+  recap: 1
+  preview: 1
+文物宝库:
+  name:
+    - 文物宝库
+  scraper:
+    tvmao: WENWUBAOKU
+  refresh: today
+  recap: 1
+  preview: 1
+先锋乒羽:
+  name:
+    - 先锋乒羽
+  scraper:
+    tvmao: XFBY
+  refresh: today
+  recap: 1
+  preview: 1
+天元围棋:
+  name:
+    - 天元围棋
+  scraper:
+    tvmao: TIANYUANWEIQI
+  refresh: today
+  recap: 1
+  preview: 1
+爱体育:
+  name:
+    - 爱体育
+  scraper:
+    tvmao: IHOT5
+  refresh: today
+  recap: 1
+  preview: 1
+
 # cctv
 CCTV1:
   name:
     - CCTV1
   scraper:
+    cctv: cctv1
     tvmao: CCTV1
   refresh: today
   recap: 1
@@ -819,6 +1406,7 @@ CCTV2:
   name:
     - CCTV2
   scraper:
+    cctv: cctv2
     tvmao: CCTV2
   refresh: today
   recap: 1
@@ -827,6 +1415,7 @@ CCTV3:
   name:
     - CCTV3
   scraper:
+    cctv: cctv3
     tvmao: CCTV3
   refresh: today
   recap: 1
@@ -835,6 +1424,7 @@ CCTV4:
   name:
     - CCTV4
   scraper:
+    cctv: cctv4
     tvmao: CCTV4
   refresh: today
   recap: 1
@@ -843,6 +1433,7 @@ CCTV5:
   name:
     - CCTV5
   scraper:
+    cctv: cctv5
     tvmao: CCTV5
   refresh: today
   recap: 1
@@ -851,6 +1442,7 @@ CCTV5+:
   name:
     - CCTV5+
   scraper:
+    cctv: cctv5plus
     tvmao: CCTV5+
   refresh: today
   recap: 1
@@ -859,6 +1451,7 @@ CCTV6:
   name:
     - CCTV6
   scraper:
+    cctv: cctv6
     tvmao: CCTV6
   refresh: today
   recap: 1
@@ -867,6 +1460,7 @@ CCTV7:
   name:
     - CCTV7
   scraper:
+    cctv: cctv7
     tvmao: CCTV7
   refresh: today
   recap: 1
@@ -875,6 +1469,7 @@ CCTV8:
   name:
     - CCTV8
   scraper:
+    cctv: cctv8
     tvmao: CCTV8
   refresh: today
   recap: 1
@@ -883,6 +1478,7 @@ CCTV9:
   name:
     - CCTV9
   scraper:
+    cctv: cctv9
     tvmao: CCTV9
   refresh: today
   recap: 1
@@ -891,6 +1487,7 @@ CCTV10:
   name:
     - CCTV10
   scraper:
+    cctv: cctv10
     tvmao: CCTV10
   refresh: today
   recap: 1
@@ -899,6 +1496,7 @@ CCTV11:
   name:
     - CCTV11
   scraper:
+    cctv: cctv11
     tvmao: CCTV11
   refresh: today
   recap: 1
@@ -907,6 +1505,7 @@ CCTV12:
   name:
     - CCTV12
   scraper:
+    cctv: cctv12
     tvmao: CCTV12
   refresh: today
   recap: 1
@@ -915,6 +1514,7 @@ CCTV13:
   name:
     - CCTV13
   scraper:
+    cctv: cctv13
     tvmao: CCTV13
   refresh: today
   recap: 1
@@ -923,6 +1523,7 @@ CCTV14:
   name:
     - CCTV14
   scraper:
+    cctv: cctv14
     tvmao: CCTV14
   refresh: today
   recap: 1
@@ -931,6 +1532,7 @@ CCTV15:
   name:
     - CCTV-15
   scraper:
+    cctv: cctv15
     tvmao: CCTV15
   refresh: today
   recap: 1
@@ -939,6 +1541,7 @@ CCTV16:
   name:
     - CCTV16
   scraper:
+    cctv: cctv16
     tvmao: CCTV16
   refresh: today
   recap: 1
@@ -947,6 +1550,7 @@ CCTV17:
   name:
     - CCTV17
   scraper:
+    cctv: cctv17
     tvmao: CCTV17
   refresh: today
   recap: 1
@@ -956,6 +1560,7 @@ CCTV17:
   name:
     - 风云足球
   scraper:
+    cctv: cctvfyzq
     tvmao: CCTVPAYFEE1
   refresh: today
   recap: 1
@@ -964,6 +1569,7 @@ CCTV17:
   name:
     - 风云音乐
   scraper:
+    cctv: fyyy
     tvmao: CCTVPAYFEE2
   refresh: today
   recap: 1
@@ -972,6 +1578,7 @@ CCTV17:
   name:
     - 第一剧场
   scraper:
+    cctv: diyijuchang
     tvmao: CCTVPAYFEE3
   refresh: today
   recap: 1
@@ -980,6 +1587,7 @@ CCTV17:
   name:
     - 风云剧场
   scraper:
+    cctv: fyjc
     tvmao: CCTVPAYFEE4
   refresh: today
   recap: 1
@@ -988,6 +1596,7 @@ CCTV17:
   name:
     - 世界地理
   scraper:
+    cctv: shijiedili
     tvmao: CCTVPAYFEE5
   refresh: today
   recap: 1
@@ -996,6 +1605,7 @@ CCTV17:
   name:
     - 电视指南
   scraper:
+    cctv: zhinan
     tvmao: CCTVPAYFEE6
   refresh: today
   recap: 1
@@ -1004,6 +1614,7 @@ CCTV17:
   name:
     - 怀旧剧场
   scraper:
+    cctv: hjjc
     tvmao: CCTVPAYFEE7
   refresh: today
   recap: 1
@@ -1012,6 +1623,7 @@ CCTV17:
   name:
     - 兵器科技
   scraper:
+    cctv: guofang
     tvmao: CCTVPAYFEE8
   refresh: today
   recap: 1
@@ -1020,6 +1632,7 @@ CCTV17:
   name:
     - 女性时尚
   scraper:
+    cctv: shishang
     tvmao: CCTVPAYFEE9
   refresh: today
   recap: 1
@@ -1028,6 +1641,7 @@ CCTV17:
   name:
     - 高尔夫网球
   scraper:
+    cctv: cctvgaowang
     tvmao: CCTVPAYFEE13
   refresh: today
   recap: 1
@@ -1036,6 +1650,7 @@ CCTV17:
   name:
     - 央视文化精品
   scraper:
+    cctv: jingpin
     tvmao: CCTVPAYFEE14
   refresh: today
   recap: 1
@@ -1044,6 +1659,7 @@ CCTV17:
   name:
     - 央视台球
   scraper:
+    cctv: taiqiu
     tvmao: CCTVPAYFEE36
   refresh: today
   recap: 1
@@ -1126,6 +1742,7 @@ CCTV17:
   name:
     - 天津卫视
   scraper:
+    cctv: tianjin
     tvmao: TJTV1
   refresh: today
   recap: 1
@@ -1206,6 +1823,7 @@ CCTV17:
   name:
     - 河北卫视
   scraper:
+    cctv: hebei
     tvmao: HEBEI1
   refresh: today
   recap: 1
