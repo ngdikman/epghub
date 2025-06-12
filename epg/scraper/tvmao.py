@@ -40,13 +40,25 @@ def update(
     else:
         id = scraper_id
     url = f"https://lighttv.tvmao.com/qa/qachannelschedule?epgCode={id}&op=getProgramByChnid&epgName=&isNew=on&day={need_weekday}"
-    # time.sleep(1)  # 防止 被BAN
-    try:
-        res = requests.get(url, headers=headers, timeout=5)
-    except:
-        return False
+    
+    # Retry mechanism
+    max_retries = 5
+    retry_delay = 1  # seconds
+    
+    for attempt in range(max_retries):
+        try:
+            res = requests.get(url, headers=headers, timeout=5)
+            if res.status_code == 200:
+                break  # Success, exit retry loop
+        except (requests.exceptions.RequestException, requests.exceptions.Timeout):
+            if attempt == max_retries - 1:  # Last attempt failed
+                return False
+            time.sleep(retry_delay * (attempt + 1))  # Increasing delay
+            continue
+    
     if res.status_code != 200:
         return False
+    
     data = res.json()
     try:
         programs_data = data[2]["pro"]
