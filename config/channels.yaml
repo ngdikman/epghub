@@ -3,16 +3,16 @@ ViuTV:
   name:
     - ViuTV
   scraper:
-    xmltv: 410274@http://epg.pw/xmltv/epg_HK.xml 
-  refresh: today
+    xmltv: 410274@http://epg.pw/xmltv/epg_HK.xml
+  refresh: once
   recap: 1
   preview: 2
 Now新闻台:
   name:
     - Now新闻台
   scraper:
-    xmltv: 410344@http://epg.pw/xmltv/epg_HK.xml 
-  refresh: today
+    xmltv: 410344@http://epg.pw/xmltv/epg_HK.xml
+  refresh: once
   recap: 1
   preview: 2
 
@@ -20,16 +20,16 @@ HOY76:
   name:
     - HOY76
   scraper:
-    xmltv: HOY76@http://epg.112114.xyz/pp.xml 
-  refresh: today
+    xmltv: HOY76@http://epg.112114.xyz/pp.xml
+  refresh: once
   recap: 1
   preview: 2
 HOY77:
   name:
     - HOY77
   scraper:
-    xmltv: HOY77@http://epg.112114.xyz/pp.xml 
-  refresh: today
+    xmltv: HOY77@http://epg.112114.xyz/pp.xml
+  refresh: once
   recap: 1
   preview: 2
 HOY78:
@@ -37,7 +37,7 @@ HOY78:
     - HOY78
   scraper:
     xmltv: HOY78@http://epg.112114.xyz/pp.xml 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 
@@ -47,7 +47,7 @@ CWIN:
     - SUPER FREE
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SVAR:
@@ -55,7 +55,7 @@ SVAR:
     - SUPER獎門人
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SEYT:
@@ -63,7 +63,7 @@ SEYT:
     - SUPER EYT
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SFOO:
@@ -71,7 +71,7 @@ SFOO:
     - SUPER識食
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 STRA:
@@ -79,7 +79,7 @@ STRA:
     - SUPER識嘆
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SMUS:
@@ -87,7 +87,7 @@ SMUS:
     - SUPER Music
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SGOL:
@@ -95,7 +95,7 @@ SGOL:
     - SUPER金曲
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SSIT:
@@ -103,7 +103,7 @@ SSIT:
     - SUPER煲劇
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 STVM:
@@ -111,7 +111,7 @@ STVM:
     - SUPER劇場
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SDOC:
@@ -119,7 +119,7 @@ SDOC:
     - SUPER話當年
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SSPT:
@@ -127,7 +127,7 @@ SSPT:
     - SUPER Sports
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 C18:
@@ -135,7 +135,7 @@ C18:
     - myTV SUPER 18台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 C28:
@@ -143,7 +143,7 @@ C28:
     - 28AI智慧賽馬
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 TVG:
@@ -151,7 +151,7 @@ TVG:
     - 黃金翡翠台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 J:
@@ -160,7 +160,7 @@ J:
     - 翡翠台(超高清)
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 B:
@@ -168,7 +168,7 @@ B:
     - TVB Plus
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 C:
@@ -178,7 +178,7 @@ C:
     - 互動窗 2
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 P:
@@ -186,7 +186,7 @@ P:
     - 明珠台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CTVC:
@@ -194,7 +194,7 @@ CTVC:
     - 千禧經典台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CTVS:
@@ -202,7 +202,7 @@ CTVS:
     - 亞洲劇台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CDR3:
@@ -210,7 +210,7 @@ CDR3:
     - 華語劇台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 TVO:
@@ -218,7 +218,7 @@ TVO:
     - 黃金華劇台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CTVE:
@@ -226,7 +226,7 @@ CTVE:
     - 娛樂新聞台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCOC:
@@ -234,7 +234,7 @@ CCOC:
     - 戲曲台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 KID:
@@ -242,7 +242,7 @@ KID:
     - SUPER Kids Channel
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 ZOO:
@@ -250,7 +250,7 @@ ZOO:
     - ZooMoo
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CNIKO:
@@ -258,7 +258,7 @@ CNIKO:
     - Nickelodeon
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CNIJR:
@@ -266,7 +266,7 @@ CNIJR:
     - Nick Jr
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCLM:
@@ -274,7 +274,7 @@ CCLM:
     - 粵語片台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CMAM:
@@ -282,7 +282,7 @@ CMAM:
     - 美亞電影台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CTHR:
@@ -290,7 +290,7 @@ CTHR:
     - Thrill
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCCM:
@@ -298,7 +298,7 @@ CCCM:
     - 天映經典頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CMC:
@@ -306,7 +306,7 @@ CMC:
     - 中國電影頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CRTX:
@@ -314,7 +314,7 @@ CRTX:
     - ROCK Action
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 POPC:
@@ -322,7 +322,7 @@ POPC:
     - PopC
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 ACTM:
@@ -330,7 +330,7 @@ ACTM:
     - Action Hollywood Movies
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 RCM:
@@ -338,7 +338,7 @@ RCM:
     - Rialto Classic Movies (RCM)
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CKIX:
@@ -346,7 +346,7 @@ CKIX:
     - KIX
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 TRSP:
@@ -354,7 +354,7 @@ TRSP:
     - TRACE Sport Stars
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 LNH:
@@ -362,7 +362,7 @@ LNH:
     - Love Nature HD
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 LN4:
@@ -370,7 +370,7 @@ LN4:
     - Love Nature 4K
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SMS:
@@ -378,7 +378,7 @@ SMS:
     - Global Trekker
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 PETC:
@@ -386,7 +386,7 @@ PETC:
     - Pet Club TV
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 GLBT:
@@ -394,7 +394,7 @@ GLBT:
     - Globetrotter
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 DOCV:
@@ -402,7 +402,7 @@ DOCV:
     - Docsville
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 PULS:
@@ -410,7 +410,7 @@ PULS:
     - Pulse Documentaries
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CRTE:
@@ -418,7 +418,7 @@ CRTE:
     - ROCK綜藝娛樂
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CAXN:
@@ -426,7 +426,7 @@ CAXN:
     - AXN
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CANI:
@@ -434,7 +434,7 @@ CANI:
     - Animax
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CJTV:
@@ -442,7 +442,7 @@ CJTV:
     - tvN
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CTS1:
@@ -450,7 +450,7 @@ CTS1:
     - 無線衛星亞洲台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CRE:
@@ -458,7 +458,7 @@ CRE:
     - 創世電視
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 FBX:
@@ -466,7 +466,7 @@ FBX:
     - FashionBox
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CMEZ:
@@ -474,7 +474,7 @@ CMEZ:
     - Mezzo Live HD
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CC1:
@@ -482,7 +482,7 @@ CC1:
     - 中央電視台綜合頻道 (港澳版)
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CGD:
@@ -490,7 +490,7 @@ CGD:
     - CGTN (中國環球電視網)記錄頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CGE:
@@ -498,7 +498,7 @@ CGE:
     - CGTN (中國環球電視網)英語頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 DTV:
@@ -506,7 +506,7 @@ DTV:
     - 東方衛視國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 PCC:
@@ -514,7 +514,7 @@ PCC:
     - 鳳凰衛視中文台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 PIN:
@@ -522,7 +522,7 @@ PIN:
     - 鳳凰衛視資訊台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 PHK:
@@ -530,7 +530,7 @@ PHK:
     - 鳳凰衛視香港台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CC4:
@@ -538,7 +538,7 @@ CC4:
     - 中國中央電視台中文國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCE:
@@ -546,7 +546,7 @@ CCE:
     - 中國中央電視台娛樂頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCO:
@@ -554,7 +554,7 @@ CCO:
     - 中國中央電視台戲曲頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 YNTV:
@@ -562,7 +562,7 @@ YNTV:
     - 雲南瀾湄國際衛視
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 AHTV:
@@ -570,7 +570,7 @@ AHTV:
     - 安徽廣播電視台國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 BJTV:
@@ -578,7 +578,7 @@ BJTV:
     - 北京電視台國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 GXTV:
@@ -586,7 +586,7 @@ GXTV:
     - 廣西電視台國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 FJTV:
@@ -594,7 +594,7 @@ FJTV:
     - 福建海峽衛視國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 HNTV:
@@ -602,7 +602,7 @@ HNTV:
     - 湖南電視台國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 JSTV:
@@ -610,7 +610,7 @@ JSTV:
     - 江蘇電視台國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 GBTV:
@@ -618,7 +618,7 @@ GBTV:
     - 廣東廣播電視台大灣區衛視頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 ZJTV:
@@ -626,7 +626,7 @@ ZJTV:
     - 浙江電視台國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 SZTV:
@@ -634,7 +634,7 @@ SZTV:
     - 深圳衛視國際頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 NOW7:
@@ -642,7 +642,7 @@ NOW7:
     - NOW 70s
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 NOW8:
@@ -650,7 +650,7 @@ NOW8:
     - NOW 80s
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 NOWR:
@@ -658,7 +658,7 @@ NOWR:
     - NOW ROCK
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 NOW9:
@@ -666,7 +666,7 @@ NOW9:
     - NOW 90s00s
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CONC:
@@ -674,7 +674,7 @@ CONC:
     - Concerto
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 TRUR:
@@ -682,7 +682,7 @@ TRUR:
     - TRACE Urban
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CTSN:
@@ -690,7 +690,7 @@ CTSN:
     - 無線衛星新聞台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCNA:
@@ -698,7 +698,7 @@ CCNA:
     - 亞洲新聞台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CJAZ:
@@ -706,7 +706,7 @@ CJAZ:
     - 半島電視台英語頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CF24:
@@ -714,7 +714,7 @@ CF24:
     - France 24
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CDW1:
@@ -722,7 +722,7 @@ CDW1:
     - DW
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CNHK:
@@ -730,7 +730,7 @@ CNHK:
     - NHK World-Japan
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CARI:
@@ -738,7 +738,7 @@ CARI:
     - Arirang TV
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 NSWD:
@@ -746,7 +746,7 @@ NSWD:
     - NewsWorld
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 EVT2:
@@ -754,7 +754,7 @@ EVT2:
     - myTV SUPER直播足球2台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 EVT3:
@@ -762,7 +762,7 @@ EVT3:
     - myTV SUPER直播足球3台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 EVT4:
@@ -770,7 +770,7 @@ EVT4:
     - myTV SUPER直播足球4台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 EVT5:
@@ -778,7 +778,7 @@ EVT5:
     - myTV SUPER直播足球5台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 EVT6:
@@ -786,7 +786,7 @@ EVT6:
     - myTV SUPER直播足球6台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 EVT7:
@@ -794,7 +794,7 @@ EVT7:
     - myTV SUPER直播足球7台
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 TEST:
@@ -802,7 +802,7 @@ TEST:
     - 測試頻道
   scraper:
     mytvsuper: 
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 
@@ -812,7 +812,7 @@ TEST:
     - 广东综艺
   scraper:
     tvmao: NANFANG3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广东珠江:
@@ -821,7 +821,7 @@ TEST:
   scraper:
     tvsou: e5815c01
     tvmao: GDTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广东新闻:
@@ -830,7 +830,7 @@ TEST:
   scraper:
     tvsou: 971f6ec3
     tvmao: GDTV6
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广东民生:
@@ -839,7 +839,7 @@ TEST:
   scraper:
     tvsou: 0e89a6bf
     tvmao: GDTV4
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广东体育:
@@ -848,7 +848,7 @@ TEST:
   scraper:
     tvsou: 64e4e458
     tvmao: GDTV3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 经济科教:
@@ -857,7 +857,7 @@ TEST:
   scraper:
     tvsou: dae1d7e4
     tvmao: NANFANG1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广东影视:
@@ -865,7 +865,7 @@ TEST:
     - 广东影视
   scraper:
     tvmao: NANFANG4
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广东少儿:
@@ -873,7 +873,7 @@ TEST:
     - 广东少儿
   scraper:
     tvmao: NANFANG5
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 嘉佳卡通:
@@ -881,7 +881,7 @@ TEST:
     - 嘉佳卡通
   scraper:
     tvmao: GDTV7
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 岭南戏曲:
@@ -889,7 +889,7 @@ TEST:
     - 岭南戏曲
   scraper:
     tvmao: LNXQ
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 现代教育:
@@ -897,7 +897,7 @@ TEST:
     - 现代教育
   scraper:
     tvmao: FUN-TV
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广州综合:
@@ -906,7 +906,7 @@ TEST:
   scraper:
     tvmao: GZTV1
     tvsou: 27679d2c
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广州新闻:
@@ -915,7 +915,7 @@ TEST:
   scraper:
     tvmao: GZTV2
     tvsou: 971f6ec3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广州影视:
@@ -924,7 +924,7 @@ TEST:
   scraper:
     tvmao: GZTV4
     tvsou: dcac5508
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广州法治:
@@ -933,7 +933,7 @@ TEST:
   scraper:
     tvmao: GZTV6
     tvsou: 0185d3a2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 深圳都市:
@@ -942,7 +942,7 @@ TEST:
   scraper:
     tvmao: SZTV2
     tvsou: 0a0fa12e
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 深圳电视剧:
@@ -951,7 +951,7 @@ TEST:
   scraper:
     tvmao: SZTV3
     tvsou: 8abb60ec
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 深圳财经生活:
@@ -960,7 +960,7 @@ TEST:
   scraper:
     tvmao: SZTV4
     tvsou: 285dba33
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 深圳体育健康:
@@ -968,7 +968,7 @@ TEST:
     - 深圳体育健康
   scraper:
     tvmao: SZTV6
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 深圳少儿:
@@ -976,7 +976,7 @@ TEST:
     - 深圳少儿
   scraper:
     tvmao: SZTV7
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 湛江综合:
@@ -985,7 +985,7 @@ TEST:
   scraper:
     tvmao: GDZJ1
     tvsou: ce065c60
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 湛江公共:
@@ -994,7 +994,7 @@ TEST:
   scraper:
     tvmao: GDZJ2
     tvsou: f55f14c3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 揭阳综合:
@@ -1003,7 +1003,7 @@ TEST:
   scraper:
     tvmao: GDJYTV1
     tvsou: 0f4bd658
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 揭阳生活:
@@ -1012,7 +1012,7 @@ TEST:
   scraper:
     tvmao: GDJYTV2
     tvsou: b8f472e1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 汕尾新闻综合:
@@ -1021,7 +1021,7 @@ TEST:
   scraper:
     tvmao: SWTV1
     tvsou: 3328b54f
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 汕尾文化生活:
@@ -1030,7 +1030,7 @@ TEST:
   scraper:
     tvmao: SWTV2
     tvsou: d7a7120b
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 江门综合:
@@ -1039,7 +1039,7 @@ TEST:
   scraper:
     tvmao: JMTV2
     tvsou: 0d09f3ff
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 江门侨乡生活:
@@ -1048,7 +1048,7 @@ TEST:
   scraper:
     tvmao: JMTV1
     tvsou: 192e717d
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 珠海-1:
@@ -1057,7 +1057,7 @@ TEST:
   scraper:
     tvmao: ZHTV1
     tvsou: 79ca2059
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 珠海-2:
@@ -1066,7 +1066,7 @@ TEST:
   scraper:
     tvmao: ZHTV2
     tvsou: f08e4cae
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 肇庆新闻:
@@ -1075,7 +1075,7 @@ TEST:
   scraper:
     tvmao: GDZQ1
     tvsou: 2b96d61c
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 肇庆生活服务:
@@ -1084,7 +1084,7 @@ TEST:
   scraper:
     tvmao: GDZQ2
     tvsou: 62e604f3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 河源综合:
@@ -1093,7 +1093,7 @@ TEST:
   scraper:
     tvmao: HYRTV-1
     tvsou: 9d004d93
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 河源公共:
@@ -1102,7 +1102,7 @@ TEST:
   scraper:
     tvmao: HYRTV-2
     tvsou: a2239113
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 清远新闻综合:
@@ -1110,7 +1110,7 @@ TEST:
     - 清远新闻综合
   scraper:
     tvmao: GDQYTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 清远公共:
@@ -1118,7 +1118,7 @@ TEST:
     - 清远公共
   scraper:
     tvmao: GDQYTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 云浮综合:
@@ -1126,7 +1126,7 @@ TEST:
     - 云浮综合
   scraper:
     tvmao: YFZH
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 云浮文旅:
@@ -1134,7 +1134,7 @@ TEST:
     - 云浮文旅
   scraper:
     tvmao: YFGG
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 茂名综合:
@@ -1143,7 +1143,7 @@ TEST:
   scraper:
     tvsou: ead49acc
     tvmao: MMTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 茂名公共:
@@ -1152,7 +1152,7 @@ TEST:
   scraper:
     tvsou: b7ba9ebe
     tvmao: MMTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 汕头综合:
@@ -1161,7 +1161,7 @@ TEST:
   scraper:
     tvsou: 6707021a
     tvmao: SRTTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 汕头经济生活:
@@ -1170,7 +1170,7 @@ TEST:
   scraper:
     tvsou: 13530beb
     tvmao: SRTTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 汕头文旅体育:
@@ -1179,7 +1179,7 @@ TEST:
   scraper:
     tvsou: 1b7931e1
     tvmao: SRTTV3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 佛山公共:
@@ -1188,7 +1188,7 @@ TEST:
   scraper:
     tvsou: 35b4101b
     tvmao: GDFS3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 佛山南海:
@@ -1197,7 +1197,7 @@ TEST:
   scraper:
     tvsou: c5907320
     tvmao: GDFS4
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 佛山顺德:
@@ -1206,7 +1206,7 @@ TEST:
   scraper:
     tvsou: be4c330b
     tvmao: GDFS5
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 佛山影视:
@@ -1215,7 +1215,7 @@ TEST:
   scraper:
     tvsou: 19b538d9
     tvmao: GDFS2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 佛山综合:
@@ -1224,7 +1224,7 @@ TEST:
   scraper:
     tvsou: 4441cd12
     tvmao: GDFS1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 东莞新闻:
@@ -1233,7 +1233,7 @@ TEST:
   scraper:
     tvsou: 4dd0abf9
     tvmao: GDDG1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 东莞生活资讯:
@@ -1242,7 +1242,7 @@ TEST:
   scraper:
     tvsou: bd9b9c5b
     tvmao: GDDG2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 中山综合:
@@ -1251,7 +1251,7 @@ TEST:
   scraper:
     tvsou: 918a3e04
     tvmao: GDZS1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 中山公共:
@@ -1260,7 +1260,7 @@ TEST:
   scraper:
     tvsou: 3ff2739e
     tvmao: GDZS2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 潮州综合:
@@ -1269,7 +1269,7 @@ TEST:
   scraper:
     tvsou: ada776a1
     tvmao: CZBTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 潮州民生:
@@ -1278,7 +1278,7 @@ TEST:
   scraper:
     tvsou: de2b51c1
     tvmao: CZBTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 梅州-1:
@@ -1287,7 +1287,7 @@ TEST:
   scraper:
     tvsou: 40ad6bf1
     tvmao: GDMZTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 客家生活:
@@ -1296,7 +1296,7 @@ TEST:
   scraper:
     tvsou: 7f0a4e41
     tvmao: GDMZTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 HZTV1:
@@ -1304,7 +1304,7 @@ HZTV1:
     - HZTV1
   scraper:
     xmltv: HZTV1@https://epg.v1.mk/fy.xml
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 HZTV2:
@@ -1312,7 +1312,7 @@ HZTV2:
     - HZTV2
   scraper:
     xmltv: HZTV2@https://epg.v1.mk/fy.xml
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 
@@ -1323,7 +1323,7 @@ CCTV1:
   scraper:
     cctv: cctv1
     tvmao: CCTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV2:
@@ -1332,7 +1332,7 @@ CCTV2:
   scraper:
     cctv: cctv2
     tvmao: CCTV2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV3:
@@ -1341,7 +1341,7 @@ CCTV3:
   scraper:
     cctv: cctv3
     tvmao: CCTV3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV4:
@@ -1350,7 +1350,7 @@ CCTV4:
   scraper:
     cctv: cctv4
     tvmao: CCTV4
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV5:
@@ -1359,7 +1359,7 @@ CCTV5:
   scraper:
     cctv: cctv5
     tvmao: CCTV5
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV5+:
@@ -1368,7 +1368,7 @@ CCTV5+:
   scraper:
     cctv: cctv5plus
     tvmao: CCTV5+
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV6:
@@ -1377,7 +1377,7 @@ CCTV6:
   scraper:
     cctv: cctv6
     tvmao: CCTV6
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV7:
@@ -1386,7 +1386,7 @@ CCTV7:
   scraper:
     cctv: cctv7
     tvmao: CCTV7
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV8:
@@ -1395,7 +1395,7 @@ CCTV8:
   scraper:
     cctv: cctv8
     tvmao: CCTV8
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV9:
@@ -1404,7 +1404,7 @@ CCTV9:
   scraper:
     cctv: cctv9
     tvmao: CCTV9
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV10:
@@ -1413,7 +1413,7 @@ CCTV10:
   scraper:
     cctv: cctv10
     tvmao: CCTV10
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV11:
@@ -1422,7 +1422,7 @@ CCTV11:
   scraper:
     cctv: cctv11
     tvmao: CCTV11
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV12:
@@ -1431,7 +1431,7 @@ CCTV12:
   scraper:
     cctv: cctv12
     tvmao: CCTV12
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV13:
@@ -1440,7 +1440,7 @@ CCTV13:
   scraper:
     cctv: cctv13
     tvmao: CCTV13
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV14:
@@ -1449,7 +1449,7 @@ CCTV14:
   scraper:
     cctv: cctv14
     tvmao: CCTV14
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV15:
@@ -1458,7 +1458,7 @@ CCTV15:
   scraper:
     cctv: cctv15
     tvmao: CCTV15
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV16:
@@ -1467,7 +1467,7 @@ CCTV16:
   scraper:
     cctv: cctv16
     tvmao: CCTV16
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 CCTV17:
@@ -1476,7 +1476,7 @@ CCTV17:
   scraper:
     cctv: cctv17
     tvmao: CCTV17
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 
@@ -1486,7 +1486,7 @@ CCTV17:
   scraper:
     cctv: cctvfyzq
     tvmao: CCTVPAYFEE1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 风云音乐:
@@ -1495,7 +1495,7 @@ CCTV17:
   scraper:
     cctv: fyyy
     tvmao: CCTVPAYFEE2
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 第一剧场:
@@ -1504,7 +1504,7 @@ CCTV17:
   scraper:
     cctv: diyijuchang
     tvmao: CCTVPAYFEE3
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 风云剧场:
@@ -1513,7 +1513,7 @@ CCTV17:
   scraper:
     cctv: fyjc
     tvmao: CCTVPAYFEE4
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 世界地理:
@@ -1522,7 +1522,7 @@ CCTV17:
   scraper:
     cctv: shijiedili
     tvmao: CCTVPAYFEE5
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 电视指南:
@@ -1531,7 +1531,7 @@ CCTV17:
   scraper:
     cctv: zhinan
     tvmao: CCTVPAYFEE6
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 怀旧剧场:
@@ -1540,7 +1540,7 @@ CCTV17:
   scraper:
     cctv: hjjc
     tvmao: CCTVPAYFEE7
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 兵器科技:
@@ -1549,7 +1549,7 @@ CCTV17:
   scraper:
     cctv: guofang
     tvmao: CCTVPAYFEE8
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 女性时尚:
@@ -1558,7 +1558,7 @@ CCTV17:
   scraper:
     cctv: shishang
     tvmao: CCTVPAYFEE9
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 高尔夫网球:
@@ -1567,7 +1567,7 @@ CCTV17:
   scraper:
     cctv: cctvgaowang
     tvmao: CCTVPAYFEE13
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 央视文化精品:
@@ -1576,7 +1576,7 @@ CCTV17:
   scraper:
     cctv: jingpin
     tvmao: CCTVPAYFEE14
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 央视台球:
@@ -1585,7 +1585,7 @@ CCTV17:
   scraper:
     cctv: taiqiu
     tvmao: CCTVPAYFEE36
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 
@@ -1594,9 +1594,9 @@ CCTV17:
   name:
     - 广东卫视
   scraper:
-    tvmao: GDTV1
+    cctv: guangdong
     tvsou: cb608c10
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 大湾区卫视:
@@ -1605,69 +1605,70 @@ CCTV17:
   scraper:
     tvmao: NANFANG6
     tvsou: ccfe6b99
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 深圳卫视:
   name:
     - 深圳卫视
   scraper:
-    tvmao: SZTV1
+    cctv: shenzhen
     tvsou: 50ca1f4c
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 湖南卫视:
   name:
     - 湖南卫视
   scraper:
-    tvmao: HUNANTV1
+    cctv: hunan
     tvsou: 7d4daf1f
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 浙江卫视:
   name:
     - 浙江卫视
   scraper:
-    tvmao: ZJTV1
+    cctv: zhejiang
     tvsou: 9f005630
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 江苏卫视:
   name:
     - 江苏卫视
   scraper:
-    tvmao: JSTV1
+    cctv: jiangsu
     tvsou: 95f40184
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 东方卫视:
   name:
     - 东方卫视
   scraper:
+    cctv: dongfang
     tvmao: DONGFANG1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 安徽卫视:
   name:
     - 安徽卫视
   scraper:
-    tvmao: AHTV1
+    cctv: anhui
     tvsou: 06a195fd
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 北京卫视:
   name:
     - 北京卫视
   scraper:
-    tvmao: BTV1
+    cctv: btv1
     tvsou: 696f2203
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 天津卫视:
@@ -1676,88 +1677,88 @@ CCTV17:
   scraper:
     cctv: tianjin
     tvmao: TJTV1
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 山东卫视:
   name:
     - 山东卫视
   scraper:
-    tvmao: SDTV1
+    cctv: shandong
     tvsou: c62d45e9
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 江西卫视:
   name:
     - 江西卫视
   scraper:
-    tvmao: JXTV1
     cctv: jiangxi
-  refresh: today
+    tvmao: JXTV1
+  refresh: once
   recap: 1
   preview: 2
 湖北卫视:
   name:
     - 湖北卫视
   scraper:
-    tvmao: HUBEI1
+    cctv: hubei
     tvsou: 526cbae7
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 广西卫视:
   name:
     - 广西卫视
   scraper:
-    tvmao: GUANXI1
     cctv: guangxi
-  refresh: today
+    tvmao: GUANXI1
+  refresh: once
   recap: 1
   preview: 2
 辽宁卫视:
   name:
     - 辽宁卫视
   scraper:
-    tvmao: LNTV1
+    cctv: liaoning
     tvsou: 019d9e5e
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 黑龙江卫视:
   name:
     - 黑龙江卫视
   scraper:
-    tvmao: HLJTV1
+    cctv: heilongjiang
     tvsou: 59736a35
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 贵州卫视:
   name:
     - 贵州卫视
   scraper:
-    tvmao: GUIZOUTV1
+    cctv: guizhou
     tvsou: a136a49d
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 四川卫视:
   name:
     - 四川卫视
   scraper:
-    tvmao: SCTV1
+    cctv: sichuan
     tvsou: e5b252e4
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 河南卫视:
   name:
     - 河南卫视
   scraper:
-    tvmao: HNTV1
+    cctv: henan
     tvsou: 789d0d22
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 河北卫视:
@@ -1766,78 +1767,78 @@ CCTV17:
   scraper:
     cctv: hebei
     tvsou: 25feea76
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 东南卫视:
   name:
     - 东南卫视
   scraper:
-    tvmao: FJTV2
+    cctv: dongnan
     tvsou: da0c3f96
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 吉林卫视:
   name:
     - 吉林卫视
   scraper:
-    tvmao: JILIN1
+    cctv: jilin
     tvsou: a3aa4d01
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 青海卫视:
   name:
     - 青海卫视
   scraper:
-    tvmao: QHTV1
+    cctv: qinghai
     tvsou: 6cf61152
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 海南卫视:
   name:
     - 海南卫视
   scraper:
-    tvmao: TCTC1
     tvsou: 8024c685
-  refresh: today
+    tvmao: TCTC1
+  refresh: once
   recap: 1
   preview: 2
 甘肃卫视:
   name:
     - 甘肃卫视
   scraper:
-    tvmao: GSTV1
+    cctv: gansu
     tvsou: fac1ecf6
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 三沙卫视:
   name:
     - 三沙卫视
   scraper:
-    tvmao: SANSHATV
     tvsou: 79d20678
-  refresh: today
+    tvmao: SANSHATV
+  refresh: once
   recap: 1
   preview: 2
 云南卫视:
   name:
     - 云南卫视
   scraper:
+    cctv: yunnan
     tvmao: YNTV1
-    tvsou: 3a19b822
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 重庆卫视:
   name:
     - 重庆卫视
   scraper:
+    cctv: chongqing
     tvmao: CCQTV1
-    tvsou: 54cb9087
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
