@@ -1,5 +1,5 @@
 # http://epg.pw/xmltv/epg_HK.xml
-ViuTV:
+VIUTV:
   name:
     - ViuTV
   scraper:
@@ -7,9 +7,9 @@ ViuTV:
   refresh: once
   recap: 1
   preview: 2
-Now新闻台:
+NOW新闻台:
   name:
-    - Now新闻台
+    - Now新聞台
   scraper:
     xmltv: 410344@http://epg.pw/xmltv/epg_HK.xml
   refresh: once
