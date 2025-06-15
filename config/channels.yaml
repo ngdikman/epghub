@@ -3,7 +3,7 @@ VIUTV:
   name:
     - VIUTV
   scraper:
-    xmltv: Viutv.hk@http://epg.pw/xmltv/epg_HK.xml
+    xmltv: Viutv.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
   recap: 1
   preview: 2
@@ -21,7 +21,6 @@ HOY76:
     - HOY76
   scraper:
     xmltv: 76@https://epg1.168.us.kg/hoy.tv.xml
-    xmltv: HOY76@http://epg.112114.xyz/pp.xml
   refresh: once
   recap: 1
   preview: 2
@@ -30,7 +29,6 @@ HOY77:
     - HOY77
   scraper:
     xmltv: 77@https://epg1.168.us.kg/hoy.tv.xml
-    xmltv: HOY77@http://epg.112114.xyz/pp.xml
   refresh: once
   recap: 1
   preview: 2
@@ -39,7 +37,6 @@ HOY78:
     - HOY78
   scraper:
     xmltv: 78@https://epg1.168.us.kg/hoy.tv.xml
-    xmltv: HOY78@http://epg.112114.xyz/pp.xml 
   refresh: once
   recap: 1
   preview: 2
