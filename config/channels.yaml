@@ -1447,7 +1447,7 @@ CCTV14:
   name:
     - CCTV14
   scraper:
-    cctv: cctv14
+    cctv: cctvchild
     tvmao: CCTV14
   refresh: once
   recap: 1
@@ -1603,8 +1603,7 @@ CCTV17:
   name:
     - 大湾区卫视
   scraper:
-    tvmao: NANFANG6
-    tvsou: ccfe6b99
+    xml: 大湾区卫视@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
@@ -1801,8 +1800,7 @@ CCTV17:
   name:
     - 海南卫视
   scraper:
-    tvsou: 8024c685
-    tvmao: TCTC1
+    xml: 海南卫视@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
@@ -1819,8 +1817,7 @@ CCTV17:
   name:
     - 三沙卫视
   scraper:
-    tvsou: 79d20678
-    tvmao: SANSHATV
+    xml: 三沙卫视@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
