@@ -28,7 +28,7 @@ HOY77:
   name:
     - HOY77
   scraper:
-    xmltv: 77@https://epg1.168.us.kg/hoy.tv.xml
+    xmltv: HOYTV.hk@https://epg1.168.us.kg/hoy.tv.xml
   refresh: once
   recap: 1
   preview: 2
