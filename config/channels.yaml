@@ -3,7 +3,7 @@ VIUTV:
   name:
     - VIUTV
   scraper:
-    xmltv: Viutv.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+    xmltv: ViuTV.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: today
   recap: 1
   preview: 2
