@@ -1603,7 +1603,7 @@ CCTV17:
   name:
     - 大湾区卫视
   scraper:
-    xml: 大湾区卫视@https://epg.v1.mk/fy.xml
+    xmltv: 大湾区卫视@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
@@ -1800,7 +1800,7 @@ CCTV17:
   name:
     - 海南卫视
   scraper:
-    xml: 海南卫视@https://epg.v1.mk/fy.xml
+    xmltv: 海南卫视@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
@@ -1817,7 +1817,7 @@ CCTV17:
   name:
     - 三沙卫视
   scraper:
-    xml: 三沙卫视@https://epg.v1.mk/fy.xml
+    xmltv: 三沙卫视@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
