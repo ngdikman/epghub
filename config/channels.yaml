@@ -4,7 +4,7 @@ VIUTV:
     - VIUTV
   scraper:
     xmltv: ViuTV.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 NOW新聞台:
