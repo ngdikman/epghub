@@ -896,7 +896,7 @@ TEST:
   name:
     - 现代教育
   scraper:
-    tvmao: FUN-TV
+    xmltv: 现代教育@https://epg.v1.mk/fy.xml
   refresh: once
   recap: 1
   preview: 2
@@ -1091,8 +1091,8 @@ TEST:
   name:
     - 河源综合
   scraper:
+    xmltv: 河源综合@https://epg.v1.mk/fy.xml
     tvmao: HYRTV-1
-    tvsou: 9d004d93
   refresh: once
   recap: 1
   preview: 2
@@ -1100,7 +1100,7 @@ TEST:
   name:
     - 河源公共
   scraper:
-    tvmao: HYRTV-2
+    xmltv: 河源公共@https://epg.v1.mk/fy.xml
     tvsou: a2239113
   refresh: once
   recap: 1
