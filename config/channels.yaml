@@ -25,44 +25,44 @@ NOW新聞台:
   recap: 1
   preview: 2
 
-港台电视31:
+港台電視31:
   name:
-    - 港台电视31
+    - 港台電視31
   scraper:
-    xmltv: 368550@https://epg.pw/xmltv/epg_HK.xml
-  refresh: once
+    xmltv: 368550@https://epg.pw/api/epg.xml?channel_id=368550
+  refresh: today
   recap: 1
   preview: 2
-港台电视32:
+港台電視32:
   name:
-    - 港台电视32
+    - 港台電視32
   scraper:
-    xmltv: 368551@https://epg.pw/xmltv/epg_HK.xml
-  refresh: once
+    xmltv: 368551@https://epg.pw/api/epg.xml?channel_id=368551
+  refresh: today
   recap: 1
   preview: 2
-港台电视33:
+港台電視33:
   name:
-    - 港台电视33
+    - 港台電視33
   scraper:
-    xmltv: 368552@https://epg.pw/xmltv/epg_HK.xml
-  refresh: once
+    xmltv: 368552@https://epg.pw/api/epg.xml?channel_id=368552
+  refresh: today
   recap: 1
   preview: 2
-港台电视34:
+港台電視34:
   name:
-    - 港台电视34
+    - 港台電視34
   scraper:
-    xmltv: 368553@https://epg.pw/xmltv/epg_HK.xml
-  refresh: once
+    xmltv: 368553@https://epg.pw/api/epg.xml?channel_id=368553
+  refresh: today
   recap: 1
   preview: 2
-港台电视35:
+港台電視35:
   name:
-    - 港台电视35
+    - 港台電視35
   scraper:
-    xmltv: 368554@https://epg.pw/xmltv/epg_HK.xml
-  refresh: once
+    xmltv: 368554@https://epg.pw/api/epg.xml?channel_id=368554
+  refresh: today
   recap: 1
   preview: 2
  
