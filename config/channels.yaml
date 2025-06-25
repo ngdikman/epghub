@@ -28,8 +28,8 @@ NOW新聞台:
   name:
     - 天映頻道
   scraper:
-    xmltv: 1298@https://epg.pw/api/epg.xml?channel_id=1298
-  refresh: once
+    xmltv: 1298@https://epg.pw/api/epg.xml?channel_id=1298&timezone=QWZyaWNhL0FiaWRqYW4=
+  refresh: today
   recap: 1
   preview: 2
 
