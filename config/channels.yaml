@@ -7,6 +7,14 @@ VIUTV:
   refresh: once
   recap: 1
   preview: 2
+VIUTVSIX:
+  name:
+    - VIUTVSIX
+  scraper:
+    xmltv: ViuTVsix.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
 NOW新聞台:
   name:
     - NOW新聞台
@@ -20,7 +28,7 @@ NOW新聞台:
   name:
     - 天映頻道
   scraper:
-    xmltv: 1298@https://epg.pw/xmltv/epg_MY.xml
+    xmltv: 1298@https://epg.pw/api/epg.xml?channel_id=1298
   refresh: once
   recap: 1
   preview: 2
@@ -30,7 +38,7 @@ NOW新聞台:
     - 港台電視31
   scraper:
     xmltv: 368550@https://epg.pw/api/epg.xml?channel_id=368550
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 港台電視32:
@@ -38,7 +46,7 @@ NOW新聞台:
     - 港台電視32
   scraper:
     xmltv: 368551@https://epg.pw/api/epg.xml?channel_id=368551
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 港台電視33:
@@ -46,7 +54,7 @@ NOW新聞台:
     - 港台電視33
   scraper:
     xmltv: 368552@https://epg.pw/api/epg.xml?channel_id=368552
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 港台電視34:
@@ -54,7 +62,7 @@ NOW新聞台:
     - 港台電視34
   scraper:
     xmltv: 368553@https://epg.pw/api/epg.xml?channel_id=368553
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
 港台電視35:
@@ -62,7 +70,7 @@ NOW新聞台:
     - 港台電視35
   scraper:
     xmltv: 368554@https://epg.pw/api/epg.xml?channel_id=368554
-  refresh: today
+  refresh: once
   recap: 1
   preview: 2
  
