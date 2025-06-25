@@ -25,6 +25,47 @@ NOW新聞台:
   recap: 1
   preview: 2
 
+港台电视31:
+  name:
+    - 港台电视31
+  scraper:
+    xmltv: 368550@https://epg.pw/xmltv/epg_HK.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台电视32:
+  name:
+    - 港台电视32
+  scraper:
+    xmltv: 368551@https://epg.pw/xmltv/epg_HK.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台电视33:
+  name:
+    - 港台电视33
+  scraper:
+    xmltv: 368552@https://epg.pw/xmltv/epg_HK.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台电视34:
+  name:
+    - 港台电视34
+  scraper:
+    xmltv: 368553@https://epg.pw/xmltv/epg_HK.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台电视35:
+  name:
+    - 港台电视35
+  scraper:
+    xmltv: 368554@https://epg.pw/xmltv/epg_HK.xml
+  refresh: once
+  recap: 1
+  preview: 2
+ 
 HOY76:
   name:
     - HOY76
