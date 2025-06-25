@@ -73,6 +73,14 @@ NOW新聞台:
   refresh: once
   recap: 1
   preview: 2
+TVB星河:
+  name:
+    - TVB星河
+  scraper:
+    xmltv: 3493@https://epg.pw/api/epg.xml?channel_id=3493
+  refresh: once
+  recap: 1
+  preview: 2
  
 HOY76:
   name:
