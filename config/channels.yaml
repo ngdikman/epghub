@@ -87,7 +87,7 @@ HOY76:
     - HOY76
   scraper:
     xmltv: 76@https://epg1.168.us.kg/hoy.tv.xml
-  refresh: once
+  refresh: today
   recap: 1
   preview: 2
 HOY77:
@@ -95,7 +95,7 @@ HOY77:
     - HOY77
   scraper:
     xmltv: HOYTV.hk@https://epg1.168.us.kg/hoy.tv.xml
-  refresh: once
+  refresh: today
   recap: 1
   preview: 2
 HOY78:
@@ -103,7 +103,7 @@ HOY78:
     - HOY78
   scraper:
     xmltv: 78@https://epg1.168.us.kg/hoy.tv.xml
-  refresh: once
+  refresh: today
   recap: 1
   preview: 2
 
