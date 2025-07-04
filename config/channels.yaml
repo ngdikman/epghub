@@ -384,6 +384,14 @@ CRTX:
   refresh: once
   recap: 1
   preview: 2
+RKEX:
+  name:
+    - ROCK Extreme
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
 POPC:
   name:
     - PopC
