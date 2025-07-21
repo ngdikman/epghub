@@ -427,6 +427,16 @@
                             programItem.innerHTML = `<td>${program.start}</td><td>${programTitle}</td>`;
                             programList.appendChild(programItem);
                         });
+
+                        // 自动滚动到当前播放节目的位置
+                        const nowPlayingElement = document.querySelector('.now-playing');
+                        if (nowPlayingElement) {
+                            const tr = nowPlayingElement.closest('tr');
+                            if (tr) {
+                                tr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }
+
                     } else {
                         const noDataItem = document.createElement('tr');
                         noDataItem.classList.add('program-item');
