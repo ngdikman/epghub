@@ -377,219 +377,82 @@
         </div>
     </div>
 
-    <script>
-        // Function to refresh the program list for the selected channel and date
-        function refreshProgramList(channelName, formattedDate) {
-            const programList = document.querySelector('.program-list tbody');
-            const currentDate = formattedDate;
-            const apiUrl = `/diyp?ch=${encodeURIComponent(channelName)}&date=${currentDate}`;
+<script>
+    // Function to refresh the program list for the selected channel and date
+    function refreshProgramList(channelName, formattedDate) {
+        const programList = document.querySelector('.program-list tbody');
+        const currentDate = formattedDate;
+        const apiUrl = `/diyp?ch=${encodeURIComponent(channelName)}&date=${currentDate}`;
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    programList.innerHTML = '';
-                    currentTime = new Date();
-                    currentTime = new Date(currentTime.toISOString());
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                programList.innerHTML = '';
+                currentTime = new Date();
+                currentTime = new Date(currentTime.toISOString());
 
-                    if (data.epg_data) {
-                        // 新增排序逻辑 - 按开始时间排序
-                        const sortedPrograms = data.epg_data.sort((a, b) => {
-                            const timeA = new Date(`${currentDate}T${a.start}{{timezone_offset}}`).getTime();
-                            const timeB = new Date(`${currentDate}T${b.start}{{timezone_offset}}`).getTime();
-                            return timeA - timeB;
-                        });
+                if (data.epg_data) {
+                    // 新增排序逻辑 - 按开始时间排序
+                    const sortedPrograms = data.epg_data.sort((a, b) => {
+                        const timeA = new Date(`${currentDate}T${a.start}{{timezone_offset}}`).getTime();
+                        const timeB = new Date(`${currentDate}T${b.start}{{timezone_offset}}`).getTime();
+                        return timeA - timeB;
+                    });
 
-                        sortedPrograms.forEach((program, index) => {
-                            const programItem = document.createElement('tr');
-                            programItem.classList.add('program-item');
+                    sortedPrograms.forEach((program, index) => {
+                        const programItem = document.createElement('tr');
+                        programItem.classList.add('program-item');
 
-                            // Format program start and end times with '{{timezone_name}}' time zone
-                            programStartTime = new Date(`${currentDate}T${program.start}{{timezone_offset}}`);
-                            programEndTime = new Date(`${currentDate}T${program.end}{{timezone_offset}}`);
-                            
-                            if (programEndTime < programStartTime) {
-                                programEndTime.setDate(programEndTime.getDate() + 1);
-                            }
+                        programStartTime = new Date(`${currentDate}T${program.start}{{timezone_offset}}`);
+                        programEndTime = new Date(`${currentDate}T${program.end}{{timezone_offset}}`);
 
-                            let programTitle = program.title;
-                            let programDesc = '';
-                            
-                            if (program.desc) {
-                                programDesc = `<span class="program-desc">${program.desc}</span>`;
-                            }
-                            
-                            if (currentTime >= programStartTime && currentTime <= programEndTime) {
-                                programTitle = `<span class="now-playing">${program.title}</span>${programDesc}`;
-                            } else {
-                                programTitle = `${program.title}${programDesc}`;
-                            }
+                        if (programEndTime < programStartTime) {
+                            programEndTime.setDate(programEndTime.getDate() + 1);
+                        }
 
-                            programItem.innerHTML = `<td>${program.start}</td><td>${programTitle}</td>`;
-                            programList.appendChild(programItem);
-                        });
-                    } else {
-                        const noDataItem = document.createElement('tr');
-                        noDataItem.classList.add('program-item');
-                        noDataItem.innerHTML = '<td colspan="2" style="text-align: center; padding: 20px;">No program data available.</td>';
-                        programList.appendChild(noDataItem);
+                        let programTitle = program.title;
+                        let programDesc = '';
+
+                        if (program.desc) {
+                            programDesc = `<span class="program-desc">${program.desc}</span>`;
+                        }
+
+                        if (currentTime >= programStartTime && currentTime <= programEndTime) {
+                            programTitle = `<span class="now-playing">${program.title}</span>${programDesc}`;
+                        } else {
+                            programTitle = `${program.title}${programDesc}`;
+                        }
+
+                        programItem.innerHTML = `<td>${program.start}</td><td>${programTitle}</td>`;
+                        programList.appendChild(programItem);
+                    });
+
+                    // ✅ 滚动到当前播放的节目项
+                    const nowPlayingElement = document.querySelector('.now-playing');
+                    if (nowPlayingElement) {
+                        const tr = nowPlayingElement.closest('tr');
+                        if (tr) {
+                            tr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
                     }
-                })
-                .catch(error => {
-                    console.error(error);
-                    const errorItem = document.createElement('tr');
-                    errorItem.classList.add('program-item');
-                    errorItem.innerHTML = '<td colspan="2" style="text-align: center; padding: 20px; color: #dc3545;">Failed to retrieve program data.</td>';
-                    programList.appendChild(errorItem);
-                });
-        }
 
-        const channelItems = document.querySelectorAll('.channel-item');
-
-        channelItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Clear all selected items
-                channelItems.forEach(item => item.classList.remove('selected'));
-
-                // Toggle the selected state for the clicked item
-                item.classList.add('selected');
-
-                // Refresh the program list for the selected channel
-                goBackToday();
+                } else {
+                    const noDataItem = document.createElement('tr');
+                    noDataItem.classList.add('program-item');
+                    noDataItem.innerHTML = '<td colspan="2" style="text-align: center; padding: 20px;">No program data available.</td>';
+                    programList.appendChild(noDataItem);
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                const errorItem = document.createElement('tr');
+                errorItem.classList.add('program-item');
+                errorItem.innerHTML = '<td colspan="2" style="text-align: center; padding: 20px; color: #dc3545;">Failed to retrieve program data.</td>';
+                programList.appendChild(errorItem);
             });
-        });
+    }
+</script>
 
-        // Function to copy the URL to the clipboard
-        function copyURLToClipboard(elID) {
-            const urlInput = document.getElementById(elID);
-            urlInput.select();
-            document.execCommand('copy');
-            
-            // Create and show feedback element
-            const feedback = document.createElement('div');
-            feedback.className = 'copy-success';
-            feedback.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="16" height="16" style="vertical-align: sub;margin-right: 8px">
-                    <path fill="#67c23a" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292c-12.7 17.7-39 17.7-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z"/>
-                </svg><span>复制成功！</span>
-            `;
-            document.body.appendChild(feedback);
-            
-            // Remove feedback element after animation
-            setTimeout(() => {
-                document.body.removeChild(feedback);
-            }, 2000);
-        }
-
-        // Attach a click event listener to the "Copy URL" button
-        document.getElementById('copyEpgUrlButton').addEventListener('click', () => { copyURLToClipboard('epgUrl') });
-        document.getElementById('copyDiypUrlButton').addEventListener('click', () => { copyURLToClipboard('diypUrl') });
-
-        window.addEventListener('load', function () {
-            // Get the href attribute value
-            var hrefValueEpgUrl = document.getElementById('epgUrl').value;
-            var hrefValueDiypUrl = document.getElementById('diypUrl').value;
-            // Get the full URL including the base URL
-            var fullUrlEpgUrl = window.location.origin + hrefValueEpgUrl;
-            var fullUrlDiypUrl = window.location.origin + hrefValueDiypUrl;
-
-            // Set the full URL in the input box
-            document.getElementById('epgUrl').value = fullUrlEpgUrl;
-            document.getElementById('diypUrl').value = fullUrlDiypUrl;
-        });
-
-        // Function to update the date display
-        function updateDateDisplay(dateString) {
-            const currentDateElement = document.getElementById('currentDate');
-            currentDateElement.textContent = dateString;
-        }
-
-        // Function to handle the "Previous Date" button click
-        function goToPreviousDate() {
-            const currentDateElement = document.getElementById('currentDate');
-            const currentDate = currentDateElement.textContent;
-            const curDate = convertLocalTimeToTimezoneOffset(new Date(`${currentDate}`), "{{timezone_offset}}");
-            curDate.setDate(curDate.getDate() - 1);
-            const formattedDate = curDate.getFullYear() + '-' + String(curDate.getMonth() + 1).padStart(2, '0') + '-' + String(curDate.getDate()).padStart(2, '0');
-            updateDateDisplay(formattedDate);
-            const initiallySelectedChannel = document.querySelector('.channel-item.selected');
-            refreshProgramList(initiallySelectedChannel.getAttribute('data-channel'), formattedDate);
-        }
-
-        // Function to handle the "Next Date" button click
-        function goToNextDate() {
-            const currentDateElement = document.getElementById('currentDate');
-            const currentDate = currentDateElement.textContent;
-            const curDate = convertLocalTimeToTimezoneOffset(new Date(`${currentDate}`), "{{timezone_offset}}");
-            curDate.setDate(curDate.getDate() + 1);
-            const formattedDate = curDate.getFullYear() + '-' + String(curDate.getMonth() + 1).padStart(2, '0') + '-' + String(curDate.getDate()).padStart(2, '0');
-            updateDateDisplay(formattedDate);
-            const initiallySelectedChannel = document.querySelector('.channel-item.selected');
-            refreshProgramList(initiallySelectedChannel.getAttribute('data-channel'), formattedDate);
-        }
-
-        // Function to go back to today
-        function goBackToday() {
-            const currentDate = new Date();
-            const epgTime = convertLocalTimeToTimezoneOffset(currentDate, "{{timezone_offset}}");
-            const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-            const formattedDate = epgTime.toLocaleDateString('fr-CA', options);
-
-            updateDateDisplay(formattedDate);
-            const initiallySelectedChannel = document.querySelector('.channel-item.selected');
-            refreshProgramList(initiallySelectedChannel.getAttribute('data-channel'), formattedDate);
-        }
-
-        // Function to convert local time to timezone offset
-        function convertLocalTimeToTimezoneOffset(localTime, timezone_offset) {
-            const sign = timezone_offset[0] === '-' ? -1 : 1;
-            const hours = parseInt(timezone_offset.slice(1, 3), 10);
-            const minutes = parseInt(timezone_offset.slice(3, 5), 10);
-
-            const offsetMilliseconds = (hours * 60 + minutes) * 60 * 1000 * sign;
-            const currentOffsetMilliseconds = localTime.getTimezoneOffset() * 60 * 1000;
-
-            localTime.setTime(localTime.getTime() + currentOffsetMilliseconds + offsetMilliseconds);
-            
-            return localTime;
-        }
-
-        // Attach event listeners to the "Previous Date" and "Next Date" buttons
-        const prevDateButton = document.getElementById('prevDate');
-        prevDateButton.addEventListener('click', goToPreviousDate);
-
-        const nextDateButton = document.getElementById('nextDate');
-        nextDateButton.addEventListener('click', goToNextDate);
-
-        // Refresh the program list for the initially selected channel
-        goBackToday();
-
-         // 新增实时搜索功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('channelSearch');
-            const channelItems = document.querySelectorAll('.channel-item');
-            
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                
-                channelItems.forEach(item => {
-                    const channelName = item.textContent.toLowerCase();
-                    if (channelName.includes(searchTerm)) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
-            });
-            
-            // 保持搜索框在滚动时可见
-            // const channelListContainer = document.querySelector('.channel-list-container');
-            // channelListContainer.addEventListener('scroll', function() {
-            //     const scrollTop = channelListContainer.scrollTop;
-            //     const searchContainer = document.querySelector('.channel-search-container');
-            //     searchContainer.style.boxShadow = scrollTop > 0 ? '0 2px 5px rgba(0,0,0,0.1)' : 'none';
-            // });
-        });
-    </script>
 </body>
 
 </html>
