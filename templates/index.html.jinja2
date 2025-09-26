@@ -263,6 +263,16 @@
                 max-height: 200px;
                 position: static;
                 flex: none;
+                z-index: 1;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .program-list-container {
+                order: 2;
+                position: relative;
+                z-index: 2;
+                background: #fff;
             }
 
             .program-list-container {
@@ -379,6 +389,16 @@
 
             .channel-list-container {
                 max-height: 150px;
+                position: static;
+                z-index: 1;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .program-list-container {
+                position: relative;
+                z-index: 2;
+                background: #fff;
             }
 
             .program-item td {
@@ -417,6 +437,16 @@
         @media (max-width: 768px) and (orientation: landscape) {
             .channel-list-container {
                 max-height: 120px;
+                position: static;
+                z-index: 1;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .program-list-container {
+                position: relative;
+                z-index: 2;
+                background: #fff;
             }
         }
 
