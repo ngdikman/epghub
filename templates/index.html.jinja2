@@ -248,6 +248,7 @@
             .container {
                 flex-direction: column;
                 padding: 10px;
+                gap: 15px;
             }
 
             .program-list-container,
@@ -258,26 +259,164 @@
 
             .channel-list-container {
                 order: 1;
-                margin-bottom: 20px;
-                max-height: 300px;
+                margin-bottom: 15px;
+                max-height: 200px;
                 position: static;
+                flex: none;
             }
 
             .program-list-container {
                 order: 2;
             }
 
+            .header {
+                padding: 15px;
+            }
+
             .header h1 {
-                font-size: 28px;
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .header p {
+                font-size: 14px;
+                margin: 5px 0;
+            }
+
+            .link-container {
+                gap: 8px;
+                margin: 10px 0;
+            }
+
+            .cta-button {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+
+            .cta-button svg {
+                width: 16px;
+                height: 16px;
             }
 
             .program-item td {
-                padding: 10px 8px;
+                padding: 8px 6px;
+                font-size: 14px;
             }
 
             .program-item td:first-child {
-                width: 60px;
-                padding-right: 10px;
+                width: 50px;
+                padding-right: 8px;
+                font-size: 13px;
+            }
+
+            .program-desc {
+                font-size: 12px;
+                margin-top: 3px;
+            }
+
+            .date-nav {
+                margin-bottom: 15px;
+                padding: 8px;
+            }
+
+            .date-prev,
+            .date-next {
+                padding: 4px 8px;
+                font-size: 14px;
+            }
+
+            .date-now {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+
+            .channel-search-container {
+                padding: 10px 0;
+            }
+
+            .channel-search-input {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+
+            .channel-item {
+                font-size: 14px;
+                margin-bottom: 8px;
+                padding: 6px 10px;
+            }
+
+            .now-playing {
+                padding-left: 12px;
+            }
+
+            .now-playing::before {
+                font-size: 0.7em;
+                top: 2px;
+            }
+
+            .program-list {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .link-container {
+                gap: 6px;
+            }
+
+            .cta-button {
+                padding: 4px 8px;
+                font-size: 12px;
+            }
+
+            .channel-list-container {
+                max-height: 150px;
+            }
+
+            .program-item td {
+                padding: 6px 4px;
+                font-size: 13px;
+            }
+
+            .program-item td:first-child {
+                width: 45px;
+                padding-right: 6px;
+                font-size: 12px;
+            }
+
+            .program-desc {
+                font-size: 11px;
+            }
+
+            .date-prev,
+            .date-next {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            .date-now {
+                font-size: 12px;
+                margin: 0 8px;
+            }
+
+            .channel-item {
+                font-size: 13px;
+                padding: 5px 8px;
+                margin-bottom: 6px;
+            }
+        }
+
+        @media (max-width: 768px) and (orientation: landscape) {
+            .channel-list-container {
+                max-height: 120px;
             }
         }
 
