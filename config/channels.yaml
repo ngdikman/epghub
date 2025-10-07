@@ -1,3 +1,52 @@
+# http://epg.pw/xmltv/epg_TW.xml
+龍華電影HD:
+  name:
+    - 龍華電影HD
+  scraper:
+    xmltv: 457361@https://epg.pw/api/epg.xml?channel_id=457361&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華經典HD:
+  name:
+    - 龍華經典HD
+  scraper:
+    xmltv: 457370@https://epg.pw/api/epg.xml?channel_id=457370&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華洋片HD:
+  name:
+    - 龍華洋片HD
+  scraper:
+    xmltv: 457364@https://epg.pw/api/epg.xml?channel_id=457364&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華戲劇HD:
+  name:
+    - 龍華戲劇HD
+  scraper:
+    xmltv: 457313@https://epg.pw/api/epg.xml?channel_id=457313&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華偶像HD:
+  name:
+    - 龍華偶像HD
+  scraper:
+    xmltv: 457314@https://epg.pw/api/epg.xml?channel_id=457314&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華動畫HD:
+  name:
+    - 龍華動畫HD
+  scraper:
+    xmltv: 457225@https://epg.pw/api/epg.xml?channel_id=457225&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
 # http://epg.pw/xmltv/epg_HK.xml
 VIUTV:
   name:
