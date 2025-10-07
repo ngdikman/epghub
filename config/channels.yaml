@@ -205,14 +205,6 @@ C18:
   refresh: once
   recap: 1
   preview: 2
-C28:
-  name:
-    - 28AI智慧賽馬
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
 TVG:
   name:
     - 黃金翡翠台
@@ -882,49 +874,49 @@ TEST:
   preview: 2
   
 # http://epg.pw/xmltv/epg_TW.xml
-龍華電影HD:
+龍華電影:
   name:
-    - 龍華電影HD
+    - 龍華電影
   scraper:
     xmltv: 457361@https://epg.pw/api/epg.xml?channel_id=457361&timezone=QXNpYS9TaGFuZ2hhaQ==
   refresh: today
   recap: 1
   preview: 2
-龍華經典HD:
+龍華經典:
   name:
-    - 龍華經典HD
+    - 龍華經典
   scraper:
     xmltv: 457370@https://epg.pw/api/epg.xml?channel_id=457370&timezone=QXNpYS9TaGFuZ2hhaQ==
   refresh: today
   recap: 1
   preview: 2
-龍華洋片HD:
+龍華洋片:
   name:
-    - 龍華洋片HD
+    - 龍華洋片
   scraper:
     xmltv: 457364@https://epg.pw/api/epg.xml?channel_id=457364&timezone=QXNpYS9TaGFuZ2hhaQ==
   refresh: today
   recap: 1
   preview: 2
-龍華戲劇HD:
+龍華戲劇:
   name:
-    - 龍華戲劇HD
+    - 龍華戲劇
   scraper:
     xmltv: 457313@https://epg.pw/api/epg.xml?channel_id=457313&timezone=QXNpYS9TaGFuZ2hhaQ==
   refresh: today
   recap: 1
   preview: 2
-龍華偶像HD:
+龍華偶像:
   name:
-    - 龍華偶像HD
+    - 龍華偶像
   scraper:
     xmltv: 457314@https://epg.pw/api/epg.xml?channel_id=457314&timezone=QXNpYS9TaGFuZ2hhaQ==
   refresh: today
   recap: 1
   preview: 2
-龍華動畫HD:
+龍華動畫:
   name:
-    - 龍華動畫HD
+    - 龍華動畫
   scraper:
     xmltv: 457225@https://epg.pw/api/epg.xml?channel_id=457225&timezone=QXNpYS9TaGFuZ2hhaQ==
   refresh: today
