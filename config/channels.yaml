@@ -23,6 +23,22 @@ NOW新聞台:
   refresh: once
   recap: 1
   preview: 2
+NOW爆谷星影台:
+  name:
+    - NOW爆谷星影台
+  scraper:
+    xmltv: nowBaoguSuperstars.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+NOW爆谷台:
+  name:
+    - NOW爆谷台
+  scraper:
+    xmltv: nowBaoguMovies.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
 
 天映頻道:
   name:
