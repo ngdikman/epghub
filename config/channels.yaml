@@ -31,6 +31,14 @@ NOW財經台:
   refresh: once
   recap: 1
   preview: 2
+NOW直播台:
+  name:
+    - NOW直播台
+  scraper:
+    xmltv: nowDirect.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
 NOW爆谷星影台:
   name:
     - NOW爆谷星影台
