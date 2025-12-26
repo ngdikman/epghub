@@ -1,15 +1,15 @@
 # http://epg.pw/xmltv/epg_HK.xml
-VIUTV:
+ViuTV:
   name:
-    - VIUTV
+    - ViuTV
   scraper:
     xmltv: ViuTV.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
   recap: 1
   preview: 2
-VIUTVSIX:
+ViuTVsix:
   name:
-    - VIUTVSIX
+    - ViuTVsix
   scraper:
     xmltv: ViuTVsix.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
