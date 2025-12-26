@@ -23,6 +23,14 @@ NOW新聞台:
   refresh: once
   recap: 1
   preview: 2
+NOW財經台:
+  name:
+    - NOW財經台
+  scraper:
+    xmltv: nowBusinessNewsChannel.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
 NOW爆谷星影台:
   name:
     - NOW爆谷星影台
@@ -36,6 +44,14 @@ NOW爆谷台:
     - NOW爆谷台
   scraper:
     xmltv: nowBaoguMovies.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+Now Sports Prime:
+  name:
+    - Now Sports Prime
+  scraper:
+    xmltv: nowSportsPrime.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
   recap: 1
   preview: 2
