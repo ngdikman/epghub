@@ -125,6 +125,7 @@ TVB星河:
 HOY76:
   name:
     - HOY76
+    - HOY國際財經台
   scraper:
     xmltv: 76@https://epg1.168.us.kg/hoy.tv.xml
   refresh: today
@@ -133,6 +134,7 @@ HOY76:
 HOY77:
   name:
     - HOY77
+    - HOY TV
   scraper:
     xmltv: HOYTV.hk@https://epg1.168.us.kg/hoy.tv.xml
   refresh: today
@@ -141,6 +143,7 @@ HOY77:
 HOY78:
   name:
     - HOY78
+    - HOY資訊台
   scraper:
     xmltv: 78@https://epg1.168.us.kg/hoy.tv.xml
   refresh: today
@@ -257,6 +260,7 @@ J:
   name:
     - 翡翠台
     - 翡翠台(超高清)
+    - 翡翠台 4K
   scraper:
     mytvsuper: 
   refresh: once
