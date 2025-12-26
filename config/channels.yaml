@@ -1944,6 +1944,15 @@ CCTV17:
   refresh: once
   recap: 1
   preview: 2
+新疆卫视:
+  name:
+    - 新疆卫视
+  scraper:
+    cctv: xinjiang
+    tvsou: aa83e122
+  refresh: once
+  recap: 1
+  preview: 2
 青海卫视:
   name:
     - 青海卫视
