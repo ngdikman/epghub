@@ -121,7 +121,8 @@ TVB星河:
   refresh: once
   recap: 1
   preview: 2
- 
+
+# HOY
 HOY76:
   name:
     - HOY76
@@ -149,7 +150,38 @@ HOY78:
   refresh: today
   recap: 1
   preview: 2
-
+HOY生活台:
+  name:
+    - HOY生活台
+  scraper:
+    xmltv: HOY生活台@https://epg-1.iill.top/epg.xml
+  refresh: today
+  recap: 1
+  preview: 2
+HOY劇集台:
+  name:
+    - HOY劇集台
+  scraper:
+    xmltv: HOY劇集台@https://epg-1.iill.top/epg.xml
+  refresh: today
+  recap: 1
+  preview: 2
+HOY怪談台:
+  name:
+    - HOY怪談台
+  scraper:
+    xmltv: HOY怪談台@https://epg-1.iill.top/epg.xml
+  refresh: today
+  recap: 1
+  preview: 2
+HOY體育台:
+  name:
+    - HOY體育台
+  scraper:
+    xmltv: HOY體育台@https://epg-1.iill.top/epg.xml
+  refresh: today
+  recap: 1
+  preview: 2
 
 # mytvsuper
 CWIN:
