@@ -58,6 +58,7 @@ NOW爆谷台:
 Now Sports Prime:
   name:
     - Now Sports Prime
+    - NOW SPORTS PRIME
   scraper:
     xmltv: nowSportsPrime.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
