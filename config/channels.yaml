@@ -129,7 +129,7 @@ HOY76:
     - HOY76
     - HOY國際財經台
   scraper:
-    xmltv: 76@https://epg1.168.us.kg/hoy.tv.xml
+    xmltv: HOY國際財經台@https://epg-1.iill.top/epg.xml
   refresh: today
   recap: 1
   preview: 2
@@ -138,7 +138,7 @@ HOY77:
     - HOY77
     - HOY TV
   scraper:
-    xmltv: HOYTV.hk@https://epg1.168.us.kg/hoy.tv.xml
+    xmltv: HOY TV@https://epg-1.iill.top/epg.xml
   refresh: today
   recap: 1
   preview: 2
@@ -147,7 +147,7 @@ HOY78:
     - HOY78
     - HOY資訊台
   scraper:
-    xmltv: 78@https://epg1.168.us.kg/hoy.tv.xml
+    xmltv: HOY資訊台@https://epg-1.iill.top/epg.xml
   refresh: today
   recap: 1
   preview: 2
