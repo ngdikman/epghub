@@ -999,6 +999,14 @@ TEST:
   refresh: today
   recap: 1
   preview: 2
+龍華日韓:
+  name:
+    - 龍華日韓
+  scraper:
+    xmltv: 龍華日韓台@https://epg-1.iill.top/epg.xml
+  refresh: today
+  recap: 1
+  preview: 2
 
 # # gdtv
 # 广东综艺:
