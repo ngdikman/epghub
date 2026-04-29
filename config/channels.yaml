@@ -78,7 +78,7 @@ Now Sports Prime:
   name:
     - 港台電視31
   scraper:
-    xmltv: 368550@https://epg.pw/api/epg.xml?channel_id=368550
+    xmltv: RTHKTV31.hk@https://epg1.168.us.kg/rthk.hk.xml
   refresh: once
   recap: 1
   preview: 2
@@ -86,7 +86,7 @@ Now Sports Prime:
   name:
     - 港台電視32
   scraper:
-    xmltv: 368551@https://epg.pw/api/epg.xml?channel_id=368551
+    xmltv: RTHKTV32.hk@https://epg1.168.us.kg/rthk.hk.xml
   refresh: once
   recap: 1
   preview: 2
@@ -94,7 +94,7 @@ Now Sports Prime:
   name:
     - 港台電視33
   scraper:
-    xmltv: 368552@https://epg.pw/api/epg.xml?channel_id=368552
+    xmltv: RTHKTV33.hk@https://epg1.168.us.kg/rthk.hk.xml
   refresh: once
   recap: 1
   preview: 2
@@ -102,7 +102,7 @@ Now Sports Prime:
   name:
     - 港台電視34
   scraper:
-    xmltv: 368553@https://epg.pw/api/epg.xml?channel_id=368553
+    xmltv: RTHKTV34.hk@https://epg1.168.us.kg/rthk.hk.xml
   refresh: once
   recap: 1
   preview: 2
@@ -110,7 +110,7 @@ Now Sports Prime:
   name:
     - 港台電視35
   scraper:
-    xmltv: 368554@https://epg.pw/api/epg.xml?channel_id=368554
+    xmltv: RTHKTV35.hk@https://epg1.168.us.kg/rthk.hk.xml
   refresh: once
   recap: 1
   preview: 2
@@ -129,7 +129,7 @@ HOY76:
     - HOY76
     - HOY國際財經台
   scraper:
-    xmltv: HOY 國際財經台@https://epg-1.iill.top/epg.xml
+    xmltv: 76@https://epg1.168.us.kg/hoy.tv.xml
   refresh: today
   recap: 1
   preview: 2
@@ -138,7 +138,7 @@ HOY77:
     - HOY77
     - HOY TV
   scraper:
-    xmltv: HOY TV@https://epg-1.iill.top/epg.xml
+    xmltv: HOYTV.hk@https://epg1.168.us.kg/hoy.tv.xml
   refresh: today
   recap: 1
   preview: 2
@@ -147,42 +147,42 @@ HOY78:
     - HOY78
     - HOY資訊台
   scraper:
-    xmltv: HOY 資訊台@https://epg-1.iill.top/epg.xml
+    xmltv: 78@https://epg1.168.us.kg/hoy.tv.xml
   refresh: today
   recap: 1
   preview: 2
-HOY生活台:
-  name:
-    - HOY生活台
-  scraper:
-    xmltv: HOY生活台@https://epg-1.iill.top/epg.xml
-  refresh: today
-  recap: 1
-  preview: 2
-HOY劇集台:
-  name:
-    - HOY劇集台
-  scraper:
-    xmltv: HOY劇集台@https://epg-1.iill.top/epg.xml
-  refresh: today
-  recap: 1
-  preview: 2
-HOY怪談台:
-  name:
-    - HOY怪談台
-  scraper:
-    xmltv: HOY怪談台@https://epg-1.iill.top/epg.xml
-  refresh: today
-  recap: 1
-  preview: 2
-HOY體育台:
-  name:
-    - HOY體育台
-  scraper:
-    xmltv: HOY體育台@https://epg-1.iill.top/epg.xml
-  refresh: today
-  recap: 1
-  preview: 2
+# HOY生活台:
+#   name:
+#     - HOY生活台
+#   scraper:
+#     xmltv: HOY生活台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+# HOY劇集台:
+#   name:
+#     - HOY劇集台
+#   scraper:
+#     xmltv: HOY劇集台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+# HOY怪談台:
+#   name:
+#     - HOY怪談台
+#   scraper:
+#     xmltv: HOY怪談台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+# HOY體育台:
+#   name:
+#     - HOY體育台
+#   scraper:
+#     xmltv: HOY體育台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
 
 # mytvsuper
 CWIN:
@@ -1003,7 +1003,7 @@ TEST:
   name:
     - 龍華日韓
   scraper:
-    xmltv: 龍華日韓台@https://epg-1.iill.top/epg.xml
+    xmltv: 龍華日韓台@https://epg.yang-1989.eu.org/epg.xml
   refresh: today
   recap: 1
   preview: 2
