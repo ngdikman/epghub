@@ -203,7 +203,7 @@ SVAR:
   preview: 2
 SEYT:
   name:
-    - SUPER EYT
+    - 愛回家SUPER煲
   scraper:
     mytvsuper: 
   refresh: once
@@ -219,7 +219,7 @@ SFOO:
   preview: 2
 STRA:
   name:
-    - SUPER識嘆
+    - SUPER FUN
   scraper:
     mytvsuper: 
   refresh: once
@@ -235,7 +235,7 @@ SMUS:
   preview: 2
 SGOL:
   name:
-    - SUPER金曲
+    - SUPER驚
   scraper:
     mytvsuper: 
   refresh: once
@@ -251,7 +251,7 @@ SSIT:
   preview: 2
 STVM:
   name:
-    - SUPER劇場
+    - SUPER亞視劇
   scraper:
     mytvsuper: 
   refresh: once
@@ -259,7 +259,7 @@ STVM:
   preview: 2
 SDOC:
   name:
-    - SUPER話當年
+    - 真情SUPER煲
   scraper:
     mytvsuper: 
   refresh: once
@@ -783,7 +783,7 @@ SZTV:
   preview: 2
 NOW7:
   name:
-    - NOW 70s
+    - that's 70s
   scraper:
     mytvsuper: 
   refresh: once
@@ -791,7 +791,7 @@ NOW7:
   preview: 2
 NOW8:
   name:
-    - NOW 80s
+    - that's 80s
   scraper:
     mytvsuper: 
   refresh: once
@@ -799,7 +799,7 @@ NOW8:
   preview: 2
 NOWR:
   name:
-    - NOW ROCK
+    - that's Rock
   scraper:
     mytvsuper: 
   refresh: once
@@ -807,7 +807,7 @@ NOWR:
   preview: 2
 NOW9:
   name:
-    - NOW 90s00s
+    - that's 90s00s
   scraper:
     mytvsuper: 
   refresh: once
