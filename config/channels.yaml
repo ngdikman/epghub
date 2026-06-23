@@ -565,22 +565,6 @@ CRTE:
   refresh: once
   recap: 1
   preview: 2
-CAXN:
-  name:
-    - AXN
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
-CANI:
-  name:
-    - Animax
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
 CJTV:
   name:
     - tvN
@@ -720,14 +704,6 @@ AHTV:
 BJTV:
   name:
     - 北京電視台國際頻道
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
-GXTV:
-  name:
-    - 廣西電視台國際頻道
   scraper:
     mytvsuper: 
   refresh: once
