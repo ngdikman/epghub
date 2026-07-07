@@ -642,7 +642,7 @@ PCC:
     - 鳳凰衛視中文台
   scraper:
     xmltv: 鳳凰衛視中文台@https://epg1.168.us.kg/nowplayer.now.com.xml
-  refresh: once
+  refresh: today
   recap: 1
   preview: 2
 PIN:
@@ -650,7 +650,7 @@ PIN:
     - 鳳凰衛視資訊台
   scraper:
     xmltv: 366@https://epg1.168.us.kg/nowplayer.now.com.xml
-  refresh: once
+  refresh: today
   recap: 1
   preview: 2
 PHK:
@@ -658,7 +658,7 @@ PHK:
     - 鳳凰衛視香港台
   scraper:
     xmltv: 367@https://epg1.168.us.kg/nowplayer.now.com.xml
-  refresh: once
+  refresh: today
   recap: 1
   preview: 2
 CC4:
