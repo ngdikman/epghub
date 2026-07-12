@@ -76,11 +76,11 @@ class Channel:
     def __init__(
         self,
         id: str,
-        metadata: dict = {},
+        metadata: dict | None = None,
         update_callable: Callable[[Any, date], bool] | None = None,
     ) -> None:
         self.__id = id
-        self.metadata = metadata
+        self.metadata = metadata if metadata is not None else {}
         self.metadata.update(
             {"last_update": datetime(1970, 1, 1, 0, 0, 0, tzinfo=tz_shanghai)}
         )
@@ -105,7 +105,7 @@ class Channel:
     def id(self, value: str) -> None:
         raise AttributeError("Cannot set attribute 'id'")
 
-    def update(self, date: date = datetime.today().date()) -> bool | tuple:
+    def update(self, date: date | None = None) -> bool | tuple:
         """
         Update channel with new data for the given date.
 
@@ -115,12 +115,14 @@ class Channel:
         Returns:
             bool: True if the update was successful, False otherwise.
         """
+        if date is None:
+            date = datetime.today().date()
         if self.__update_callable is not None:
             update_result = self.__update_callable(self, date)
             return update_result
         return False
 
-    def now_playing(self, now: datetime = datetime.now()) -> Program | None:
+    def now_playing(self, now: datetime | None = None) -> Program | None:
         """
         Get the program that is currently playing.
 
@@ -130,6 +132,8 @@ class Channel:
         Returns:
             Program: The program that is currently playing, or None if no program is playing.
         """
+        if now is None:
+            now = datetime.now()
         for program in self.programs:
             if (
                 program.start_time.astimezone()
@@ -139,7 +143,7 @@ class Channel:
                 return program
         return None
 
-    def next_program(self, now: datetime = datetime.now()) -> Program | None:
+    def next_program(self, now: datetime | None = None) -> Program | None:
         """
         Get the next program.
 
@@ -149,6 +153,8 @@ class Channel:
         Returns:
             Program: The next program, or None if there is no next program.
         """
+        if now is None:
+            now = datetime.now()
         self.programs.sort(key=lambda x: x.start_time)
         for program in self.programs:
             if program.start_time.astimezone() > now.astimezone():

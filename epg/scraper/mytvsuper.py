@@ -2,11 +2,10 @@
 # Channels: https://github.com/iptv-org/epg/blob/master/sites/mytvsuper.com/mytvsuper.com.channels.xml
 # Translated by: https://chat.openai.com/share/e1a723db-d273-4241-97b9-cf8497b5c746
 
-import requests
 import datetime
 import json
 from epg.model import Channel, Program
-from . import tz_hong_kong
+from . import get_session, tz_hong_kong
 
 API_ENDPOINT = "https://content-api.mytvsuper.com/v1"
 
@@ -28,9 +27,11 @@ def parse_description(item, site_channel):
 
 
 def parse_start(item):
+    # API times are Hong Kong wall time: attach the timezone directly
+    # instead of converting from the (arbitrary) local timezone.
     start_datetime = datetime.datetime.strptime(
         item["start_datetime"], "%Y-%m-%d %H:%M:%S"
-    ).astimezone(tz_hong_kong)
+    ).replace(tzinfo=tz_hong_kong)
     return start_datetime
 
 
@@ -54,7 +55,7 @@ def parse_items(content, date):
 
 def fetch_data(site_channel, date):
     url = f"{API_ENDPOINT}/epg?network_code={site_channel['site_id']}&from={date.strftime('%Y%m%d')}&to={date.strftime('%Y%m%d')}&platform=web"
-    response = requests.get(url)
+    response = get_session().get(url, timeout=10)
     response.raise_for_status()
     return response.text
 
@@ -89,7 +90,7 @@ def parse_programs(content, site_channel, date):
 
 
 def get_channels(lang):
-    response = requests.get(f"{API_ENDPOINT}/channel/list?platform=web")
+    response = get_session().get(f"{API_ENDPOINT}/channel/list?platform=web", timeout=10)
     response.raise_for_status()
     data = response.json()
 
@@ -107,13 +108,12 @@ def get_channels(lang):
 def update(
     channel: Channel,
     scraper_id: str | None = None,
-    dt: datetime.date = datetime.datetime.today().date(),
+    dt: datetime.date | None = None,
 ) -> bool:
-    channel_id = channel.id if scraper_id == None else scraper_id
+    if dt is None:
+        dt = datetime.datetime.today().date()
+    channel_id = channel.id if scraper_id is None else scraper_id
     lang = channel.metadata.get("lang", "tc")
-    # Purge channel programs on this date
-    channel.flush(dt)
-    # Update channel programs on this date
     site_channel = {
         "site_id": channel_id,
         "lang": lang,
@@ -121,9 +121,15 @@ def update(
 
     try:
         data = fetch_data(site_channel, dt)
-    except:
+    except Exception:
         return False
     programs = parse_programs(data, site_channel, dt)
+    if not programs:
+        return False
+    # Purge channel programs on this date only after a successful fetch,
+    # so a failed request does not wipe previously stored data.
+    channel.flush(dt)
+    # Update channel programs on this date
     for program in programs:
         channel.programs.append(
             Program(

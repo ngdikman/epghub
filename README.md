@@ -31,6 +31,7 @@ Demo: [演示地址](https://demo.epghub.com/)
     Requests/sec: 564614.18
     Transfer/sec:      3.25GB
     ```
+- 多线程并发刮削（`MAX_WORKERS` 环境变量控制并发数，默认 8），自动重试瞬时失败的请求
 - 添加刮削器是非常容易的，只需要增加刮削器 .py 文件，然后联动 yaml 里的配置即可
 - 支持刮削器的 plugin，进行后期处理，弥补数据源的不足
 - 支持部署到 Cloudflare Pages + Workers 或 docker 部署
@@ -61,6 +62,7 @@ Demo: [演示地址](https://demo.epghub.com/)
 - `TZ`: 如果你在中国，设为 `Asia/Shanghai`
 - `CRON_TRIGGER`: 可以参考这里的 [Cron 表达式](https://crontab.guru/)，例如 `0 0 * * *` 表示每天 UTC 时间 0 点执行（相当于北京时间 8 点，不受上面的时区设置影响）
 - `XMLTV_URL`: 别动它
+- `MAX_WORKERS`: 并发刮削的线程数，默认 `8`。如果被数据源限流可调小
 
 ## Cloudflare Pages + Workers
 
@@ -83,6 +85,8 @@ Demo: [演示地址](https://demo.epghub.com/)
 # 配置
 
 ## 频道配置
+
+**快速建立频道列表**：[`/docs/channels.md`](/docs/channels.md) 列出了各刮削器全部可用的频道 id；[`/config/channels.example.yaml`](/config/channels.example.yaml) 是一份覆盖央视、各省卫视和地方频道的完整示例配置（160+ 频道，卫视自动带 tvmao 备用数据源），可以直接复制需要的频道段落，或以它为底稿删掉不需要的频道。这两个文件由 `python scripts/generate_channel_docs.py` 从 [`/reference`](/reference) 目录自动生成。
 
 在 [`/config/channels.yaml`](/config/channels.yaml) 中：
 
@@ -163,11 +167,13 @@ CCTV9 的这个插件是用来从 CCTV9 官方微博话题 #每日央视纪录�
 
 # 待改进
 
-- [ ] 考虑使用 asyncio 处理 request，并且处理相同 url 的缓存问题（或使用更好的调度策略避免）
+- [x] 考虑使用 asyncio 处理 request，并且处理相同 url 的缓存问题（或使用更好的调度策略避免）
+  - 已实现：线程池并发刮削（`MAX_WORKERS`）+ 带重试的连接池 + xmltv 相同 URL 进程内缓存
 - [ ] main.py 和 scheduler.py 写得比较潦草，将来可考虑合并为一个命令行程序，更优雅
-- [ ] 支持命令行输出 scraper 的频道列表
+- [x] 支持命令行输出 scraper 的频道列表
+  - 已实现：`docs/channels.md` 和 `config/channels.example.yaml`（由 `scripts/generate_channel_docs.py` 生成）
 - [ ] 部分代码还不够严谨清晰，需要重构
   - [ ] recap/preview/today 应该作为一个连续时间范围合并处理
-  - [ ] 能够跨日期一次性获取的内容可以避免多次抓取
+  - [x] 能够跨日期一次性获取的内容可以避免多次抓取（xmltv 来源已实现 URL 缓存）
   - [ ] plugin 应该作为 post process 出现
 - [ ] xmltv 多语言标记支持

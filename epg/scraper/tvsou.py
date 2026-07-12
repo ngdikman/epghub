@@ -1,13 +1,12 @@
 from epg.model import Channel, Program
 from datetime import datetime, date, timedelta
-import requests
 from bs4 import BeautifulSoup
-from . import tz_shanghai, headers
+from . import get_session, tz_shanghai
 
 baseurl = "https://www.tvsou.com/epg/"
 
 
-def grab_programs(channel_id: str, need_weekday: int) -> tuple:
+def grab_programs(channel_id: str, need_weekday: int) -> tuple | bool:
     """
     Grab programs from tvsou.com.
     Return: (content, date) in tuple
@@ -17,27 +16,22 @@ def grab_programs(channel_id: str, need_weekday: int) -> tuple:
     """
     channel_baseurl = baseurl + channel_id + "/"  # get channel_id
     try:
-        res = requests.get(
-            channel_baseurl + "w" + str(need_weekday), headers=headers, timeout=5
-        )
-    except:
+        res = get_session().get(channel_baseurl + "w" + str(need_weekday), timeout=5)
+    except Exception:
         return False
-    content = None
-    if res.status_code == 200:
-        soup = BeautifulSoup(res.text, "html.parser")
-        try:
-            content = soup.find("div", class_="layui-tab-item layui-show").find_all(
-                "td"
-            )
-            date_str = soup.find("a", class_="week_active").find("i").text
-            date = (
-                datetime.strptime(date_str, "%m月%d日")
-                .astimezone(tz_shanghai)
-                .date()
-                .replace(year=datetime.now().year)
-            )
-        except AttributeError:
-            return False
+    if res.status_code != 200:
+        return False
+    soup = BeautifulSoup(res.text, "html.parser")
+    try:
+        content = soup.find("div", class_="layui-tab-item layui-show").find_all("td")
+        date_str = soup.find("a", class_="week_active").find("i").text
+        date = (
+            datetime.strptime(date_str, "%m月%d日")
+            .date()
+            .replace(year=datetime.now().year)
+        )
+    except (AttributeError, ValueError):
+        return False
     return (content, date)
 
 
@@ -55,9 +49,9 @@ def parse_programs(content: tuple) -> list:
     for line in content[0]:
         if line.text:
             try:
-                start_time = (
-                    datetime.strptime(line.text, "%H:%M").astimezone(tz_shanghai).time()
-                )
+                # Times on the page are Beijing time; parse the wall time
+                # and attach the timezone without converting.
+                start_time = datetime.strptime(line.text, "%H:%M").time()
                 start = datetime(
                     year=date.year,
                     month=date.month,
@@ -82,7 +76,7 @@ def parse_programs(content: tuple) -> list:
 
 
 def update(
-    channel: Channel, scraper_id: str | None = None, dt: date = datetime.today().date()
+    channel: Channel, scraper_id: str | None = None, dt: date | None = None
 ):
     """
     Update channel with new data for the given date.
@@ -92,6 +86,10 @@ def update(
         scraper_id (str): The scraper id.
         dt (date): The date to update.
     """
+    if dt is None:
+        dt = datetime.today().date()
+    if scraper_id is None:
+        return False
     now_date = datetime.now().date()
     request_date = dt
     delta = request_date - now_date
@@ -108,11 +106,11 @@ def update(
         return False
     else:
         programs = parse_programs(bs_programs)
-        # Purge channel programs on this date
-        channel.flush(dt)
-        # Update channel programs on this date, if any
         if len(programs) == 0:
             return False
+        # Purge channel programs on this date only after data is confirmed,
+        # so an empty response does not wipe previously stored programs.
+        channel.flush(dt)
         temp_program = None
         for program in programs:
             title = program["title"]

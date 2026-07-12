@@ -1,32 +1,51 @@
-import __xmltv
+from . import __xmltv
 from epg.model import Channel, Program
 from datetime import datetime, date, timezone
 
 
 def update(
-    channel: Channel, scraper_params: str, dt: date = datetime.today().date()
+    channel: Channel, scraper_params: str, dt: date | None = None
 ) -> bool:
-    if scraper_params.find("@http") == -1:
+    """
+    Import programs from a remote XMLTV file.
+
+    scraper_params is either a plain URL (the channel id in the remote
+    file must match this channel's id) or "<remote_id>@<url>" to map a
+    different remote channel id onto this channel.
+    """
+    if dt is None:
+        dt = datetime.today().date()
+    if "@http" not in scraper_params:
+        scraper_id = None
         scraper_url = scraper_params
     else:
-        scraper_id = scraper_params.split("@http", 1)[0]
-        scraper_url = "http" + scraper_params.split("@http", 1)[1]
-    channel_id = channel.id if scraper_id == None else scraper_id
-    scraper_channels = __xmltv.get_channels(scraper_url)
-    for scraper_channel in scraper_channels:
-        if scraper_channel.id == channel_id:
-            for program in scraper_channel.programs:
-                start_time = program.start_time
-                if start_time.date() != dt:
-                    continue
-                end_time = program.end_time
-                title = program.title
-                # Purge channel programs on this date
-                channel.flush(dt)
-                # Update channel programs on this date
-                channel.programs.append(
-                    Program(title, start_time, end_time, channel.id)
+        scraper_id, url_part = scraper_params.split("@http", 1)
+        scraper_url = "http" + url_part
+    channel_id = channel.id if not scraper_id else scraper_id
+    for scraper_channel in __xmltv.get_channels(scraper_url):
+        if scraper_channel.id != channel_id:
+            continue
+        programs = [
+            program
+            for program in scraper_channel.programs
+            if program.start_time.date() == dt
+        ]
+        if not programs:
+            return False
+        # Purge channel programs on this date
+        channel.flush(dt)
+        # Update channel programs on this date
+        for program in programs:
+            channel.programs.append(
+                Program(
+                    program.title,
+                    program.start_time,
+                    program.end_time,
+                    channel.id + "@xmltv",
+                    program.desc,
+                    sub_title=program.sub_title,
                 )
+            )
         channel.metadata.update(
             {"last_update": datetime.now(timezone.utc).astimezone()}
         )
