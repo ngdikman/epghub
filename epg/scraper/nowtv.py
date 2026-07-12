@@ -70,7 +70,10 @@ def update(
     day = (dt - datetime.datetime.now(tz_hong_kong).date()).days + 1
     if not 1 <= day <= MAX_DAYS:
         return False
-    channel_id = channel.id if scraper_id is None else scraper_id
+    # YAML configs usually write nowtv ids as bare numbers (nowtv: 332),
+    # so the scraper id arrives as an int: normalize before using it in
+    # URLs and string concatenation.
+    channel_id = str(channel.id if scraper_id is None else scraper_id)
     lang = channel.metadata.get("lang", "zh")
 
     try:
