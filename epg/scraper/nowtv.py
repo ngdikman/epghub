@@ -12,6 +12,26 @@ API_ENDPOINT = "https://nowplayer.now.com/tvguide"
 MAX_DAYS = 7
 
 
+def _parse_time(value) -> datetime.datetime:
+    """
+    Parse a programme start/end value.
+
+    The epglist API is known to return epoch milliseconds, but upstream
+    parsers accept date strings as well, so tolerate both instead of
+    silently dropping every item if the format differs.
+    """
+    if isinstance(value, (int, float)):
+        return datetime.datetime.fromtimestamp(value / 1000, tz=tz_hong_kong)
+    text = str(value).strip()
+    if text.isdigit():
+        return datetime.datetime.fromtimestamp(int(text) / 1000, tz=tz_hong_kong)
+    parsed = datetime.datetime.fromisoformat(text.replace("Z", "+00:00"))
+    if parsed.tzinfo is None:
+        # Bare wall-clock strings from the API are Hong Kong time.
+        return parsed.replace(tzinfo=tz_hong_kong)
+    return parsed.astimezone(tz_hong_kong)
+
+
 def fetch_items(site_id: str, day: int, lang: str) -> list:
     response = get_session().get(
         f"{API_ENDPOINT}/epglist",
@@ -60,12 +80,8 @@ def update(
     programs = []
     for item in items:
         try:
-            start = datetime.datetime.fromtimestamp(
-                int(item["start"]) / 1000, tz=tz_hong_kong
-            )
-            end = datetime.datetime.fromtimestamp(
-                int(item["end"]) / 1000, tz=tz_hong_kong
-            )
+            start = _parse_time(item["start"])
+            end = _parse_time(item["end"])
             title = item["name"]
         except (KeyError, TypeError, ValueError):
             continue
