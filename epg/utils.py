@@ -57,6 +57,11 @@ def _validate_channel_config(channel_id: str, metadata) -> list[str]:
             problems.append(
                 f"channel '{channel_id}': '{key}' must be a non-negative integer, got {value!r}"
             )
+    xml_lang = metadata.get("xml_lang")
+    if xml_lang is not None and (not isinstance(xml_lang, str) or not xml_lang.strip()):
+        problems.append(
+            f"channel '{channel_id}': 'xml_lang' must be a non-empty language code, got {xml_lang!r}"
+        )
     return problems
 
 
@@ -140,19 +145,37 @@ def scrap_channel(channel: Channel, channels_config, date: date | None = None) -
         if success:
             channel.metadata["last_scraper"] = scraper
             channel.metadata["last_update"] = datetime.now().astimezone()
-            if channel.metadata.get("plugin") is not None:
-                try:
-                    plugin_module = importlib.import_module(
-                        "epg.plugin" + "." + channel.metadata["plugin"]
-                    )
-                    plugin_update = getattr(plugin_module, "update")
-                    plugin_update(channel, date)
-                except Exception as exc:
-                    print(
-                        f"!!!Plugin '{channel.metadata['plugin']}' failed on {channel.id}: {exc}!!!"
-                    )
             return True
     return False
+
+
+def run_plugin(channel: Channel, dates: list[date], log: list[str]) -> None:
+    """
+    Post-process a channel with its configured plugin.
+
+    Plugins run after all scraping for the channel is done, once per
+    updated date, so they are decoupled from which scraper succeeded.
+
+    Args:
+        channel (Channel): The channel to post-process.
+        dates (list[date]): The dates that were updated in this run.
+        log (list[str]): Buffer that per-channel progress lines are appended to.
+    """
+    plugin_name = channel.metadata.get("plugin")
+    if plugin_name is None or not dates:
+        return
+    try:
+        plugin_module = importlib.import_module("epg.plugin" + "." + plugin_name)
+        plugin_update = getattr(plugin_module, "update")
+    except (ImportError, AttributeError) as exc:
+        print(f"!!!Plugin '{plugin_name}' is not available: {exc}!!!")
+        return
+    for dt in dates:
+        try:
+            plugin_update(channel, dt)
+        except Exception as exc:
+            print(f"!!!Plugin '{plugin_name}' failed on {channel.id} {dt}: {exc}!!!")
+    log.append(f"plugin {plugin_name} <- {', '.join(str(dt) for dt in dates)}")
 
 
 def copy_channels(
@@ -196,72 +219,20 @@ def copy_channels(
     return (num_reuse_channels, dates)
 
 
-def update_preview(channel: Channel, log: list[str]) -> int:
-    """
-    Update channel preview.
-
-    Args:
-        channel (Channel): The channel to update.
-        log (list[str]): Buffer that per-channel progress lines are appended to.
-
-    Returns:
-        int: The number of days previewed."""
-    previewed_days = 0
-    preview = channel.metadata.get("preview") or 0
-    if preview <= 0:
-        return previewed_days
-    max_date = datetime.now().date() + timedelta(preview)
-    pointer_date = datetime.now().date()
-    parts = []
-    while pointer_date < max_date:
-        pointer_date += timedelta(1)
-        if channel.update(pointer_date):
-            previewed_days += 1
-            parts.append(f"{pointer_date} {channel.metadata['last_scraper']}")
-    if parts:
-        log.append(f"preview <- {', '.join(parts)} total: {previewed_days}")
-    return previewed_days
-
-
-def update_recap(channel: Channel, log: list[str]) -> int:
-    """
-    Update channel recap.
-
-    Args:
-        channel (Channel): The channel to update.
-        log (list[str]): Buffer that per-channel progress lines are appended to.
-
-    Returns:
-        int: The number of days recaped."""
-    recaped_days = 0
-    recap = channel.metadata.get("recap") or 0
-    if recap <= 0:
-        return recaped_days
-    min_date = datetime.now().date() - timedelta(recap)
-    pointer_date = min_date
-    max_date = datetime.now().date()
-    for program in channel.programs:
-        if program.start_time.date() < max_date:
-            max_date = program.start_time.date()
-    parts = []
-    while pointer_date < max_date:
-        if channel.update(pointer_date):
-            recaped_days += 1
-            parts.append(f"{pointer_date} {channel.metadata['last_scraper']}")
-        pointer_date += timedelta(1)
-    if parts:
-        log.append(
-            f"recap {min_date} -> {max_date - timedelta(1)}: "
-            f"{', '.join(parts)} total: {recaped_days}"
-        )
-    return recaped_days
-
-
 def update_channel_full(channel: Channel, index: int | None = None) -> bool:
     """
-    Fully update a channel (recap + today + preview) according to its
-    refresh policy, printing its progress as one atomic block so that
-    concurrent updates do not interleave.
+    Fully update a channel according to its refresh policy, printing its
+    progress as one atomic block so that concurrent updates do not
+    interleave.
+
+    Recap, today and preview are handled as one continuous date range
+    [today - recap, today + preview]:
+      - past dates are scraped only when they have no programs yet
+        (fills any gap, not just days before the earliest known one)
+      - today follows the refresh policy
+      - future dates are always re-scraped (sources change their
+        upcoming schedules)
+    The configured plugin then post-processes every updated date.
 
     Args:
         channel (Channel): The channel to update.
@@ -285,14 +256,41 @@ def update_channel_full(channel: Channel, index: int | None = None) -> bool:
     log: list[str] = []
     header = f"{index if index is not None else '-'} {channel.id} {channel.metadata['name']}"
     log.append(f"{header} last update: {channel.metadata['last_update']}")
-    update_recap(channel, log)
-    if channel.update():
+    recap = channel.metadata.get("recap") or 0
+    preview = channel.metadata.get("preview") or 0
+    dates_with_programs = {program.start_time.date() for program in channel.programs}
+    updated_dates: list[date] = []
+    recap_parts: list[str] = []
+    preview_parts: list[str] = []
+    for offset in range(-recap, preview + 1):
+        pointer_date = today + timedelta(offset)
+        if pointer_date < today and pointer_date in dates_with_programs:
+            continue  # past days are only filled in, never refreshed
+        if not channel.update(pointer_date):
+            if pointer_date == today:
+                log.append(
+                    f"{refresh} <- now {datetime.now().astimezone().isoformat()} FAILED"
+                )
+            continue
+        updated_dates.append(pointer_date)
+        part = f"{pointer_date} {channel.metadata['last_scraper']}"
+        if pointer_date < today:
+            recap_parts.append(part)
+        elif pointer_date == today:
+            log.append(
+                f"{refresh} <- now {datetime.now().astimezone().isoformat()} "
+                f"{channel.metadata['last_scraper']}"
+            )
+        else:
+            preview_parts.append(part)
+    if recap_parts:
         log.append(
-            f"{refresh} <- now {datetime.now().astimezone().isoformat()} "
-            f"{channel.metadata['last_scraper']}"
+            f"recap <- {', '.join(recap_parts)} total: {len(recap_parts)}"
         )
-    else:
-        log.append(f"{refresh} <- now {datetime.now().astimezone().isoformat()} FAILED")
-    update_preview(channel, log)
+    if preview_parts:
+        log.append(
+            f"preview <- {', '.join(preview_parts)} total: {len(preview_parts)}"
+        )
+    run_plugin(channel, updated_dates, log)
     print("\n".join(log), flush=True)
     return True

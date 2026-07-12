@@ -82,6 +82,7 @@ def gen_docs(cntv: list[dict], tvmao: list[dict]) -> str:
         "  refresh: once     # once=只增补 / today=刷新今天",
         "  recap: 7          # 保留过去 7 天",
         "  preview: 2        # 预抓未来 2 天",
+        "  xml_lang: zh      # 可选，输出 xmltv 的 lang 语言属性",
         "```",
         "",
         "## cctv 刮削器（tv.cctv.com，央视官方，推荐）",

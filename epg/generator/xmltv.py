@@ -25,12 +25,17 @@ def write(filepath: str, channels: list[Channel], info: str = "") -> bool:
     root.set("generator-info-name", info)
     last_update_time_list = []
     for channel in channels:
+        # Optional per-channel language stamped as the xmltv 'lang'
+        # attribute (two-letter code, e.g. 'zh' or 'en').
+        xml_lang = channel.metadata.get("xml_lang")
         last_update_time_list.append(channel.metadata["last_update"])
         channel_element = etree.SubElement(root, "channel")
         channel_element.set("id", channel.id)
         for name in channel.metadata["name"]:
             display_name = etree.SubElement(channel_element, "display-name")
             display_name.text = _sanitize(name)
+            if xml_lang:
+                display_name.set("lang", xml_lang)
     last_update_time = max(last_update_time_list)
     root.set(
         "date",
@@ -42,6 +47,7 @@ def write(filepath: str, channels: list[Channel], info: str = "") -> bool:
         ).strftime("%Y%m%d%H%M%S %z"),
     )
     for channel in channels:
+        xml_lang = channel.metadata.get("xml_lang")
         channel.programs.sort(key=lambda x: x.start_time)
         for program in channel.programs:
             program_element = etree.SubElement(root, "programme")
@@ -54,11 +60,17 @@ def write(filepath: str, channels: list[Channel], info: str = "") -> bool:
             program_element.set("channel", channel.id)
             title = etree.SubElement(program_element, "title")
             title.text = _sanitize(program.title)
+            if xml_lang:
+                title.set("lang", xml_lang)
             if program.sub_title != "":
                 sub_title = etree.SubElement(program_element, "sub-title")
                 sub_title.text = _sanitize(program.sub_title)
+                if xml_lang:
+                    sub_title.set("lang", xml_lang)
             if program.desc != "":
                 desc = etree.SubElement(program_element, "desc")
                 desc.text = _sanitize(program.desc)
+                if xml_lang:
+                    desc.set("lang", xml_lang)
     tree.write(filepath, pretty_print=True, xml_declaration=True, encoding="utf-8")
     return True

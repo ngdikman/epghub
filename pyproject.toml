@@ -1,11 +1,14 @@
 [tool.poetry]
 name = "epghub"
-version = "0.1.0"
+version = "0.2.0"
 description = "A multi-source EPG builder with extensibility."
 authors = ["Shun Li <riverscn@gmail.com>"]
 license = "GPL3"
 readme = "README.md"
-package-mode = false
+packages = [{ include = "epg" }]
+
+[tool.poetry.scripts]
+epghub = "epg.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
