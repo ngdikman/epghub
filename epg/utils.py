@@ -30,6 +30,17 @@ def _validate_channel_config(channel_id: str, metadata) -> list[str]:
         problems.append(
             f"channel '{channel_id}': 'name' must be a non-empty list of display names"
         )
+    elif isinstance(name[0], str) and any(
+        seq in name[0] for seq in ("/", "\\", "..")
+    ):
+        # The first display name is used as the DIYP directory name and
+        # as the ch= query value; path separators in it cannot round-trip
+        # through the static file layout, so reject them up front.
+        problems.append(
+            f"channel '{channel_id}': first display name {name[0]!r} must not "
+            "contain '/', '\\' or '..' (it is used as the DIYP directory and "
+            "query name)"
+        )
     scraper = metadata.get("scraper")
     if not isinstance(scraper, dict) or len(scraper) == 0:
         problems.append(
