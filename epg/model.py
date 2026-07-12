@@ -81,8 +81,10 @@ class Channel:
     ) -> None:
         self.__id = id
         self.metadata = metadata if metadata is not None else {}
-        self.metadata.update(
-            {"last_update": datetime(1970, 1, 1, 0, 0, 0, tzinfo=tz_shanghai)}
+        # Guarantee the key exists but keep a caller-provided value
+        # (e.g. the date parsed from a reused XMLTV file).
+        self.metadata.setdefault(
+            "last_update", datetime(1970, 1, 1, 0, 0, 0, tzinfo=tz_shanghai)
         )
         self.__update_callable = update_callable
         self.programs = []
