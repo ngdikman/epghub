@@ -17,8 +17,11 @@ _parser = etree.XMLParser(
 
 # One XMLTV source is often shared by many channels/dates in a single run;
 # cache the parsed result per URL so it is fetched only once per process.
+# A per-URL lock serializes concurrent cache misses so only one thread
+# fetches a given source while the others wait for its result.
 _cache: dict[str, list[Channel]] = {}
 _cache_lock = threading.Lock()
+_url_locks: dict[str, threading.Lock] = {}
 
 
 def _find_text(element: etree._Element, tag: str) -> str:
@@ -32,10 +35,19 @@ def get_channels(xmltv_url: str, dtd: etree.DTD | None = None) -> list[Channel]:
     with _cache_lock:
         if xmltv_url in _cache:
             return _cache[xmltv_url]
-    channels = _fetch_channels(xmltv_url, dtd)
-    with _cache_lock:
-        _cache[xmltv_url] = channels
-    return channels
+        url_lock = _url_locks.setdefault(xmltv_url, threading.Lock())
+    with url_lock:
+        # Another thread may have fetched this URL while we waited.
+        with _cache_lock:
+            if xmltv_url in _cache:
+                return _cache[xmltv_url]
+        channels = _fetch_channels(xmltv_url, dtd)
+        # Do not cache a failed/empty fetch: a transient error must not
+        # poison the source for every remaining channel in the run.
+        if channels:
+            with _cache_lock:
+                _cache[xmltv_url] = channels
+        return channels
 
 
 def _fetch_channels(xmltv_url: str, dtd: etree.DTD | None = None) -> list[Channel]:
