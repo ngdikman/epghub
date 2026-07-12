@@ -46,21 +46,31 @@ def update(channel: Channel, date: date) -> int:
     weibo_list = weibo_search(keyword, 1)
     programs_weibo = []
     for weibo in weibo_list:
-        created_at = datetime.strptime(weibo["created_at"], "%a %b %d %H:%M:%S %z %Y")
+        try:
+            created_at = datetime.strptime(
+                weibo["created_at"], "%a %b %d %H:%M:%S %z %Y"
+            )
+        except (KeyError, ValueError):
+            continue
         if created_at.date() == date:
             # 获取微博正文
-            text_weibo = weibo["text"]
-            text_url_suffix = re.findall(r'href="(.*?)"', text_weibo)[-1]
-            text_url = "https://m.weibo.cn" + text_url_suffix
+            text_weibo = weibo.get("text", "")
+            url_suffixes = re.findall(r'href="(.*?)"', text_weibo)
+            if not url_suffixes:
+                continue
+            text_url = "https://m.weibo.cn" + url_suffixes[-1]
             try:
                 r = requests.get(text_url, headers=headers, timeout=5)
-            except:
+            except Exception:
                 continue
-            render_data = re.findall(
-                r".*var \$render_data = (.*\}\])\[0\]", r.text, re.S
-            )
-            render_data = json.loads(render_data[0])
-            text = render_data[0]["status"]["text"]
+            try:
+                render_data = re.findall(
+                    r".*var \$render_data = (.*\}\])\[0\]", r.text, re.S
+                )
+                render_data = json.loads(render_data[0])
+                text = render_data[0]["status"]["text"]
+            except (IndexError, KeyError, ValueError):
+                continue
             # 获取节目列表文本
             program_list = re.findall(r"(\d\d:\d\d)\s+(.*?)<br />", text)
             # 生成节目列表
@@ -112,7 +122,7 @@ def update(channel: Channel, date: date) -> int:
             if program.sub_title == "":
                 program.sub_title = sub_title
             program.title = title_dict[sub_title]
-            program.scraper_id = "cctv9@weibo"
+            program.channel = "cctv9@weibo"
             num_updated_programs += 1
 
     if num_updated_programs > 0:

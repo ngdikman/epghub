@@ -1,14 +1,11 @@
-import requests
-import time
-from datetime import date, datetime, timedelta
-from epg.scraper import headers
+from datetime import date, datetime, time, timedelta
 from epg.model import Channel, Program
-from . import tz_shanghai
+from . import get_session, tz_shanghai
 
 
 # Credits to https://github.com/supzhang/epg/blob/master/crawl/spiders/tvmao.py
 def update(
-    channel: Channel, scraper_id: str | None = None, dt: date = datetime.today().date()
+    channel: Channel, scraper_id: str | None = None, dt: date | None = None
 ) -> bool:
     """
     Update channel with new data for the given date.
@@ -21,6 +18,10 @@ def update(
     Returns:
         bool: True if success, False if not.
     """
+    if dt is None:
+        dt = datetime.today().date()
+    if scraper_id is None:
+        return False
     now_date = datetime.now().date()
     request_date = dt
     delta = request_date - now_date
@@ -40,38 +41,39 @@ def update(
     else:
         id = scraper_id
     url = f"https://lighttv.tvmao.com/qa/qachannelschedule?epgCode={id}&op=getProgramByChnid&epgName=&isNew=on&day={need_weekday}"
-    # time.sleep(1)  # 防止 被BAN
     try:
-        res = requests.get(url, headers=headers, timeout=5)
-    except:
+        res = get_session().get(url, timeout=5)
+    except Exception:
         return False
     if res.status_code != 200:
         return False
-    data = res.json()
     try:
-        programs_data = data[2]["pro"]
-    except:
+        programs_data = res.json()[2]["pro"]
+    except Exception:
         return False
-    # Purge channel programs on this date
-    channel.flush(dt)
-    # Update channel programs on this date, if any
     if len(programs_data) == 0:
         return False
+    # Purge channel programs on this date only after data is confirmed,
+    # so an empty response does not wipe previously stored programs.
+    channel.flush(dt)
     temp_program = None
     for program in programs_data:
         title = program["name"]
-        starttime_str = program["time"]
-        starttime = (
-            datetime.strptime(starttime_str, "%H:%M")
-            .astimezone(tz_shanghai)
-            .replace(year=dt.year, month=dt.month, day=dt.day)
-        )
-        if temp_program != None:
+        try:
+            start_of_program = datetime.strptime(program["time"], "%H:%M").time()
+        except ValueError:
+            continue
+        # tvmao times are Beijing time: attach the timezone directly
+        # instead of converting from the (arbitrary) local timezone.
+        starttime = datetime.combine(dt, start_of_program, tzinfo=tz_shanghai)
+        if temp_program is not None:
             temp_program.end_time = starttime
             channel.programs.append(temp_program)
         temp_program = Program(title, starttime, None, channel.id + "@tvmao.com")
-    temp_program.end_time = datetime.strptime("00:00", "%H:%M").astimezone(
-        tz_shanghai
-    ).replace(year=dt.year, month=dt.month, day=dt.day) + timedelta(days=1)
+    if temp_program is None:
+        return False
+    temp_program.end_time = datetime.combine(
+        dt + timedelta(days=1), time(0, 0), tzinfo=tz_shanghai
+    )
     channel.programs.append(temp_program)
     return True

@@ -1,28 +1,27 @@
 from epg.model import Channel, Program
 from datetime import datetime, date, timezone
-import requests
-import json
-from . import headers, tz_shanghai
+from . import get_session, tz_shanghai
 
 
 def update(
-    channel: Channel, scraper_id: str | None = None, dt: date = datetime.today().date()
+    channel: Channel, scraper_id: str | None = None, dt: date | None = None
 ) -> bool:
-    channel_id = channel.id if scraper_id == None else scraper_id
+    if dt is None:
+        dt = datetime.today().date()
+    channel_id = channel.id if scraper_id is None else scraper_id
     date_str = dt.strftime("%Y%m%d")
     url = f"http://api.cntv.cn/epg/getEpgInfoByChannelNew?c={channel_id}&serviceId=tvcctv&d={date_str}&t=json"
     try:
-        res = requests.get(url, headers=headers, timeout=5)
-    except:
+        res = get_session().get(url, timeout=5)
+    except Exception:
         print("Fail:", url)
         return False
     # handle error
     if res.status_code != 200:
         return False
-    data = json.loads(res.text)
     try:
-        programs_data = data["data"][channel_id]["list"]
-    except KeyError:
+        programs_data = res.json()["data"][channel_id]["list"]
+    except Exception:
         return False
     # Purge channel programs on this date
     channel.flush(dt)

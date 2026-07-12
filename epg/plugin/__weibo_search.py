@@ -32,11 +32,14 @@ def search(keyword: str, page: int = 1) -> list:
     # 发送请求
     try:
         r = requests.get(API_ENDPOINT, headers=headers, params=params, timeout=5)
-    except:
+    except Exception:
         return []
 
     # 解析json数据
-    cards = r.json()["data"]["cards"]
+    try:
+        cards = r.json()["data"]["cards"]
+    except Exception:
+        return []
 
     # 提取微博数据
     weibo_list = []

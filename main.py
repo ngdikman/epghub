@@ -5,9 +5,12 @@ from epg.generator import diyp
 from epg.scraper import __xmltv
 from lxml import etree
 from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor
 from croniter import croniter
 import os
 import shutil
+import subprocess
+import sys
 
 CF_PAGES = os.getenv("CF_PAGES")
 CF_PAGES_URL = os.getenv("CF_PAGES_URL")
@@ -20,6 +23,10 @@ if TZ is None:
         "!!!Please set TZ environment variables to define timezone or it will use system timezone by default!!!"
     )
 CRON_TRIGGER = os.getenv("CRON_TRIGGER", "0 0 * * *")
+try:
+    MAX_WORKERS = max(1, int(os.getenv("MAX_WORKERS", "8")))
+except ValueError:
+    MAX_WORKERS = 8
 next_cron_time = (
     croniter(CRON_TRIGGER, datetime.now(timezone.utc))
     .get_next(datetime)
@@ -27,7 +34,8 @@ next_cron_time = (
     .astimezone()
 )
 
-dtd = etree.DTD(open("xmltv.dtd", "r"))
+with open("xmltv.dtd", "r") as dtd_file:
+    dtd = etree.DTD(dtd_file)
 
 now = datetime.now()
 current_timezone = now.astimezone().tzinfo
@@ -41,6 +49,9 @@ if not os.path.exists(os.path.join(os.getcwd(), "web")):
     os.mkdir(os.path.join(os.getcwd(), "web"))
 
 channels = utils.load_config(config_path)
+if not channels:
+    print(f"!!!No valid channels defined in {config_path}, nothing to do!!!")
+    sys.exit(1)
 
 if XMLTV_URL == "":
     xml_channels = []
@@ -65,12 +76,13 @@ else:
             flush=True,
         )
 
-print("refreshing...")
+print(f"refreshing with {MAX_WORKERS} workers...", flush=True)
 
-num_refresh_channels = 0
-for channel in channels:
-    if utils.update_channel_full(channel, num_refresh_channels):
-        num_refresh_channels += 1
+with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    results = list(
+        executor.map(utils.update_channel_full, channels, range(1, len(channels) + 1))
+    )
+num_refresh_channels = sum(1 for refreshed in results if refreshed)
 
 print(
     f"number of refreshed channels: {num_refresh_channels}/{len(channels)}", flush=True
@@ -80,8 +92,8 @@ print("deploying...", flush=True)
 print("file path:", epg_path, flush=True)
 xmltv.write(epg_path, channels, "epghub")
 
-xml = open(epg_path, "rb")
-root = etree.XML(xml.read())
+with open(epg_path, "rb") as xml:
+    root = etree.XML(xml.read())
 valid = dtd.validate(root)
 if not valid:
     print(dtd.error_log.filter_from_errors()[0])
@@ -116,7 +128,8 @@ rendered_html = template.render(
     timezone_offset=timezone_offset,
 )
 
-open(os.path.join(os.getcwd(), "web", "index.html"), "w").write(rendered_html)
+with open(os.path.join(os.getcwd(), "web", "index.html"), "w") as index_file:
+    index_file.write(rendered_html)
 shutil.copyfile(
     os.path.join(os.getcwd(), "templates", "404.html"),
     os.path.join(os.getcwd(), "web", "404.html"),
@@ -140,6 +153,19 @@ if CF_PAGES is not None:
             "!!!Please set CLOUDFLARE_API_TOKEN environment variables to deploy automatically!!!"
         )
     if DEPLOY_HOOK is not None and CLOUDFLARE_API_TOKEN is not None:
-        cmd = f'cd workers && npx --yes wrangler deploy --var DEPLOY_HOOK:{DEPLOY_HOOK} --triggers "{CRON_TRIGGER}"'
-        # print(cmd)
-        os.system(cmd)
+        # Run wrangler without a shell so values coming from environment
+        # variables cannot be used for command injection.
+        subprocess.run(
+            [
+                "npx",
+                "--yes",
+                "wrangler",
+                "deploy",
+                "--var",
+                f"DEPLOY_HOOK:{DEPLOY_HOOK}",
+                "--triggers",
+                CRON_TRIGGER,
+            ],
+            cwd=os.path.join(os.getcwd(), "workers"),
+            check=False,
+        )

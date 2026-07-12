@@ -24,6 +24,11 @@ class ChannelIn(Schema):
 def diyp(query_data):
     ch = query_data["ch"]
     date = query_data["date"]
+    # Defense in depth against path traversal: a channel name is a single
+    # path segment, never a path. send_from_directory also guards this,
+    # but reject early and answer with the DIYP-friendly 404 body.
+    if "/" in ch or "\\" in ch or ch in (".", ".."):
+        return send_file(os.path.join(os.getcwd(), "web", "404.json"))
     try:
         return send_from_directory(
             directory=os.path.join(os.getcwd(), "web", "diyp_files"),
