@@ -230,8 +230,9 @@ def update_channel_full(channel: Channel, index: int | None = None) -> bool:
       - past dates are scraped only when they have no programs yet
         (fills any gap, not just days before the earliest known one)
       - today follows the refresh policy
-      - future dates are always re-scraped (sources change their
-        upcoming schedules)
+      - future dates are re-scraped (sources change their upcoming
+        schedules), except on repeat runs of an already-updated
+        refresh:once channel, where only empty future dates are filled
     The configured plugin then post-processes every updated date.
 
     Args:
@@ -243,29 +244,43 @@ def update_channel_full(channel: Channel, index: int | None = None) -> bool:
     """
     refresh = channel.metadata.get("refresh", "once")
     today = datetime.now().date()
-    if (
+    recap = channel.metadata.get("recap") or 0
+    preview = channel.metadata.get("preview") or 0
+    dates_with_programs = {program.start_time.date() for program in channel.programs}
+    today_done = (
         refresh == "once"
         and channel.metadata["last_update"].date() == today
         # Only trust today's last_update if today's programs actually
         # exist: a run whose "today" scrape failed (but whose recap
         # succeeded) still stamps last_update, and skipping here would
         # leave the channel empty for the whole day (issue #7).
-        and any(program.start_time.date() == today for program in channel.programs)
-    ):
-        return False
+        and today in dates_with_programs
+    )
+    if today_done:
+        # An earlier run already updated this channel today. Do not
+        # refresh anything that exists, but still fill future dates
+        # that have no programs at all (e.g. their scrape failed).
+        pending_dates = [
+            today + timedelta(offset)
+            for offset in range(1, preview + 1)
+            if today + timedelta(offset) not in dates_with_programs
+        ]
+        if not pending_dates:
+            return False
+    else:
+        pending_dates = [
+            today + timedelta(offset)
+            for offset in range(-recap, preview + 1)
+            # past days are only filled in, never refreshed
+            if offset >= 0 or today + timedelta(offset) not in dates_with_programs
+        ]
     log: list[str] = []
     header = f"{index if index is not None else '-'} {channel.id} {channel.metadata['name']}"
     log.append(f"{header} last update: {channel.metadata['last_update']}")
-    recap = channel.metadata.get("recap") or 0
-    preview = channel.metadata.get("preview") or 0
-    dates_with_programs = {program.start_time.date() for program in channel.programs}
     updated_dates: list[date] = []
     recap_parts: list[str] = []
     preview_parts: list[str] = []
-    for offset in range(-recap, preview + 1):
-        pointer_date = today + timedelta(offset)
-        if pointer_date < today and pointer_date in dates_with_programs:
-            continue  # past days are only filled in, never refreshed
+    for pointer_date in pending_dates:
         if not channel.update(pointer_date):
             if pointer_date == today:
                 log.append(
