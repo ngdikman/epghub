@@ -278,6 +278,22 @@ zhejiangtv:
 
 scraper id 为搜视网 URL `https://www.tvsou.com/epg/<id>/` 中的路径段。只能获取本周范围内的节目表。
 
+搜视网没有公开的频道 id 清单，且 id 格式不统一——部分频道是 8 位十六进制哈希（如杭州综合是 `630175b5`），
+部分是可读名称（如江苏卫视是 `JSTV-1`），无法批量推导。查找方法：
+
+1. 在 [tvsou.com](https://www.tvsou.com/) 搜索频道名，进入该频道的节目表页面
+2. 复制地址栏 `https://www.tvsou.com/epg/<id>/` 中的 `<id>` 部分
+
+```yaml
+htv:
+  name:
+    - 杭州综合
+  scraper:
+    tvsou: 630175b5
+```
+
+搜视网覆盖了大量 cctv/tvmao 没有的地方频道和数字频道，适合作为查漏补缺的数据源。
+
 ### mytvsuper（mytvsuper.com，香港 TVB）
 
 scraper id 为频道的 network code，完整列表见
