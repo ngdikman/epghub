@@ -171,7 +171,7 @@ CCTV9 的这个插件是用来从 CCTV9 官方微博话题 #每日央视纪录�
   - 已实现：线程池并发刮削（`MAX_WORKERS`）+ 带重试的连接池 + xmltv 相同 URL 进程内缓存
 - [ ] main.py 和 scheduler.py 写得比较潦草，将来可考虑合并为一个命令行程序，更优雅
 - [x] 支持命令行输出 scraper 的频道列表
-  - 已实现：`docs/channels.md` 和 `config/channels.example.yaml`（由 `scripts/generate_channel_docs.py` 生成）
+  - 已实现：`python scripts/list_channels.py <scraper> --save` 在线探测频道列表并保存到 `/reference`；`docs/channels.md` 和 `config/channels.example.yaml` 由 `scripts/generate_channel_docs.py` 生成
 - [ ] 部分代码还不够严谨清晰，需要重构
   - [ ] recap/preview/today 应该作为一个连续时间范围合并处理
   - [x] 能够跨日期一次性获取的内容可以避免多次抓取（xmltv 来源已实现 URL 缓存）

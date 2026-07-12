@@ -262,6 +262,10 @@
 
 ## 其它刮削器
 
+以下数据源没有内置的完整频道清单，可在能访问对应网站的机器上运行
+`python scripts/list_channels.py <刮削器名> --save` 自动探测并保存到
+`/reference`，然后重新运行本生成脚本，就会在下方生成对照表。
+
 ### cztv（cztv.com 浙江广电）
 
 scraper id 为 cztv 接口中的 station id，例如：
@@ -296,21 +300,32 @@ htv:
 
 ### mytvsuper（mytvsuper.com，香港 TVB）
 
-scraper id 为频道的 network code，完整列表见
-[iptv-org 的频道文件](https://github.com/iptv-org/epg/blob/master/sites/mytvsuper.com/mytvsuper.com.channels.xml)。
+scraper id 为频道的 network code。官方频道列表接口为
+`https://content-api.mytvsuper.com/v1/channel/list?platform=web`，
+可用 `python scripts/list_channels.py mytvsuper --save` 一键获取。
 在频道配置中可加 `lang: en` 输出英文节目名（默认繁体中文）。
 
 ```yaml
-tvb_pearl:
+PhoenixChineseChannel.hk:
   name:
-    - 明珠台
+    - 凤凰卫视中文
   scraper:
-    mytvsuper: PEAR
+    mytvsuper: PCC
 ```
 
 ### discoverychannel_tw（discoverychannel.com.tw）
 
-scraper id 为台湾探索频道网站上的 channel 参数，如 `DC`。
+scraper id 为台湾探索频道排片接口的数字 channel 参数，例如探索频道亚洲是 `4`：
+
+```yaml
+DiscoveryChannelAsia.tw:
+  name:
+    - 探索频道亚洲
+  scraper:
+    discoverychannel_tw: 4
+```
+
+可用 `python scripts/list_channels.py discoverychannel_tw` 探测哪些 id 有效。
 
 ### xmltv（任意远程 XMLTV 文件）
 
