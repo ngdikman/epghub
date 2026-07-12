@@ -1530,6 +1530,15 @@ sanshatv:
 #   recap: 7
 #   preview: 2
 #
+# now_news:
+#   name:
+#     - Now新闻台
+#   scraper:
+#     nowtv: 332
+#   refresh: once
+#   recap: 7
+#   preview: 2
+#
 # discovery_tw:
 #   name:
 #     - Discovery 探索频道

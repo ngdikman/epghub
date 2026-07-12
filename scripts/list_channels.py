@@ -3,6 +3,7 @@ List the channels available from a scraper's data source.
 
 Usage:
     python scripts/list_channels.py mytvsuper [--lang tc|en] [--save]
+    python scripts/list_channels.py nowtv [--lang zh|en] [--save]
     python scripts/list_channels.py cztv [--range 1-120] [--save]
     python scripts/list_channels.py discoverychannel_tw [--range 1-10]
 
@@ -36,6 +37,17 @@ def list_mytvsuper(args) -> list[dict]:
     channels = get_channels(args.lang)
     return [
         {"ename": str(c["site_id"]), "chname": c["name"], "type": "香港 TVB"}
+        for c in channels
+    ]
+
+
+def list_nowtv(args) -> list[dict]:
+    from epg.scraper.nowtv import get_channels
+
+    lang = "zh" if args.lang in ("zh", "tc") else "en"
+    channels = get_channels(lang)
+    return [
+        {"ename": str(c["site_id"]), "chname": c["name"], "type": "香港 NowTV"}
         for c in channels
     ]
 
@@ -99,6 +111,7 @@ def list_discoverychannel_tw(args) -> list[dict]:
 
 SOURCES = {
     "mytvsuper": list_mytvsuper,
+    "nowtv": list_nowtv,
     "cztv": list_cztv,
     "discoverychannel_tw": list_discoverychannel_tw,
 }
@@ -107,7 +120,7 @@ SOURCES = {
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("scraper", choices=sorted(SOURCES))
-    parser.add_argument("--lang", default="tc", choices=("tc", "en"))
+    parser.add_argument("--lang", default="tc", choices=("tc", "zh", "en"))
     parser.add_argument("--range", help="id range to probe, e.g. 1-120")
     parser.add_argument(
         "--save",

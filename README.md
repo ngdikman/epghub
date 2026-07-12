@@ -104,7 +104,7 @@ zhejiangtv:
 
 ### 频道定义
 
-`zhejiangtv` 是该频道的 id，它将会对应出现在输出的 [xmltv 格式](/xmltv.dtd)文件中。大部分支持 xmltv 格式的播放软件，会使用这个 id 来匹配频道列表 m3u8 文件中的频道 `tvg-id`。有些人喜欢用数字来作为频道 id，也是可以的，但就是没有英文容易辨认，容易混淆。
+`zhejiangtv` 是该频道的 id，它将会对应出现在输出的 [xmltv 格式](/epg/data/xmltv.dtd)文件中。大部分支持 xmltv 格式的播放软件，会使用这个 id 来匹配频道列表 m3u8 文件中的频道 `tvg-id`。有些人喜欢用数字来作为频道 id，也是可以的，但就是没有英文容易辨认，容易混淆。
 
 更多频道信息可参考 [`/reference`](/reference) 目录中的文件。
 
@@ -132,6 +132,21 @@ zhejiangtv:
 ### 预览天数
 
 `preview` 属性是预览天数。即在今天之后的多少天的节目表内容会被保留。这样的好处是可以预览之后的节目表，但是会占用更多存储空间和刮削时间。
+
+更新时，`recap`/今天/`preview` 会作为一个连续的日期范围一次性处理：过去的日期只在缺失时增补，今天按 `refresh` 规则处理，未来的日期会重新刮削（因为来源的排期可能变化）。例外：`refresh: once` 的频道当天已更新过时，同日的再次运行不刷新已有内容，只补抓完全没有节目的未来日期。
+
+### 输出语言标记
+
+`xml_lang` 属性可选，为该频道输出的 xmltv 内容（display-name / title / sub-title / desc）添加 `lang` 语言属性，取值为两位语言代码，例如 `zh`、`en`。不设置则不输出语言属性。
+
+```yaml
+tvb_pearl:
+  name:
+    - 明珠台
+  scraper:
+    mytvsuper: PEAR
+  xml_lang: zh
+```
 
 ### 插件
 
@@ -165,15 +180,44 @@ CCTV9 的这个插件是用来从 CCTV9 官方微博话题 #每日央视纪录�
 
 本项目大量使用 ChatGPT 和 Github Copilot 协助生成的代码，事半功倍！包括本文，也是 Copilot 协助撰写的。
 
+# 安装与命令行
+
+本项目是一个标准的可安装 Python 包，安装后提供 `epghub` 命令：
+
+```bash
+pip install git+https://github.com/riverscn/epghub.git   # 直接安装
+# 或克隆仓库后：
+pip install .           # 也可用 pipx install . 隔离安装
+```
+
+```bash
+epghub                  # 更新一次（默认，等同 epghub update）
+epghub schedule         # 先更新一次，然后按 CRON_TRIGGER 定时更新
+epghub update -c my.yaml -o ./out   # 指定配置文件和输出目录
+epghub --help
+```
+
+默认从当前目录读取 `config/channels.yaml`，输出到 `web/` 目录；行为由环境变量控制（`TZ`、`CRON_TRIGGER`、`XMLTV_URL`、`MAX_WORKERS` 等，见上文）。模板和 xmltv.dtd 已作为包数据内置，无需额外文件。
+
+未安装也可以直接在仓库目录运行，旧入口保持兼容：
+
+```bash
+python main.py            # 等同 epghub update
+python main.py schedule   # 等同 epghub schedule
+python scheduler.py       # 兼容旧入口，等同 epghub schedule
+python -m epg.cli update  # 模块方式运行
+```
+
 # 待改进
 
 - [x] 考虑使用 asyncio 处理 request，并且处理相同 url 的缓存问题（或使用更好的调度策略避免）
   - 已实现：线程池并发刮削（`MAX_WORKERS`）+ 带重试的连接池 + xmltv 相同 URL 进程内缓存
-- [ ] main.py 和 scheduler.py 写得比较潦草，将来可考虑合并为一个命令行程序，更优雅
+- [x] main.py 和 scheduler.py 写得比较潦草，将来可考虑合并为一个命令行程序，更优雅
+  - 已实现：`pip install` 后提供 `epghub [update|schedule]` 命令（入口在 `epg/cli.py`），`main.py`/`scheduler.py` 保留为兼容包装
 - [x] 支持命令行输出 scraper 的频道列表
   - 已实现：`python scripts/list_channels.py <scraper> --save` 在线探测频道列表并保存到 `/reference`；`docs/channels.md` 和 `config/channels.example.yaml` 由 `scripts/generate_channel_docs.py` 生成
-- [ ] 部分代码还不够严谨清晰，需要重构
-  - [ ] recap/preview/today 应该作为一个连续时间范围合并处理
+- [x] 部分代码还不够严谨清晰，需要重构
+  - [x] recap/preview/today 应该作为一个连续时间范围合并处理（`update_channel_full` 单次遍历，过去日期还能自动补缺）
   - [x] 能够跨日期一次性获取的内容可以避免多次抓取（xmltv 来源已实现 URL 缓存）
-  - [ ] plugin 应该作为 post process 出现
-- [ ] xmltv 多语言标记支持
+  - [x] plugin 应该作为 post process 出现（刮削全部完成后按更新过的日期统一后处理）
+- [x] xmltv 多语言标记支持（频道配置 `xml_lang` 输出 `lang` 属性）
