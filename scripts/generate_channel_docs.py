@@ -173,6 +173,27 @@ def gen_docs(cntv: list[dict], tvmao: list[dict]) -> str:
     if mytvsuper_ref:
         lines += id_table(mytvsuper_ref)
     lines += [
+        "### nowtv（nowplayer.now.com，香港 Now 宽频电视）",
+        "",
+        "scraper id 为 Now 节目表接口中的 channelNo（如 Now 新闻台是 `332`）。",
+        "官方频道列表接口为 `https://nowplayer.now.com/tvguide/channellist`，",
+        "可用 `python scripts/list_channels.py nowtv --save` 一键获取。",
+        "在频道配置中可加 `lang: en` 输出英文节目名（默认中文）。",
+        "只能获取今天起 7 天内的节目表，无历史数据（recap 依赖 XML 复用）。",
+        "",
+        "```yaml",
+        "NowNews.hk:",
+        "  name:",
+        "    - Now新闻台",
+        "  scraper:",
+        "    nowtv: 332",
+        "```",
+        "",
+    ]
+    nowtv_ref = load_optional_reference("nowtv")
+    if nowtv_ref:
+        lines += id_table(nowtv_ref)
+    lines += [
         "### discoverychannel_tw（discoverychannel.com.tw）",
         "",
         "scraper id 为台湾探索频道排片接口的数字 channel 参数，例如探索频道亚洲是 `4`：",
@@ -277,6 +298,15 @@ def gen_example_config(cntv: list[dict], tvmao: list[dict]) -> str:
         "#     - 明珠台",
         "#   scraper:",
         "#     mytvsuper: PEAR",
+        "#   refresh: once",
+        "#   recap: 7",
+        "#   preview: 2",
+        "#",
+        "# now_news:",
+        "#   name:",
+        "#     - Now新闻台",
+        "#   scraper:",
+        "#     nowtv: 332",
         "#   refresh: once",
         "#   recap: 7",
         "#   preview: 2",

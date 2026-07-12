@@ -271,7 +271,16 @@ def update_channel_full(channel: Channel, index: int | None = None) -> bool:
         bool: True if the channel was refreshed.
     """
     refresh = channel.metadata.get("refresh", "once")
-    if refresh == "once" and channel.metadata["last_update"].date() == datetime.now().date():
+    today = datetime.now().date()
+    if (
+        refresh == "once"
+        and channel.metadata["last_update"].date() == today
+        # Only trust today's last_update if today's programs actually
+        # exist: a run whose "today" scrape failed (but whose recap
+        # succeeded) still stamps last_update, and skipping here would
+        # leave the channel empty for the whole day (issue #7).
+        and any(program.start_time.date() == today for program in channel.programs)
+    ):
         return False
     log: list[str] = []
     header = f"{index if index is not None else '-'} {channel.id} {channel.metadata['name']}"
