@@ -3,363 +3,487 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>{{ title }}</title>
     <style>
+        :root {
+            --primary-color: #007BFF;
+            --primary-light: #e6f2ff;
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #666a6e;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif;
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .break-line {
-            width: 100%;
-            height: 1px;
-            /* Set the desired height of the break line */
-            background: linear-gradient(to left, transparent, #8a8a8a, transparent) center;
-        }
-
+        /* 頂部導航 */
         .header {
-            color: #333;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
+            background: var(--card-bg);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
         }
 
         .header h1 {
-            font-size: 36px;
-            font-weight: bold;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            background: linear-gradient(135deg, #2c3e50, #4b6cb7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .header p {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #555;
+        .update-info {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 5px 0;
         }
 
-        .container {
+        .link-container {
             display: flex;
             justify-content: center;
-            padding: 20px;
-        }
-
-        .program-list-container {
-            flex: 1;
-            max-width: 800px;
-        }
-
-        .channel-list-container {
-            flex: 1;
-            max-width: 200px;
-        }
-
-        .program-list {
-            width: 100%;
-            max-width: 100%;
-            border-collapse: collapse;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-            line-height: 16px;
-        }
-
-        .program-list th {
-            display: none;
-        }
-
-        .program-item:nth-child(odd) {
-            background-color: #f7f7f7;
-        }
-
-        .program-item:nth-child(even) {
-            background-color: #ebebeb;
-        }
-
-        .program-item td:first-child {
-            width: 60px;
-            text-align: right;
-            font-weight: bold;
-            color: #007BFF;
-        }
-
-        .program-item td {
-            padding: 10px;
-            line-height: 20px;
-            color: #333;
-        }
-
-        .channel-list {
-            text-align: left;
-            user-select: none;
-        }
-
-        .channel-item {
-            font-size: 16px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .selected {
-            color: #007BFF;
-        }
-
-        .now-playing {
-            color: #007BFF;
-            font-weight: bold;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .cta-button {
             display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            /* background-color: #007bff;
-            color: #fff;
-            padding: 5px 10px; */
-            border-radius: 4px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background-color: #fff;
+            color: var(--text-main);
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
         }
 
-        .url-input {
-            position: absolute;
-            left: -9999px; /* 将元素移到视图之外的位置 */
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* 主容器 */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            gap: 24px;
+        }
+
+        /* 頻道列表側邊欄 */
+        .channel-list-container {
+            flex: 0 0 260px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 20px;
+            overflow: hidden;
+        }
+
+        .channel-search-container {
+            padding: 16px;
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            z-index: 10;
+        }
+
+        .channel-search-input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: #f9f9f9;
+            transition: all 0.2s;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .channel-search-input:focus {
+            background-color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+
+        .channel-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+        }
+
+        .channel-item {
+            padding: 12px 16px;
+            margin-bottom: 4px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .channel-item:hover {
+            background-color: #f0f4f8;
+        }
+
+        .channel-item.selected {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* 節目列表清單 */
+        .program-list-container {
+            flex: 1;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            max-height: 85vh; /* 限制高度，使其在內部滾動 */
         }
 
         .date-nav {
+            background: #fff;
+            padding: 16px;
+            border-bottom: 1px solid #eee;
+            flex-shrink: 0;
+        }
+
+        .date-nav p { margin: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; }
+
+        .date-btn {
+            padding: 6px 14px;
+            border-radius: 6px;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 14px;
+        }
+
+        .date-btn:hover { background: var(--primary-light); }
+        .date-now { font-weight: 700; color: var(--text-main); font-size: 16px; }
+
+        .program-scroll-area {
+            flex: 1;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .program-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .program-item {
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+
+        .program-item td {
+            padding: 16px;
+            vertical-align: top;
+        }
+
+        .time-cell {
+            width: 80px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-weight: 600;
+            color: var(--text-muted);
             text-align: center;
-            font-weight: bold;
+            border-right: 2px solid #f0f0f0;
         }
 
-        .date-prev {
-            cursor: pointer;
-            color: #007BFF;
-            user-select: none;
-            font-weight: bold;
+        .content-cell {
+            padding-left: 20px !important;
         }
 
-        .date-next {
-            cursor: pointer;
-            color: #007BFF;
-            user-select: none;
-            font-weight: bold;
+        .program-title {
+            font-weight: 500;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 4px;
         }
 
-        @media (max-width: 500px) {
+        .program-item.active {
+            background-color: #fffdf0;
+        }
+
+        .now-playing-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 6px;
+            vertical-align: middle;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        /* 自定義滾動條 */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+
+        /* 響應式佈局 */
+        @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                padding: 0 12px 20px;
+                gap: 16px;
             }
-
-            .program-list-container {
-                order: 2;
-            }
-
             .channel-list-container {
-                order: 1;
-                max-width: 100%;
+                max-height: 250px;
+                position: static;
+                flex: none;
             }
+            .program-list-container {
+                max-height: 500px; /* 手機端給予固定高度，方便內部滾動而不影響外部頁面位置 */
+            }
+            .time-cell { width: 60px; font-size: 13px; }
         }
+
+        /* 成功彈窗 */
+        .copy-success {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            z-index: 1000;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translate(-50%, 20px); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+
+        .hidden { display: none !important; }
+        .url-input { position: absolute; left: -9999px; }
     </style>
 </head>
 
 <body>
     <div class="header">
         <h1>{{ title }}</h1>
-        <p>
-            <a href="/epg.xml">TVXML</a><a href="#" class="cta-button" id="copyEpgUrlButton">📋</a>
-            <span> </span>
-            <a href="/diyp">DIYP</a><a href="#" class="cta-button" id="copyDiypUrlButton">📋</a>
-            <span> </span>
-            <a href="https://github.com/riverscn/epghub">GitHub</a>
-        </p>
-        <p>{{ num_refresh_channels }}/{{ num_channels }} channels refreshed at {{ last_update_time }}</p>
-        <p>Next update will be triggered at {{ next_update_time }}</p>
-        <p>by {{ update_trigger }}</p>
+        <div class="update-info">已更新 {{ num_refresh_channels }}/{{ num_channels }} 個頻道</div>
+        <div class="update-info">上次更新：{{ last_update_time }} | 下次更新：{{ next_update_time }}</div>
+        
+        <div class="link-container">
+            <button class="cta-button" id="copyEpgUrlButton">TVXML 鏈接</button>
+            <button class="cta-button" id="copyDiypUrlButton">DIYP 接口</button>
+            <a href="https://github.com/riverscn/epghub" class="cta-button" target="_blank">GitHub</a>
+        </div>
 
-        <input type="text" value="/epg.xml" id="epgUrl" class="url-input" aria-label="URL" readonly />
-        <input type="text" value="/diyp" id="diypUrl" class="url-input" aria-label="URL" readonly />
+        <input type="text" value="/epg.xml" id="epgUrl" class="url-input" readonly />
+        <input type="text" value="/diyp?ch=&date=" id="diypUrl" class="url-input" readonly />
     </div>
-    <div class="break-line"></div>
+
     <div class="container">
-        <div class="channel-list-container">
+        <!-- 頻道選擇區 -->
+        <aside class="channel-list-container">
+            <div class="channel-search-container">
+                <input type="text" id="channelSearch" placeholder="搜索頻道名稱..." class="channel-search-input">
+            </div>
             <div class="channel-list">
                 <div class="channel-item selected" data-channel="{{ first_channel }}">{{ first_channel }}</div>
                 {% for channel in channel_list %}
                 <div class="channel-item" data-channel="{{ channel }}">{{ channel }}</div>
                 {% endfor %}
-                <!-- Add more channel items here for additional channels -->
             </div>
-        </div>
-        <div class="program-list-container">
+        </aside>
+
+        <!-- 節目列表區 -->
+        <main class="program-list-container">
             <div class="date-nav">
                 <p>
-                    <span class="date-prev" id="prevDate">&lt;&lt; </span>
-                    <span class="date-now" id="currentDate">2023-10-10</span>
-                    <span class="date-next" id="nextDate"> &gt;&gt;</span>
+                    <span class="date-btn" id="prevDate">← 前一天</span>
+                    <span class="date-now" id="currentDate">---- -- --</span>
+                    <span class="date-btn" id="nextDate">後一天 →</span>
                 </p>
             </div>
-            <table class="program-list">
-                <tbody></tbody>
-            </table>
-        </div>
+            <div class="program-scroll-area" id="programScrollArea">
+                <table class="program-list">
+                    <tbody id="programBody">
+                        <!-- JS 動態加載 -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
 
     <script>
-        // Function to refresh the program list for the selected channel and date
-        function refreshProgramList(channelName, formattedDate) {
-            const programList = document.querySelector('.program-list tbody');
+        function refreshProgramList(channelName, formattedDate, shouldScroll = true) {
+            const programBody = document.getElementById('programBody');
+            const scrollArea = document.getElementById('programScrollArea');
+            const apiUrl = `/diyp?ch=${encodeURIComponent(channelName)}&date=${formattedDate}`;
 
-            const currentDate = formattedDate;
-
-            const apiUrl = `/diyp?ch=${encodeURIComponent(channelName)}&date=${currentDate}`;
+            programBody.innerHTML = '<tr><td colspan="2" style="text-align:center;padding:40px;color:#999">加載中...</td></tr>';
 
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
-                    programList.innerHTML = '';
-                    currentTime = new Date();
-                    currentTime = new Date(currentTime.toISOString())
+                    programBody.innerHTML = '';
+                    const now = new Date();
 
-                    if (data.epg_data) {
-                        data.epg_data.forEach((program, index) => {
-                            const programItem = document.createElement('tr');
-                            programItem.classList.add('program-item');
+                    if (data.epg_data && data.epg_data.length > 0) {
+                        const sorted = data.epg_data.sort((a, b) => a.start.localeCompare(b.start));
 
-                            // Format program start and end times with '{{timezone_name}}' time zone
-                            programStartTime = new Date(`${currentDate}T${program.start}{{timezone_offset}}`);
-                            programEndTime = new Date(`${currentDate}T${program.end}{{timezone_offset}}`);
-                            
-                            if (programEndTime < programStartTime) {
-                                programEndTime.setDate(programEndTime.getDate() + 1);
-                            }
+                        sorted.forEach(program => {
+                            const tr = document.createElement('tr');
+                            tr.className = 'program-item';
 
-                            let programTitle = program.title;
-                            
-                            if (currentTime >= programStartTime && currentTime <= programEndTime) {
-                                programTitle = `<span class="now-playing">${program.title}</span>`;
-                            }
+                            const pStart = new Date(`${formattedDate}T${program.start}{{timezone_offset}}`);
+                            const pEnd = new Date(`${formattedDate}T${program.end}{{timezone_offset}}`);
+                            if (pEnd < pStart) pEnd.setDate(pEnd.getDate() + 1);
 
-                            programItem.innerHTML = `<td>${program.start}</td><td>${programTitle}</td>`;
-                            programList.appendChild(programItem);
-                            console.log(programTitle, programStartTime, programEndTime)
+                            const isActive = now >= pStart && now <= pEnd;
+                            if (isActive) tr.classList.add('active');
+
+                            tr.innerHTML = `
+                                <td class="time-cell">${program.start}</td>
+                                <td class="content-cell">
+                                    <span class="program-title">
+                                        ${isActive ? '<span class="now-playing-tag">LIVE</span>' : ''}
+                                        ${program.title}
+                                    </span>
+                                    ${program.desc ? `<span class="program-desc" style="font-size:12px;color:#888">${program.desc}</span>` : ''}
+                                </td>
+                            `;
+                            programBody.appendChild(tr);
                         });
+                        
+                        if (shouldScroll) {
+                            const activeItem = document.querySelector('.program-item.active');
+                            if (activeItem) {
+                                setTimeout(() => {
+                                    
+                                    const topPos = activeItem.offsetTop;
+                                    scrollArea.scrollTo({
+                                        top: topPos - 50,
+                                        behavior: 'smooth'
+                                    });
+                                }, 300);
+                            }
+                        }
                     } else {
-                        programList.textContent = 'No program data available.';
+                        programBody.innerHTML = '<tr><td colspan="2" style="text-align:center;padding:40px;color:#999">暫無節目數據</td></tr>';
                     }
                 })
-                .catch(error => {
-                    console.error(error);
-                    programList.textContent = 'Failed to retrieve program data.';
+                .catch(() => {
+                    programBody.innerHTML = '<tr><td colspan="2" style="text-align:center;padding:40px;color:#f44336">數據加載失敗</td></tr>';
                 });
         }
 
-        const channelItems = document.querySelectorAll('.channel-item');
+        function init() {
+            const channelItems = document.querySelectorAll('.channel-item');
+            const searchInput = document.getElementById('channelSearch');
 
-        channelItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Clear all selected items
-                channelItems.forEach(item => item.classList.remove('selected'));
-
-                // Toggle the selected state for the clicked item
-                item.classList.add('selected');
-
-                // Refresh the program list for the selected channel
-                goBackToday();
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                channelItems.forEach(item => {
+                    item.classList.toggle('hidden', !item.textContent.toLowerCase().includes(term));
+                });
             });
-        });
-        // Function to copy the URL to the clipboard
-        function copyURLToClipboard(elID) {
-            console.log(elID, 'copy to clipboard');
-            const epgUrl = document.getElementById(elID);
-            epgUrl.select();
-            document.execCommand('copy');
+
+            channelItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    channelItems.forEach(i => i.classList.remove('selected'));
+                    item.classList.add('selected');
+                    goBackToday();
+                    // 在手機端點擊頻道後，平滑移動到節目清單位置，但不超過搜索框
+                    if (window.innerWidth <= 768) {
+                        const listPos = document.querySelector('.program-list-container').offsetTop;
+                        window.scrollTo({ top: listPos - 10, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const copy = (id) => {
+                const el = document.getElementById(id);
+                el.select();
+                document.execCommand('copy');
+                const toast = document.createElement('div');
+                toast.className = 'copy-success';
+                toast.textContent = '✅ 已複製鏈接';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2000);
+            };
+
+            document.getElementById('copyEpgUrlButton').onclick = () => copy('epgUrl');
+            document.getElementById('copyDiypUrlButton').onclick = () => copy('diypUrl');
+
+            const base = window.location.origin;
+            document.getElementById('epgUrl').value = base + '/epg.xml';
+            document.getElementById('diypUrl').value = base + '/diyp?ch=&date=';
+
+            document.getElementById('prevDate').onclick = () => moveDate(-1);
+            document.getElementById('nextDate').onclick = () => moveDate(1);
+
+            goBackToday(false); 
         }
 
-        // Attach a click event listener to the "Copy URL" button
-        document.getElementById('copyEpgUrlButton').addEventListener('click', () => { copyURLToClipboard('epgUrl') });
-        document.getElementById('copyDiypUrlButton').addEventListener('click', () => { copyURLToClipboard('diypUrl') });
-
-        window.addEventListener('load', function () {
-            // Get the href attribute value
-            var hrefValueEpgUrl = document.getElementById('epgUrl').value;
-            var hrefValueDiypUrl = document.getElementById('diypUrl').value;
-            // Get the full URL including the base URL
-            var fullUrlEpgUrl = window.location.origin + hrefValueEpgUrl;
-            var fullUrlDiypUrl = window.location.origin + hrefValueDiypUrl;
-
-            // Set the full URL in the input box
-            document.getElementById('epgUrl').value = fullUrlEpgUrl;
-            document.getElementById('diypUrl').value = fullUrlDiypUrl;
-        });
-        // Function to update the date display
-        function updateDateDisplay(dateString) {
-            const currentDateElement = document.getElementById('currentDate');
-            currentDateElement.textContent = dateString;
+        function moveDate(days) {
+            const date = new Date(document.getElementById('currentDate').textContent);
+            date.setDate(date.getDate() + days);
+            updateView(date.toISOString().split('T')[0], true);
         }
 
-        // Function to handle the "Previous Date" button click
-        function goToPreviousDate() {
-            const currentDateElement = document.getElementById('currentDate');
-            const currentDate = currentDateElement.textContent;
-            const curDate = convertLocalTimeToTimezoneOffset(new Date(`${currentDate}`), "{{timezone_offset}}");
-            curDate.setDate(curDate.getDate() - 1);
-            console.log("Previous Date:", curDate);
-            const formattedDate = curDate.getFullYear() + '-' + String(curDate.getMonth() + 1).padStart(2, '0') + '-' + String(curDate.getDate()).padStart(2, '0');
-            updateDateDisplay(formattedDate);
-            const initiallySelectedChannel = document.querySelector('.channel-item.selected');
-            refreshProgramList(initiallySelectedChannel.getAttribute('data-channel'), formattedDate);
+        function goBackToday(shouldScroll = true) {
+            const now = new Date();
+            const offset = "{{timezone_offset}}";
+            const hours = parseInt(offset.substring(1,3));
+            now.setHours(now.getHours() + (offset[0] === '+' ? 1 : -1) * hours);
+            updateView(now.toISOString().split('T')[0], shouldScroll);
         }
 
-        // Function to handle the "Next Date" button click
-        function goToNextDate() {
-            const currentDateElement = document.getElementById('currentDate');
-            const currentDate = currentDateElement.textContent;
-            const curDate = convertLocalTimeToTimezoneOffset(new Date(`${currentDate}`), "{{timezone_offset}}");
-            curDate.setDate(curDate.getDate() + 1);
-            console.log("Next Date:", curDate);
-            const formattedDate = curDate.getFullYear() + '-' + String(curDate.getMonth() + 1).padStart(2, '0') + '-' + String(curDate.getDate()).padStart(2, '0');
-            updateDateDisplay(formattedDate);
-            const initiallySelectedChannel = document.querySelector('.channel-item.selected');
-            refreshProgramList(initiallySelectedChannel.getAttribute('data-channel'), formattedDate);
+        function updateView(dateStr, shouldScroll) {
+            document.getElementById('currentDate').textContent = dateStr;
+            const sel = document.querySelector('.channel-item.selected');
+            if (sel) refreshProgramList(sel.dataset.channel, dateStr, shouldScroll);
         }
 
-        // Function to go back to today
-        function goBackToday() {
-            // Create a Date object for the current UTC date and time
-            const currentDate = new Date();
-
-            const epgTime = convertLocalTimeToTimezoneOffset(currentDate, "{{timezone_offset}}");
-            console.log("EPG time:", epgTime, "EPG timezone: UTC{{timezone_offset}}");
-
-            const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-            const formattedDate = epgTime.toLocaleDateString('fr-CA', options);
-
-            updateDateDisplay(formattedDate);
-            const initiallySelectedChannel = document.querySelector('.channel-item.selected');
-            refreshProgramList(initiallySelectedChannel.getAttribute('data-channel'), formattedDate);
-        }
-
-        // Function to convert local time to timezone offset
-        function convertLocalTimeToTimezoneOffset(localTime, timezone_offset) {
-            // Extract hours and minutes from the time offset string
-            const sign = timezone_offset[0] === '-' ? -1 : 1;
-            const hours = parseInt(timezone_offset.slice(1, 3), 10);
-            const minutes = parseInt(timezone_offset.slice(3, 5), 10);
-
-            // Calculate the offset in milliseconds
-            const offsetMilliseconds = (hours * 60 + minutes) * 60 * 1000 * sign;;
-            const currentOffsetMilliseconds = localTime.getTimezoneOffset() * 60 * 1000;
-
-            // Adjust the Date object by adding the offset
-            localTime.setTime(localTime.getTime() + currentOffsetMilliseconds + offsetMilliseconds);
-            
-            return localTime;
-        }
-
-        // Attach event listeners to the "Previous Date" and "Next Date" buttons
-        const prevDateButton = document.getElementById('prevDate');
-        prevDateButton.addEventListener('click', goToPreviousDate);
-
-        const nextDateButton = document.getElementById('nextDate');
-        nextDateButton.addEventListener('click', goToNextDate);
-
-        // Refresh the program list for the initially selected channel
-        goBackToday()
+        window.onload = init;
     </script>
 </body>
-
 </html>
