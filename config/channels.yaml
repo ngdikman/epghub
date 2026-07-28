@@ -1,158 +1,2028 @@
-# Channel list
----
-cctv1:
+# http://epg.pw/xmltv/epg_HK.xml
+ViuTV:
   name:
-    - CCTV1 综合
+    - ViuTV
   scraper:
-    cctv:
+    xmltv: ViuTV.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
-  recap: 7
+  recap: 1
+  preview: 2
+ViuTVsix:
+  name:
+    - ViuTVsix
+  scraper:
+    xmltv: ViuTVsix.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+NOW新聞台:
+  name:
+    - NOW新聞台
+  scraper:
+    xmltv: nowNews.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+NOW財經台:
+  name:
+    - NOW財經台
+  scraper:
+    xmltv: nowBusinessNewsChannel.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+NOW直播台:
+  name:
+    - NOW直播台
+  scraper:
+    xmltv: nowDirect.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+NOW爆谷星影台:
+  name:
+    - NOW爆谷星影台
+  scraper:
+    xmltv: nowBaoguSuperstars.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+NOW爆谷台:
+  name:
+    - NOW爆谷台
+  scraper:
+    xmltv: nowBaoguMovies.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
+  preview: 2
+Now Sports Prime:
+  name:
+    - Now Sports Prime
+    - NOW SPORTS PRIME
+  scraper:
+    xmltv: nowSportsPrime.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: once
+  recap: 1
   preview: 2
 
-cctv5:
+天映頻道:
   name:
-    - CCTV5 体育
+    - 天映頻道
   scraper:
-    cctv:
-  refresh: once
-  recap: 7
-  preview: 2
-
-cctv5+:
-  name:
-    - CCTV5+ 体育赛事
-  scraper:
-    cctv: cctv5plus
-  refresh: once
-  recap: 7
-  preview: 2
-
-cctv6:
-  name:
-    - CCTV6 电影
-  scraper:
-    cctv:
-  refresh: once
-  recap: 7
-  preview: 2
-
-cctv8:
-  name:
-    - CCTV8 电视剧
-  scraper:
-    cctv:
-  refresh: once
-  recap: 7
-  preview: 2
-
-cctv9:
-  name:
-    - CCTV9 纪录
-  scraper:
-    cctv: cctvjilu
-  #plugin: weibo_cctv9
+    xmltv: 1298@https://epg.pw/api/epg.xml?channel_id=1298&timezone=QWZyaWNhL0FiaWRqYW4=
   refresh: today
-  recap: 7
+  recap: 1
   preview: 2
 
-cctv10:
+港台電視31:
   name:
-    - CCTV10 科教
+    - 港台電視31
   scraper:
-    cctv:
+    xmltv: RTHKTV31.hk@https://epg1.168.us.kg/rthk.hk.xml
   refresh: once
-  recap: 7
+  recap: 1
+  preview: 2
+港台電視32:
+  name:
+    - 港台電視32
+  scraper:
+    xmltv: RTHKTV32.hk@https://epg1.168.us.kg/rthk.hk.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台電視33:
+  name:
+    - 港台電視33
+  scraper:
+    xmltv: RTHKTV33.hk@https://epg1.168.us.kg/rthk.hk.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台電視34:
+  name:
+    - 港台電視34
+  scraper:
+    xmltv: RTHKTV34.hk@https://epg1.168.us.kg/rthk.hk.xml
+  refresh: once
+  recap: 1
+  preview: 2
+港台電視35:
+  name:
+    - 港台電視35
+  scraper:
+    xmltv: RTHKTV35.hk@https://epg1.168.us.kg/rthk.hk.xml
+  refresh: once
+  recap: 1
+  preview: 2
+TVB星河:
+  name:
+    - TVB星河
+  scraper:
+    xmltv: 3493@https://epg.pw/api/epg.xml?channel_id=3493
+  refresh: once
+  recap: 1
   preview: 2
 
-cctv13:
+# HOY
+HOY76:
   name:
-    - CCTV13 新闻
+    - HOY76
+    - HOY國際財經台
   scraper:
-    cctv:
+    xmltv: 76@https://epg1.168.us.kg/hoy.tv.xml
+  refresh: today
+  recap: 1
+  preview: 2
+HOY77:
+  name:
+    - HOY77
+    - HOY TV
+  scraper:
+    xmltv: HOYTV.hk@https://epg1.168.us.kg/hoy.tv.xml
+  refresh: today
+  recap: 1
+  preview: 2
+HOY78:
+  name:
+    - HOY78
+    - HOY資訊台
+  scraper:
+    xmltv: 78@https://epg1.168.us.kg/hoy.tv.xml
+  refresh: today
+  recap: 1
+  preview: 2
+# HOY生活台:
+#   name:
+#     - HOY生活台
+#   scraper:
+#     xmltv: HOY生活台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+# HOY劇集台:
+#   name:
+#     - HOY劇集台
+#   scraper:
+#     xmltv: HOY劇集台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+# HOY怪談台:
+#   name:
+#     - HOY怪談台
+#   scraper:
+#     xmltv: HOY怪談台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+# HOY體育台:
+#   name:
+#     - HOY體育台
+#   scraper:
+#     xmltv: HOY體育台@https://epg.yang-1989.eu.org/epg.xml
+#   refresh: today
+#   recap: 1
+#   preview: 2
+
+# mytvsuper
+CWIN:
+  name:
+    - SUPER FREE
+  scraper:
+    mytvsuper: 
   refresh: once
-  recap: 7
+  recap: 1
+  preview: 2
+SVAR:
+  name:
+    - SUPER獎門人
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SEYT:
+  name:
+    - 愛回家SUPER煲
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SFOO:
+  name:
+    - SUPER識食
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+STRA:
+  name:
+    - SUPER FUN
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SMUS:
+  name:
+    - SUPER Music
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SGOL:
+  name:
+    - SUPER驚
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SSIT:
+  name:
+    - SUPER煲劇
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+STVM:
+  name:
+    - SUPER亞視劇
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SDOC:
+  name:
+    - 真情SUPER煲
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SSPT:
+  name:
+    - SUPER Sports
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+C18:
+  name:
+    - myTV SUPER 18台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+TVG:
+  name:
+    - 黃金翡翠台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+J:
+  name:
+    - 翡翠台
+    - 翡翠台(超高清)
+    - 翡翠台 4K
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+B:
+  name:
+    - TVB Plus
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+C:
+  name:
+    - 無綫新聞台
+    - 互動窗 1
+    - 互動窗 2
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+P:
+  name:
+    - 明珠台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CTVC:
+  name:
+    - 千禧經典台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CTVS:
+  name:
+    - 亞洲劇台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CDR3:
+  name:
+    - 華語劇台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+TVO:
+  name:
+    - 黃金華劇台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CTVE:
+  name:
+    - 娛樂新聞台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CCOC:
+  name:
+    - 戲曲台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+KID:
+  name:
+    - SUPER Kids Channel
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+ZOO:
+  name:
+    - ZooMoo
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CNIKO:
+  name:
+    - Nickelodeon
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CNIJR:
+  name:
+    - Nick Jr
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CCLM:
+  name:
+    - 粵語片台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CMAM:
+  name:
+    - 美亞電影台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CTHR:
+  name:
+    - Thrill
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CCCM:
+  name:
+    - 天映經典頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CMC:
+  name:
+    - 中國電影頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CRTX:
+  name:
+    - ROCK Action
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+RKEX:
+  name:
+    - ROCK Extreme
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+POPC:
+  name:
+    - PopC
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+ACTM:
+  name:
+    - Action Hollywood Movies
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+RCM:
+  name:
+    - Rialto Classic Movies (RCM)
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CKIX:
+  name:
+    - KIX
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+TRSP:
+  name:
+    - TRACE Sport Stars
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+LNH:
+  name:
+    - Love Nature HD
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+LN4:
+  name:
+    - Love Nature 4K
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SMS:
+  name:
+    - Global Trekker
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+PETC:
+  name:
+    - Pet Club TV
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+GLBT:
+  name:
+    - Globetrotter
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+DOCV:
+  name:
+    - Docsville
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+PULS:
+  name:
+    - Pulse Documentaries
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CRTE:
+  name:
+    - ROCK綜藝娛樂
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CJTV:
+  name:
+    - tvN
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CTS1:
+  name:
+    - 無線衛星亞洲台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CRE:
+  name:
+    - 創世電視
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+FBX:
+  name:
+    - FashionBox
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CMEZ:
+  name:
+    - Mezzo Live HD
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CC1:
+  name:
+    - 中央電視台綜合頻道 (港澳版)
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CGD:
+  name:
+    - CGTN (中國環球電視網)記錄頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CGE:
+  name:
+    - CGTN (中國環球電視網)英語頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+DTV:
+  name:
+    - 東方衛視國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+PCC:
+  name:
+    - 鳳凰衛視中文台
+  scraper:
+    xmltv: 鳳凰衛視中文台@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: today
+  recap: 1
+  preview: 2
+PIN:
+  name:
+    - 鳳凰衛視資訊台
+  scraper:
+    xmltv: 366@https://epg1.168.us.kg/nowplayer.now.com.xml
+  refresh: today
+  recap: 1
+  preview: 2
+# PHK:
+#   name:
+#     - 鳳凰衛視香港台
+#   scraper:
+#     xmltv: 鳳凰衛視香港台@https://epg.yang-1989.eu.org/epg.xml.gz
+#   refresh: today
+#   recap: 1
+#   preview: 2
+CC4:
+  name:
+    - 中國中央電視台中文國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CCE:
+  name:
+    - 中國中央電視台娛樂頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CCO:
+  name:
+    - 中國中央電視台戲曲頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+YNTV:
+  name:
+    - 雲南瀾湄國際衛視
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+AHTV:
+  name:
+    - 安徽廣播電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+BJTV:
+  name:
+    - 北京電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+FJTV:
+  name:
+    - 福建海峽衛視國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+HNTV:
+  name:
+    - 湖南電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+JSTV:
+  name:
+    - 江蘇電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+GBTV:
+  name:
+    - 廣東廣播電視台大灣區衛視頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+ZJTV:
+  name:
+    - 浙江電視台國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+SZTV:
+  name:
+    - 深圳衛視國際頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+NOW7:
+  name:
+    - that's 70s
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+NOW8:
+  name:
+    - that's 80s
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+NOWR:
+  name:
+    - that's Rock
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+NOW9:
+  name:
+    - that's 90s00s
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CONC:
+  name:
+    - Concerto
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+TRUR:
+  name:
+    - TRACE Urban
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CTSN:
+  name:
+    - 無線衛星新聞台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CCNA:
+  name:
+    - 亞洲新聞台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CJAZ:
+  name:
+    - 半島電視台英語頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CF24:
+  name:
+    - France 24
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CDW1:
+  name:
+    - DW
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CNHK:
+  name:
+    - NHK World-Japan
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+CARI:
+  name:
+    - Arirang TV
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+NSWD:
+  name:
+    - NewsWorld
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+EVT2:
+  name:
+    - myTV SUPER直播足球2台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+EVT3:
+  name:
+    - myTV SUPER直播足球3台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+EVT4:
+  name:
+    - myTV SUPER直播足球4台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+EVT5:
+  name:
+    - myTV SUPER直播足球5台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+EVT6:
+  name:
+    - myTV SUPER直播足球6台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+EVT7:
+  name:
+    - myTV SUPER直播足球7台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+TEST:
+  name:
+    - 測試頻道
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+  
+# http://epg.pw/xmltv/epg_TW.xml
+龍華電影:
+  name:
+    - 龍華電影
+  scraper:
+    xmltv: 457361@https://epg.pw/api/epg.xml?channel_id=457361&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華經典:
+  name:
+    - 龍華經典
+  scraper:
+    xmltv: 457370@https://epg.pw/api/epg.xml?channel_id=457370&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華洋片:
+  name:
+    - 龍華洋片
+  scraper:
+    xmltv: 457364@https://epg.pw/api/epg.xml?channel_id=457364&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華戲劇:
+  name:
+    - 龍華戲劇
+  scraper:
+    xmltv: 457313@https://epg.pw/api/epg.xml?channel_id=457313&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華偶像:
+  name:
+    - 龍華偶像
+  scraper:
+    xmltv: 457314@https://epg.pw/api/epg.xml?channel_id=457314&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華動畫:
+  name:
+    - 龍華動畫
+  scraper:
+    xmltv: 457225@https://epg.pw/api/epg.xml?channel_id=457225&timezone=QXNpYS9TaGFuZ2hhaQ==
+  refresh: today
+  recap: 1
+  preview: 2
+龍華日韓:
+  name:
+    - 龍華日韓
+  scraper:
+    xmltv: 龍華日韓台@https://epg.yang-1989.eu.org/epg.xml
+  refresh: today
+  recap: 1
   preview: 2
 
-cctv16:
-  name:
-    - CCTV16 奥林匹克
-  scraper:
-    cctv:
-  refresh: once
-  recap: 7
-  preview: 2
+# # gdtv
+# 广东综艺:
+#   name:
+#     - 广东综艺
+#   scraper:
+#     tvmao: NANFANG3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广东珠江:
+#   name:
+#     - 广东珠江
+#   scraper:
+#     tvsou: e5815c01
+#     tvmao: GDTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广东新闻:
+#   name:
+#     - 广东新闻
+#   scraper:
+#     tvsou: 971f6ec3
+#     tvmao: GDTV6
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广东民生:
+#   name:
+#     - 广东民生
+#   scraper:
+#     tvsou: 0e89a6bf
+#     tvmao: GDTV4
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广东体育:
+#   name:
+#     - 广东体育
+#   scraper:
+#     tvsou: 64e4e458
+#     tvmao: GDTV3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 经济科教:
+#   name:
+#     - 经济科教
+#   scraper:
+#     tvsou: dae1d7e4
+#     tvmao: NANFANG1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广东影视:
+#   name:
+#     - 广东影视
+#   scraper:
+#     tvmao: NANFANG4
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广东少儿:
+#   name:
+#     - 广东少儿
+#   scraper:
+#     tvmao: NANFANG5
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 嘉佳卡通:
+#   name:
+#     - 嘉佳卡通
+#   scraper:
+#     tvmao: GDTV7
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 岭南戏曲:
+#   name:
+#     - 岭南戏曲
+#   scraper:
+#     tvmao: LNXQ
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 现代教育:
+#   name:
+#     - 现代教育
+#   scraper:
+#     xmltv: 现代教育@https://epg.v1.mk/fy.xml
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广州综合:
+#   name:
+#     - 广州综合
+#   scraper:
+#     tvmao: GZTV1
+#     tvsou: 27679d2c
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广州新闻:
+#   name:
+#     - 广州新闻
+#   scraper:
+#     tvmao: GZTV2
+#     tvsou: 971f6ec3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广州影视:
+#   name:
+#     - 广州影视
+#   scraper:
+#     tvmao: GZTV4
+#     tvsou: dcac5508
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广州法治:
+#   name:
+#     - 广州法治
+#   scraper:
+#     tvmao: GZTV6
+#     tvsou: 0185d3a2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 深圳都市:
+#   name:
+#     - 深圳都市
+#   scraper:
+#     tvmao: SZTV2
+#     tvsou: 0a0fa12e
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 深圳电视剧:
+#   name:
+#     - 深圳电视剧
+#   scraper:
+#     tvmao: SZTV3
+#     tvsou: 8abb60ec
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 深圳财经生活:
+#   name:
+#     - 深圳财经生活
+#   scraper:
+#     tvmao: SZTV4
+#     tvsou: 285dba33
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 深圳体育健康:
+#   name:
+#     - 深圳体育健康
+#   scraper:
+#     tvmao: SZTV6
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 深圳少儿:
+#   name:
+#     - 深圳少儿
+#   scraper:
+#     tvmao: SZTV7
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 湛江综合:
+#   name:
+#     - 湛江综合
+#   scraper:
+#     tvmao: GDZJ1
+#     tvsou: ce065c60
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 湛江公共:
+#   name:
+#     - 湛江公共
+#   scraper:
+#     tvmao: GDZJ2
+#     tvsou: f55f14c3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 揭阳综合:
+#   name:
+#     - 揭阳综合
+#   scraper:
+#     tvmao: GDJYTV1
+#     tvsou: 0f4bd658
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 揭阳生活:
+#   name:
+#     - 揭阳生活
+#   scraper:
+#     tvmao: GDJYTV2
+#     tvsou: b8f472e1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 汕尾新闻综合:
+#   name:
+#     - 汕尾新闻综合
+#   scraper:
+#     tvmao: SWTV1
+#     tvsou: 3328b54f
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 汕尾文化生活:
+#   name:
+#     - 汕尾文化生活
+#   scraper:
+#     tvmao: SWTV2
+#     tvsou: d7a7120b
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 江门综合:
+#   name:
+#     - 江门综合
+#   scraper:
+#     tvmao: JMTV2
+#     tvsou: 0d09f3ff
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 江门侨乡生活:
+#   name:
+#     - 江门侨乡生活
+#   scraper:
+#     tvmao: JMTV1
+#     tvsou: 192e717d
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 珠海-1:
+#   name:
+#     - 珠海-1
+#   scraper:
+#     tvmao: ZHTV1
+#     tvsou: 79ca2059
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 珠海-2:
+#   name:
+#     - 珠海-2
+#   scraper:
+#     tvmao: ZHTV2
+#     tvsou: f08e4cae
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 肇庆新闻:
+#   name:
+#     - 肇庆新闻
+#   scraper:
+#     tvmao: GDZQ1
+#     tvsou: 2b96d61c
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 肇庆生活服务:
+#   name:
+#     - 肇庆生活服务
+#   scraper:
+#     tvmao: GDZQ2
+#     tvsou: 62e604f3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 河源综合:
+#   name:
+#     - 河源综合
+#   scraper:
+#     xmltv: 河源综合@https://epg.v1.mk/fy.xml
+#     tvmao: HYRTV-1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 河源公共:
+#   name:
+#     - 河源公共
+#   scraper:
+#     xmltv: 河源公共@https://epg.v1.mk/fy.xml
+#     tvsou: a2239113
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 清远新闻综合:
+#   name:
+#     - 清远新闻综合
+#   scraper:
+#     tvmao: GDQYTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 清远公共:
+#   name:
+#     - 清远公共
+#   scraper:
+#     tvmao: GDQYTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 云浮综合:
+#   name:
+#     - 云浮综合
+#   scraper:
+#     tvmao: YFZH
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 云浮文旅:
+#   name:
+#     - 云浮文旅
+#   scraper:
+#     tvmao: YFGG
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 茂名综合:
+#   name:
+#     - 茂名综合
+#   scraper:
+#     tvsou: ead49acc
+#     tvmao: MMTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 茂名公共:
+#   name:
+#     - 茂名公共
+#   scraper:
+#     tvsou: b7ba9ebe
+#     tvmao: MMTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 汕头综合:
+#   name:
+#     - 汕头综合
+#   scraper:
+#     tvsou: 6707021a
+#     tvmao: SRTTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 汕头经济生活:
+#   name:
+#     - 汕头经济生活
+#   scraper:
+#     tvsou: 13530beb
+#     tvmao: SRTTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 汕头文旅体育:
+#   name:
+#     - 汕头文旅体育
+#   scraper:
+#     tvsou: 1b7931e1
+#     tvmao: SRTTV3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 佛山公共:
+#   name:
+#     - 佛山公共
+#   scraper:
+#     tvsou: 35b4101b
+#     tvmao: GDFS3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 佛山南海:
+#   name:
+#     - 佛山南海
+#   scraper:
+#     tvsou: c5907320
+#     tvmao: GDFS4
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 佛山顺德:
+#   name:
+#     - 佛山顺德
+#   scraper:
+#     tvsou: be4c330b
+#     tvmao: GDFS5
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 佛山影视:
+#   name:
+#     - 佛山影视
+#   scraper:
+#     tvsou: 19b538d9
+#     tvmao: GDFS2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 佛山综合:
+#   name:
+#     - 佛山综合
+#   scraper:
+#     tvsou: 4441cd12
+#     tvmao: GDFS1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 东莞新闻:
+#   name:
+#     - 东莞新闻
+#   scraper:
+#     tvsou: 4dd0abf9
+#     tvmao: GDDG1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 东莞生活资讯:
+#   name:
+#     - 东莞生活资讯
+#   scraper:
+#     tvsou: bd9b9c5b
+#     tvmao: GDDG2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 中山综合:
+#   name:
+#     - 中山综合
+#   scraper:
+#     tvsou: 918a3e04
+#     tvmao: GDZS1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 中山公共:
+#   name:
+#     - 中山公共
+#   scraper:
+#     tvsou: 3ff2739e
+#     tvmao: GDZS2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 潮州综合:
+#   name:
+#     - 潮州综合
+#   scraper:
+#     tvsou: ada776a1
+#     tvmao: CZBTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 潮州民生:
+#   name:
+#     - 潮州民生
+#   scraper:
+#     tvsou: de2b51c1
+#     tvmao: CZBTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 梅州-1:
+#   name:
+#     - 梅州-1
+#   scraper:
+#     tvsou: 40ad6bf1
+#     tvmao: GDMZTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 客家生活:
+#   name:
+#     - 客家生活
+#   scraper:
+#     tvsou: 7f0a4e41
+#     tvmao: GDMZTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# HZTV1:
+#   name:
+#     - HZTV1
+#   scraper:
+#     xmltv: HZTV1@https://epg.v1.mk/fy.xml
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# HZTV2:
+#   name:
+#     - HZTV2
+#   scraper:
+#     xmltv: HZTV2@https://epg.v1.mk/fy.xml
+#   refresh: once
+#   recap: 1
+#   preview: 2
 
-cctv4k:
-  name:
-    - CCTV4K 超高清
-  scraper:
-    cctv:
-  refresh: once
-  recap: 7
-  preview: 2
+# # cctv
+# CCTV1:
+#   name:
+#     - CCTV1
+#   scraper:
+#     cctv: cctv1
+#     tvmao: CCTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV2:
+#   name:
+#     - CCTV2
+#   scraper:
+#     cctv: cctv2
+#     tvmao: CCTV2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV3:
+#   name:
+#     - CCTV3
+#   scraper:
+#     cctv: cctv3
+#     tvmao: CCTV3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV4:
+#   name:
+#     - CCTV4
+#   scraper:
+#     cctv: cctv4
+#     tvmao: CCTV4
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV5:
+#   name:
+#     - CCTV5
+#   scraper:
+#     cctv: cctv5
+#     tvmao: CCTV5
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV5+:
+#   name:
+#     - CCTV5+
+#   scraper:
+#     cctv: cctv5plus
+#     tvmao: CCTV5+
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV6:
+#   name:
+#     - CCTV6
+#   scraper:
+#     cctv: cctv6
+#     tvmao: CCTV6
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV7:
+#   name:
+#     - CCTV7
+#   scraper:
+#     cctv: cctv7
+#     tvmao: CCTV7
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV8:
+#   name:
+#     - CCTV8
+#   scraper:
+#     cctv: cctv8
+#     tvmao: CCTV8
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV9:
+#   name:
+#     - CCTV9
+#   scraper:
+#     cctv: cctv9
+#     tvmao: CCTV9
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV10:
+#   name:
+#     - CCTV10
+#   scraper:
+#     cctv: cctv10
+#     tvmao: CCTV10
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV11:
+#   name:
+#     - CCTV11
+#   scraper:
+#     cctv: cctv11
+#     tvmao: CCTV11
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV12:
+#   name:
+#     - CCTV12
+#   scraper:
+#     cctv: cctv12
+#     tvmao: CCTV12
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV13:
+#   name:
+#     - CCTV13
+#   scraper:
+#     cctv: cctv13
+#     tvmao: CCTV13
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV14:
+#   name:
+#     - CCTV14
+#   scraper:
+#     cctv: cctvchild
+#     tvmao: CCTV14
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV15:
+#   name:
+#     - CCTV-15
+#   scraper:
+#     cctv: cctv15
+#     tvmao: CCTV15
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV16:
+#   name:
+#     - CCTV16
+#   scraper:
+#     cctv: cctv16
+#     tvmao: CCTV16
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# CCTV17:
+#   name:
+#     - CCTV17
+#   scraper:
+#     cctv: cctv17
+#     tvmao: CCTV17
+#   refresh: once
+#   recap: 1
+#   preview: 2
 
-cctv8k:
-  name:
-    - CCTV8K 超高清
-  scraper:
-    cctv:
-  refresh: once
-  recap: 7
-  preview: 2
+# 风云足球:
+#   name:
+#     - 风云足球
+#   scraper:
+#     cctv: cctvfyzq
+#     tvmao: CCTVPAYFEE1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 风云音乐:
+#   name:
+#     - 风云音乐
+#   scraper:
+#     cctv: fyyy
+#     tvmao: CCTVPAYFEE2
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 第一剧场:
+#   name:
+#     - 第一剧场
+#   scraper:
+#     cctv: diyijuchang
+#     tvmao: CCTVPAYFEE3
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 风云剧场:
+#   name:
+#     - 风云剧场
+#   scraper:
+#     cctv: fyjc
+#     tvmao: CCTVPAYFEE4
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 世界地理:
+#   name:
+#     - 世界地理
+#   scraper:
+#     cctv: shijiedili
+#     tvmao: CCTVPAYFEE5
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 电视指南:
+#   name:
+#     - 电视指南
+#   scraper:
+#     cctv: zhinan
+#     tvmao: CCTVPAYFEE6
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 怀旧剧场:
+#   name:
+#     - 怀旧剧场
+#   scraper:
+#     cctv: hjjc
+#     tvmao: CCTVPAYFEE7
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 兵器科技:
+#   name:
+#     - 兵器科技
+#   scraper:
+#     cctv: guofang
+#     tvmao: CCTVPAYFEE8
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 女性时尚:
+#   name:
+#     - 女性时尚
+#   scraper:
+#     cctv: shishang
+#     tvmao: CCTVPAYFEE9
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 高尔夫网球:
+#   name:
+#     - 高尔夫网球
+#   scraper:
+#     cctv: cctvgaowang
+#     tvmao: CCTVPAYFEE13
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 央视文化精品:
+#   name:
+#     - 央视文化精品
+#   scraper:
+#     cctv: jingpin
+#     tvmao: CCTVPAYFEE14
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 央视台球:
+#   name:
+#     - 央视台球
+#   scraper:
+#     cctv: taiqiu
+#     tvmao: CCTVPAYFEE36
+#   refresh: once
+#   recap: 1
+#   preview: 2
 
-zhejiangtv:
-  name:
-    - 浙江卫视
-  scraper:
-    tvmao: ZJTV1
-    cctv: zhejiang
-  refresh: once
-  recap: 7
-  preview: 2
-
-hunantv:
-  name:
-    - 湖南卫视
-  scraper:
-    tvmao: HUNANTV2
-    cctv: hunan
-  refresh: once
-  recap: 7
-  preview: 2
-
-zjdj:
-  name:
-    - 之江纪录
-  scraper:
-    cztv: 112
-  refresh: once
-  recap: 7
-  preview: 2
-
-htv:
-  name:
-    - 杭州综合
-  scraper:
-    tvsou: 630175b5
-  refresh: once
-  recap: 7
-  preview: 2
-
-PhoenixChineseChannel.hk:
-  name:
-    - 凤凰卫视中文
-  scraper:
-    mytvsuper: PCC
-  lang: tc
-  refresh: once
-  recap: 7
-  preview: 2
-
-DiscoveryChannelAsia.tw:
-  name:
-    - 探索频道亚洲
-  scraper:
-    discoverychannel_tw: 4
-  refresh: once
-  recap: 7
-  preview: 2
+# # 卫视
+# 广东卫视:
+#   name:
+#     - 广东卫视
+#   scraper:
+#     cctv: guangdong
+#     tvsou: cb608c10
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 大湾区卫视:
+#   name:
+#     - 大湾区卫视
+#   scraper:
+#     xmltv: 大湾区卫视@https://epg.v1.mk/fy.xml
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 深圳卫视:
+#   name:
+#     - 深圳卫视
+#   scraper:
+#     cctv: shenzhen
+#     tvsou: 50ca1f4c
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 湖南卫视:
+#   name:
+#     - 湖南卫视
+#   scraper:
+#     cctv: hunan
+#     tvsou: 7d4daf1f
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 浙江卫视:
+#   name:
+#     - 浙江卫视
+#   scraper:
+#     cctv: zhejiang
+#     tvsou: 9f005630
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 江苏卫视:
+#   name:
+#     - 江苏卫视
+#   scraper:
+#     cctv: jiangsu
+#     tvsou: 95f40184
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 东方卫视:
+#   name:
+#     - 东方卫视
+#   scraper:
+#     cctv: dongfang
+#     tvmao: DONGFANG1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 安徽卫视:
+#   name:
+#     - 安徽卫视
+#   scraper:
+#     cctv: anhui
+#     tvsou: 06a195fd
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 北京卫视:
+#   name:
+#     - 北京卫视
+#   scraper:
+#     cctv: btv1
+#     tvsou: 696f2203
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 天津卫视:
+#   name:
+#     - 天津卫视
+#   scraper:
+#     cctv: tianjin
+#     tvmao: TJTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 山东卫视:
+#   name:
+#     - 山东卫视
+#   scraper:
+#     cctv: shandong
+#     tvsou: c62d45e9
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 江西卫视:
+#   name:
+#     - 江西卫视
+#   scraper:
+#     cctv: jiangxi
+#     tvmao: JXTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 湖北卫视:
+#   name:
+#     - 湖北卫视
+#   scraper:
+#     cctv: hubei
+#     tvsou: 526cbae7
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 广西卫视:
+#   name:
+#     - 广西卫视
+#   scraper:
+#     cctv: guangxi
+#     tvmao: GUANXI1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 辽宁卫视:
+#   name:
+#     - 辽宁卫视
+#   scraper:
+#     cctv: liaoning
+#     tvsou: 019d9e5e
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 黑龙江卫视:
+#   name:
+#     - 黑龙江卫视
+#   scraper:
+#     cctv: heilongjiang
+#     tvsou: 59736a35
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 贵州卫视:
+#   name:
+#     - 贵州卫视
+#   scraper:
+#     cctv: guizhou
+#     tvsou: a136a49d
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 四川卫视:
+#   name:
+#     - 四川卫视
+#   scraper:
+#     cctv: sichuan
+#     tvsou: e5b252e4
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 河南卫视:
+#   name:
+#     - 河南卫视
+#   scraper:
+#     cctv: henan
+#     tvsou: 789d0d22
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 河北卫视:
+#   name:
+#     - 河北卫视
+#   scraper:
+#     cctv: hebei
+#     tvsou: 25feea76
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 东南卫视:
+#   name:
+#     - 东南卫视
+#   scraper:
+#     cctv: dongnan
+#     tvsou: da0c3f96
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 吉林卫视:
+#   name:
+#     - 吉林卫视
+#   scraper:
+#     cctv: jilin
+#     tvsou: a3aa4d01
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 新疆卫视:
+#   name:
+#     - 新疆卫视
+#   scraper:
+#     cctv: xinjiang
+#     tvsou: aa83e122
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 青海卫视:
+#   name:
+#     - 青海卫视
+#   scraper:
+#     cctv: qinghai
+#     tvsou: 6cf61152
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 海南卫视:
+#   name:
+#     - 海南卫视
+#   scraper:
+#     xmltv: 海南卫视@https://epg.v1.mk/fy.xml
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 甘肃卫视:
+#   name:
+#     - 甘肃卫视
+#   scraper:
+#     cctv: gansu
+#     tvsou: fac1ecf6
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 三沙卫视:
+#   name:
+#     - 三沙卫视
+#   scraper:
+#     xmltv: 三沙卫视@https://epg.v1.mk/fy.xml
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 云南卫视:
+#   name:
+#     - 云南卫视
+#   scraper:
+#     cctv: yunnan
+#     tvmao: YNTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
+# 重庆卫视:
+#   name:
+#     - 重庆卫视
+#   scraper:
+#     cctv: chongqing
+#     tvmao: CCQTV1
+#   refresh: once
+#   recap: 1
+#   preview: 2
