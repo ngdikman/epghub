@@ -341,20 +341,14 @@
             }
             .channel-overlay.show { display: block; }
             .channel-list-container {
-                display: flex; flex-direction: column;
-                position: absolute; top: 42px; left: 0; right: 0;
+                display: none; flex-direction: column;
+                position: fixed; top: 0; left: 0; right: 0;
                 max-height: 50vh; z-index: 100;
                 box-shadow: 0 12px 32px rgba(0,0,0,0.12);
                 border-radius: 0 0 14px 14px;
-                flex: none; border: none;
-                opacity: 0; transform: translateY(-4px);
-                transition: opacity 0.2s, transform 0.2s;
-                pointer-events: none;
+                border: none;
             }
-            .channel-list-container.open {
-                opacity: 1; transform: translateY(0);
-                pointer-events: auto;
-            }
+            .channel-list-container.open { display: flex; }
             .program-list-container {
                 flex: 1; max-height: none; border-radius: 0; box-shadow: none; border: none;
             }
@@ -561,12 +555,15 @@
 
             const base = window.location.origin;
             document.getElementById('epgUrl').value = base + '/epg.xml';
-            document.getElementById('diypUrl').value = base + '/diyp?ch=&date=';
 
             document.getElementById('prevDate').onclick = () => moveDate(-1);
             document.getElementById('nextDate').onclick = () => moveDate(1);
 
             goBackToday(true); 
+        }
+
+        function updateDiypUrl(channel, date) {
+            document.getElementById('diypUrl').value = window.location.origin + '/diyp?ch=' + encodeURIComponent(channel) + '&date=' + date;
         }
 
         function moveDate(days) {
@@ -586,7 +583,10 @@
         function updateView(dateStr, shouldScroll) {
             document.getElementById('currentDate').textContent = dateStr;
             const sel = document.querySelector('.channel-item.selected');
-            if (sel) refreshProgramList(sel.dataset.channel, dateStr, shouldScroll);
+            if (sel) {
+                refreshProgramList(sel.dataset.channel, dateStr, shouldScroll);
+                updateDiypUrl(sel.dataset.channel, dateStr);
+            }
         }
 
         window.onload = init;
