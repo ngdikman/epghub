@@ -1,3 +1,41 @@
+# 熱門頻道
+J:
+  name:
+    - 翡翠台
+    - 翡翠台(超高清)
+    - 翡翠台 4K
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+B:
+  name:
+    - TVB Plus
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+C:
+  name:
+    - 無綫新聞台
+    - 互動窗 1
+    - 互動窗 2
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+P:
+  name:
+    - 明珠台
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+
 # http://epg.pw/xmltv/epg_HK.xml
 ViuTV:
   name:
@@ -43,6 +81,7 @@ NOW爆谷星影台:
   name:
     - NOW爆谷星影台
   scraper:
+    nowtv: 138
     xmltv: nowBaoguSuperstars.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
   recap: 1
@@ -51,6 +90,7 @@ NOW爆谷台:
   name:
     - NOW爆谷台
   scraper:
+    nowtv: 133
     xmltv: nowBaoguMovies.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
   recap: 1
@@ -60,6 +100,7 @@ Now Sports Prime:
     - Now Sports Prime
     - NOW SPORTS PRIME
   scraper:
+    nowtv: 630
     xmltv: nowSportsPrime.hk@https://epg1.168.us.kg/nowplayer.now.com.xml
   refresh: once
   recap: 1
@@ -289,42 +330,8 @@ TVG:
   refresh: once
   recap: 1
   preview: 2
-J:
-  name:
-    - 翡翠台
-    - 翡翠台(超高清)
-    - 翡翠台 4K
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
-B:
-  name:
-    - TVB Plus
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
-C:
-  name:
-    - 無綫新聞台
-    - 互動窗 1
-    - 互動窗 2
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
-P:
-  name:
-    - 明珠台
-  scraper:
-    mytvsuper: 
-  refresh: once
-  recap: 1
-  preview: 2
+
+
 CTVC:
   name:
     - 千禧經典台
@@ -653,14 +660,14 @@ PIN:
   refresh: today
   recap: 1
   preview: 2
-# PHK:
-#   name:
-#     - 鳳凰衛視香港台
-#   scraper:
-#     xmltv: 鳳凰衛視香港台@https://epg.yang-1989.eu.org/epg.xml.gz
-#   refresh: today
-#   recap: 1
-#   preview: 2
+PHK:
+  name:
+    - 鳳凰衛視香港台
+  scraper:
+    mctv: 162
+  refresh: today
+  recap: 1
+  preview: 2
 CC4:
   name:
     - 中國中央電視台中文國際頻道

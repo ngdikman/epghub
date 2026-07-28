@@ -139,7 +139,7 @@ def update(config_path: str, output_dir: str) -> int:
     )
     template = env.get_template("index.html.jinja2")
 
-    title = "EPG"
+    title = "電視直播節目表"
     channel_list = [channel.metadata["name"][0] for channel in channels]
     first_channel = channel_list[0]
     channel_list = channel_list[1:]
@@ -156,7 +156,7 @@ def update(config_path: str, output_dir: str) -> int:
         timezone_offset=timezone_offset,
     )
 
-    with open(os.path.join(output_dir, "index.html"), "w") as index_file:
+    with open(os.path.join(output_dir, "index.html"), "w", encoding="utf-8") as index_file:
         index_file.write(rendered_html)
     for static_file in ("404.html", "404.json", "robots.txt"):
         shutil.copyfile(
