@@ -342,13 +342,21 @@
             .channel-overlay.show { display: block; }
             .channel-list-container {
                 display: none; flex-direction: column;
-                position: fixed; top: 0; left: 0; right: 0;
-                max-height: 50vh; z-index: 100;
+                position: absolute; top: 42px; left: 0; right: 0;
+                max-height: 60vh; overflow-y: auto;
+                z-index: 100;
                 box-shadow: 0 12px 32px rgba(0,0,0,0.12);
                 border-radius: 0 0 14px 14px;
                 border: none;
             }
             .channel-list-container.open { display: flex; }
+            .channel-search-container {
+                position: sticky; top: 0; z-index: 10;
+            }
+            .channel-list {
+                flex: none;
+                overflow-y: visible;
+            }
             .program-list-container {
                 flex: 1; max-height: none; border-radius: 0; box-shadow: none; border: none;
             }
