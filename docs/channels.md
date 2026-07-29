@@ -344,6 +344,128 @@ DiscoveryChannelAsia.tw:
 
 可用 `python scripts/list_channels.py discoverychannel_tw` 探测哪些 id 有效。
 
+### astro（astro.com.my，马来西亚 Astro 卫星电视）
+
+scraper id 为 Astro 频道的数字 ID（如 TV1 是 `711`）。
+可用 `python scripts/list_channels.py astro --save` 一键获取全部频道列表。
+
+```yaml
+TV1:
+  name:
+    - TV1
+  scraper:
+    astro: 711
+```
+
+| 频道 | scraper id |
+| --- | --- |
+| TV1 | `711` |
+| TV2 | `5027` |
+| RIA | `1004` |
+| PRIMA | `1000` |
+| OASIS | `2505` |
+| CITRA | `2700` |
+| RANIA | `608` |
+| AURA | `609` |
+| TV ALHIJRAH | `1113` |
+| COLORS | `2611` |
+| Zee Cinema | `5106` |
+| TVS | `5021` |
+| TV OKEY | `5072` |
+| VAANAVIL | `2309` |
+| VINMEEN | `2105` |
+| SUN TV | `2310` |
+| SUN MUSIC | `5011` |
+| ADITHYA | `915` |
+| Sun News | `5087` |
+| KTV | `5088` |
+| Sun Life | `5089` |
+| STAR VIJAY | `2707` |
+| COLORS TAMIL | `2101` |
+| ZEE TAMIL | `2311` |
+| THANGATHIRAI | `2109` |
+| iQIYI | `1006` |
+| TVB CLASSIC | `5016` |
+| AEC | `2400` |
+| QJ | `2507` |
+| CELESTIAL | `506` |
+| TVBJ | `2600` |
+| AOD | `2706` |
+| CTI ASIA | `5017` |
+| TVB E-NEWS | `5015` |
+| TVB XING HE | `401` |
+| TVBS ASIA | `402` |
+| CCM | `100` |
+| PHOENIX | `400` |
+| PHOENIX NEWS | `5009` |
+| HUA HEE DAI | `2308` |
+| CCTV4 | `403` |
+| KBSW | `2306` |
+| Astro Daebak | `5211` |
+| tvN | `1001` |
+| KPLUS | `9983` |
+| HITS MOVIES | `2305` |
+| BOO | `2407` |
+| Astro Showtime | `5145` |
+| Astro FAM Time | `5186` |
+| SHOWCASE | `5054` |
+| Rock Action | `5143` |
+| Rock X Stream | `5144` |
+| tvN Movies | `2406` |
+| AWANI | `5025` |
+| Bernama TV | `1114` |
+| CGTN | `5019` |
+| Berita RTM | `5213` |
+| CNN | `2503` |
+| BBC News | `1008` |
+| AL JAZEERA | `2110` |
+| CNA | `605` |
+| CNBC | `900` |
+| BLOOMBERG  TV | `5020` |
+| ABC AUSTRALIA | `5075` |
+| DW | `9984` |
+| FRANCE24 | `9985` |
+| Love Nature | `5096` |
+| DISCOVERY | `2510` |
+| DISCOVERY ASIA | `501` |
+| BBC Earth | `5051` |
+| HISTORY | `604` |
+| CGTN Documentary | `5119` |
+| TUTOR TV | `5071` |
+| CERIA | `2606` |
+| CARTOON NTWK | `509` |
+| NICKELODEON | `2511` |
+| NICK JR | `9982` |
+| Moonbug Kids | `5067` |
+| Blippi & Friends | `5175` |
+| AXN | `2303` |
+| HITS NOW | `5110` |
+| Lifetime | `5052` |
+| HITS | `606` |
+| TLC | `2709` |
+| AFN | `500` |
+| CI | `2111` |
+| HGTV | `2502` |
+| ARENA | `2604` |
+| ARENA 2 | `5057` |
+| ARENA BOLA | `5099` |
+| ARENA BOLA 2 | `5100` |
+| Sukan+ | `5212` |
+| Astro Grandstand | `2701` |
+| Astro Premier League | `601` |
+| Astro Premier League 2 | `2104` |
+| Astro Football | `2506` |
+| Astro Badminton | `5170` |
+| Astro Sports Plus | `5171` |
+| Astro Tennis | `5210` |
+| beIN SPORTS | `408` |
+| beIN SPORTS 2 | `5066` |
+| bEIN SPORTS 3 | `2705` |
+| W-Sport | `5060` |
+| GOLF CHANNEL | `1003` |
+| Cricbuzz | `2504` |
+| Premier Sports | `2601` |
+
 ### xmltv（任意远程 XMLTV 文件）
 
 把别处生成的 xmltv 文件作为数据源，两种写法：
