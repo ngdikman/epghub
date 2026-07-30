@@ -108,7 +108,7 @@ Now Sports Prime:
 
 天映頻道(MY):
   name:
-    - 天映频道(MY)
+    - 天映頻道(MY)
   scraper:
     xmltv: celestial_my@https://epg1.168.us.kg/celestial_epg.xml
   refresh: once
@@ -116,7 +116,7 @@ Now Sports Prime:
   preview: 2
 天映頻道(SG):
   name:
-    - 天映频道(SG)
+    - 天映頻道(SG)
   scraper:
     xmltv: celestial_sg@https://epg1.168.us.kg/celestial_epg.xml
   refresh: once
@@ -879,6 +879,14 @@ CARI:
 NSWD:
   name:
     - NewsWorld
+  scraper:
+    mytvsuper: 
+  refresh: once
+  recap: 1
+  preview: 2
+INDO:
+  name:
+    - The Indonesia Channel
   scraper:
     mytvsuper: 
   refresh: once
